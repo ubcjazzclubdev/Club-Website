@@ -1,0 +1,26 @@
+/* Trocchi */
+@import url("https://fonts.googleapis.com/css?family=Trocchi");
+
+#footer-container {
+  background-color: black;
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .footer_back_top {
+    text-transform: uppercase;
+  }
+
+  .footer_back_top:hover {
+    cursor: pointer;
+  }
+
+  .footer_content {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .footer_copyright {
+    text-transform: uppercase;
+  }
+}
