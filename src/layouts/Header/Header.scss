@@ -6,6 +6,14 @@
 /* HEADER */
 
 /* NAVIGATION BAR */
+
+#navigation-bar {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
 nav {
   overflow: hidden;
   background-color: transparent;
@@ -24,7 +32,7 @@ nav {
       font-family: "Trocchi", sans-serif;
       padding-left: 1rem;
       padding-right: 1rem;
-      font-size: 20px;
+      font-size: 1.5vw;
 
       &:first-child {
         padding: unset;
@@ -57,7 +65,7 @@ nav {
         }
     
         #menu-icon {
-          width: 4rem;
+          width: 3vw;
           height: 100%;
           display: inline-block;
           vertical-align: middle;
