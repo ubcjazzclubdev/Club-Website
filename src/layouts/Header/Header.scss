@@ -14,6 +14,10 @@
   top: 0;
 }
 
+.hide {
+  visibility: hidden;
+}
+
 nav {
   overflow: hidden;
   background-color: transparent;
@@ -30,8 +34,8 @@ nav {
     li {
       vertical-align: middle;
       font-family: "Trocchi", sans-serif;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 1vw;
+      padding-right: 1vw;
       font-size: 1.5vw;
 
       &:first-child {

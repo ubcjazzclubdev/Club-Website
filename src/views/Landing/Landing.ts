@@ -1,11 +1,10 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 import Header from "../../layouts/Header/Header.vue";
 
-@Component ({
+@Component({
   components: {
-    Header,
+    Header
   }
 })
-
 @Component
 export default class Landing extends Vue {}

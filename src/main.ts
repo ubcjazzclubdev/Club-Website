@@ -8,6 +8,6 @@ new Vue({
   data: {
     currentRoute: window.location.pathname
   },
-  router : Router,
+  router: Router,
   render: h => h(App)
 }).$mount("#app");
