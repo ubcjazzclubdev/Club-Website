@@ -1,0 +1,42 @@
+.title_text_overlay {
+  z-index: 10;
+  width: 100%;
+  top: 40%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+
+  .title_box {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+
+    .title_left, .title_right {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: "Built-Tilting";
+      color: white;
+      font-size: 10vw;
+    }
+
+    img {
+      width: 10vw;
+      padding-right: 3vw;
+    }
+  }
+
+  .title_caption {
+    font-family: "Built-Tilting";
+    margin-top: 15vh;
+    color: white;
+    font-size: 2.5vw;
+  }
+}
+
+.hide {
+  display: none !important;
+}

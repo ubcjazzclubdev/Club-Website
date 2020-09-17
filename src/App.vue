@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <Title />
     <Background />
     <router-view></router-view>
     <Footer />
@@ -10,12 +11,14 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import Header from "./layouts/Header/Header.vue";
+import Title from "./layouts/Title/Title.vue";
 import Footer from "./layouts/Footer/Footer.vue";
 import Background from "./layouts/Background/Background.vue";
 
 @Component({
   components: {
     Header,
+    Title,
     Footer,
     Background
   }
