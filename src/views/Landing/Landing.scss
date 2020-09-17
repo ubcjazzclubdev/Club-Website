@@ -1,4 +1,181 @@
-.test {
-  color: yellow;
-  margin-top: 20rem;
+.container {
+  --text-padding: 10px;
+  color: var(--club-yellow);
+  position: relative;
+  background-color: #333333;
+  width: 100%;
+
+  .title_text_overlay {
+    z-index: 10;
+    width: 100%;
+    top: -32%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+
+    .title_box {
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+
+      .title_left, .title_right {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      h1 {
+        text-align: center;
+        font-family: "Built-Tilting";
+        color: white;
+        font-size: 10vw;
+      }
+  
+      img {
+        width: 11vw;
+        padding-right: 3vw;
+      }
+    }
+
+    .title_caption {
+      font-family: "Built-Tilting";
+      margin-top: 18vh;
+      color: white;
+      font-size: 2.5vw;
+    }
+  }
+
+  .content {
+    overflow: hidden;
+  }
+
+  .intro_content {
+    position: relative;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    font-style: italic;
+    font-size: 1.5vw;
+    color: white;
+    transition: all 0.3s;
+
+    .back_circle {
+      position: absolute;
+      opacity: 50%;
+    }
+
+    #circle1 {
+      // Intro3 background circle
+      width: 15%;
+      bottom: 33%;
+      right: 0;
+    }
+
+    #circle2 {
+      // Big Background circle
+      top: -10%;
+      right: 45%;
+      width: 200vh;
+    }
+
+    #circle3 {
+      // Miscellaneous Decoration Circle
+      width: 15%;
+      bottom: 10%;
+      left: 0;
+    }
+
+    .intro_1 {
+      position: relative;
+      padding-top: 40vh;
+
+      p {
+        background-color: #333333;
+        padding: var(--text-padding);
+      }
+    }
+
+    .intro_2 {
+      position: relative;
+      padding-top: 30vh;
+      text-align: left;
+
+      .table {
+        position: relative;
+        width: 50%;
+
+        .circle {
+          top: -6vh;
+          left: 15%;
+          position: absolute;
+          width: 60%;
+        }
+
+        .table_left {
+          position: relative;
+          display: block;
+          float: left;
+          background-color: #333333;
+          padding: var(--text-padding);
+        }
+
+        .table_right {
+          position: relative;
+          margin-top: 2vh;
+          display: block;
+          float: right;
+          text-align: right;
+          background-color: #333333;
+          padding: var(--text-padding);
+        }
+      }
+    }
+
+    .intro_3 {
+      position: relative;
+      padding-top: 40vh;
+      padding-right: 10vw;
+      text-align: right;
+
+      .circle {
+        position: absolute;
+        top: 60%;
+        right: 0;
+        width: 30%;
+      }
+
+      .desc {
+        position: relative;
+        padding: var(--text-padding);
+        background-color: #333333;
+      }
+    }
+
+    .space {
+      padding-bottom: 40vh;
+    }
+  }
+  .divider {
+    position: relative;
+    background: linear-gradient(
+              rgba(0, 0, 0, 0.5), 
+              rgba(0, 0, 0, 0.5)
+            ),
+            url("../../assets/home_events_divider.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 40vh;
+
+    .divider_text {
+      position: absolute;
+      top: 40%;
+
+      height: 100%;
+      width: 100%;
+
+      color: white;
+      font-family: Built-Tilting;
+      font-size: 5vw;
+    }
+  }
 }

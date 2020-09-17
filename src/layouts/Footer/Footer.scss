@@ -11,13 +11,15 @@
     display: inline-block;
     text-transform: uppercase;
     font-style: italic;
-    font-size: 1.25vw;
+    font-size: 2vw;
     padding: 2rem;
     border-radius: 7px;
+    font-family: Built-Tilting;
   }
 
   .footer_back_top:hover {
     cursor: pointer;
+    color: var(--club-yellow);
     background-color: #111111;
   }
 

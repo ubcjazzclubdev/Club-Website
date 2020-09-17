@@ -1,16 +1,18 @@
 .container {
   padding: 30vh 15vw 1rem 15vw;
   color: white;
+  background-color: #333333;
 
   // Contact title section css
   #contact_section_title {
     padding-bottom: 30vh;
 
     #contact_title {
-      font-size: 6vw;
+      font-size: 8vw;
       font-style: italic;
       color: var(--club-yellow);
       text-transform: uppercase;
+      font-family: "Built-Tilting";
 
       display: inline-block;
       padding-right: 35%;
