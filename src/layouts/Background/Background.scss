@@ -1,12 +1,14 @@
+// $img-url: url(../../assets/main_back.png);
+
 .background-image {
   z-index: 5;
   top: 0;
   left: 0;
   position: relative;
-  background-image: url(../../assets/main_back.png);
-  background-blend-mode: screen;
+  // background-image: var(--img-url);
   min-height: 100%;
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   opacity: 0.9;
