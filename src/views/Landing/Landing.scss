@@ -2,13 +2,18 @@
   --text-padding: 10px;
   color: var(--club-yellow);
   position: relative;
-  background-color: #333333;
+  background-color: var(--club-dark-grey);
   width: 100%;
 
   .content {
     overflow: hidden;
   }
 
+  .hide {
+    display: none !important;
+  }
+
+  // Intro Content
   .intro_content {
     position: relative;
     margin-left: 15vw;
@@ -49,7 +54,7 @@
       padding-top: 40vh;
 
       p {
-        background-color: #333333;
+        background-color: var(--club-dark-grey);
         padding: var(--text-padding);
       }
     }
@@ -74,7 +79,7 @@
           position: relative;
           display: block;
           float: left;
-          background-color: #333333;
+          background-color: var(--club-dark-grey);
           padding: var(--text-padding);
         }
 
@@ -84,7 +89,7 @@
           display: block;
           float: right;
           text-align: right;
-          background-color: #333333;
+          background-color: var(--club-dark-grey);
           padding: var(--text-padding);
         }
       }
@@ -106,7 +111,7 @@
       .desc {
         position: relative;
         padding: var(--text-padding);
-        background-color: #333333;
+        background-color: var(--club-dark-grey);
       }
     }
 
@@ -114,6 +119,8 @@
       padding-bottom: 40vh;
     }
   }
+
+  // Divider Parallax with text overlay
   .divider {
     position: relative;
     background: linear-gradient(
@@ -139,4 +146,83 @@
       font-size: 5vw;
     }
   }
+
+  // Events Content
+  .events_content {
+    color: white;
+    width: 100%;
+
+    .events_description {
+      padding-top: 20vw;
+      padding-bottom: 18vw;
+      font-family: sans-serif;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 2vw;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+
+      border-bottom: var(--club-yellow) 0.5vw solid;
+    }
+
+    .events_display {
+      padding-top: 15vw;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+
+      img {
+        transition: 0.3s all;
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+
+        &:hover {
+          width: 102%;
+          cursor: pointer;
+        }
+      }
+
+      .events_imgs {
+        table-layout: auto;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td {
+        width: 33%;
+        vertical-align: top;
+      }
+
+      tr {
+        display: inline-block;
+        padding: 1vw;
+      }
+    }
+
+    .events_load {
+      transition: 0.3s all;
+      float: right;
+      margin-right: 1vw;
+      margin-top: 5vw;
+      margin-bottom: 10vw;
+      display: block;
+
+      padding: 1vw;
+      border: white 2px solid;
+
+      text-transform: uppercase;
+      font-style: italic;
+      font-size: 2vw;
+
+      &:hover {
+        cursor: pointer;
+        background-color: black;
+        color: var(--club-yellow);
+        border: var(--club-yellow) 2px solid;
+      }
+    }
+  }
+
 }
