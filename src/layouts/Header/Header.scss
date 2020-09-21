@@ -44,7 +44,7 @@ nav {
       }
 
       &:last-child {
-        padding-right: 40px;
+        padding-right: 1vw;
       }
 
       a {
@@ -77,15 +77,15 @@ nav {
         }
     
         #menu-icon {
-          width: 3vw;
+          width: 4vw;
           height: 100%;
           display: inline-block;
           vertical-align: middle;
         }
       
         #menu-icon-text {
-          font-size: 40px;
-          letter-spacing: 3px;
+          font-size: 3vw;
+          letter-spacing: 0.2vw;
           padding: 10px;
           color: var(--club-yellow);
           vertical-align: middle;
