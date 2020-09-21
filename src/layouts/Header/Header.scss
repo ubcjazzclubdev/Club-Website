@@ -91,21 +91,32 @@ nav {
           vertical-align: middle;
         }
       }
+
+      .dropdown {
+
+        & > a:hover {
+          border-bottom: 3px solid rgba(255,255,255,0);
+        }
+  
+        .dropdown-list {
+          transition: max-height .5s ease-out;
+          max-height: 20em;
+          width: 10em;
+          overflow: hidden;
+          position: absolute;
+
+          border-top: 3px solid var(--club-yellow);
+
+          & > a {
+            background-color: rgba(64,64,64,0.7);
+
+            &:hover {
+              border-bottom: unset;
+              color: var(--club-yellow);
+            }
+          }
+        }
+      }
     }
   }
-}
-
-.dropdown {
-}
-
-.dropdown a {
-}
-
-.dropdown-list {
-  transition: max-height .5s ease-out;
-  max-height: 20em;
-  overflow: hidden;
-  position:absolute;
-}
-.dropdown-list > * {
 }
