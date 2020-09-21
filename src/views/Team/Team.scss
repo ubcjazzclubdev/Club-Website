@@ -1,0 +1,179 @@
+.container {
+  position: relative;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--club-dark-grey);
+  font-family: "Arial";
+
+  // Divider Parallax with text overlay
+  .divider {
+    position: relative;
+    background: linear-gradient(
+              rgba(0, 0, 0, 0.5), 
+              rgba(0, 0, 0, 0.5)
+            ),
+            url("../../assets/images/jam_5.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+
+    .divider_text {
+      position: absolute;
+      top: 40%;
+
+      width: 100%;
+
+      color: white;
+      font-family: Built-Tilting;
+      font-size: 5vw;
+    }
+  }
+
+  .top_section {
+    position: relative;
+    .circle {
+      position: absolute;
+      opacity: 0.5;
+      z-index: 1;
+    }
+  
+    #circle1 {
+      width: 15%;
+      top: 12%;
+      left: 5%;
+    }
+  
+    #circle2 {
+      width: 30%;
+      top: 20%;
+      left: -10%;
+    }
+    
+    #circle3 {
+      width: 37%;
+      top: 27%;
+      right: -5%;
+    }
+    
+    #circle4 {
+      width: 15%;
+      top: 60%;
+      right: -7%;
+    }
+  
+    .description {
+      position: relative;
+      z-index: 5;
+      width: 70%;
+      padding-top: 17vw;
+      padding-bottom: 20vw;
+      margin-left: auto;
+      margin-right: auto;
+  
+      font-size: 1.6vw;
+    }
+  
+    .description_ext {
+      position: relative;
+      z-index: 5;
+      font-size: 1.75vw;
+      font-style: italic;
+      
+      .text_1 {
+        padding-bottom: 10vw;
+      }
+  
+      .text_2 {
+        padding-bottom: 2vw;
+      }
+  
+      .text_3 {
+        padding-bottom: 5vw;
+      }
+    }
+  }
+
+  .ratings {
+    width: 80%;
+    position: relative;
+    font-family: Built-Tilting;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20vw;
+    padding-top: 10vw;
+    padding-bottom: 20vw;
+
+    background-image: url(../../assets/review_frame.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 105%;
+
+    .review{
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 2vw;
+      padding-top: 5vw;
+
+      .star_rating {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding-inline-start: unset;
+          display: flex;
+          align-items: center;
+        }
+
+        img {
+          width: 50%;
+        }
+      }
+
+      .desc {
+        display: inline-block;
+        padding-top: 1vw;
+        margin-left: auto;
+        margin-right: auto;
+        .author {
+          margin-top: 3vw;
+        }
+      }
+    }
+  }
+
+  .awards_section {
+    margin-top: 11vw;
+    margin-bottom: 30vw;
+
+    .awards_row {
+      display: flex;
+      vertical-align: top;
+      justify-content: center;
+
+      .award {
+        display: inline-block;
+        padding-left: 4vw;
+        padding-right: 4vw;
+        font-size: 1.25vw;
+
+        .desc {
+          text-transform: uppercase;
+          padding-top: 2vw;
+          p {
+            padding-top: 0.5vw;
+          }
+        }
+      }
+    }
+  }
+}

@@ -95,14 +95,15 @@ nav {
       .dropdown {
         display: flex;
         justify-content: center;
+
         & > a:hover {
           border-bottom: 3px solid rgba(255,255,255,0);
         }
   
         .dropdown-list {
           transition: max-height .5s;
-          max-height: 20em;
-          top: 100%;
+          max-height: 20vw;
+          top: 95%;
           overflow: hidden;
           position: absolute;
           font-size: 1.25vw;
