@@ -51,12 +51,20 @@ nav {
         color: #FFF;
         text-decoration: none;
         padding: 20px;
-        display: inline-block;
         text-transform: uppercase;
         &:hover {
           transition: 0.2s;
           border-bottom: 3px solid var(--club-yellow);
         }
+        box-sizing: content-box;
+      }
+
+      a.option {
+        display: block;
+      }
+
+      a:not(.option) {
+        display: inline-block;
       }
 
       #logo {
@@ -85,4 +93,19 @@ nav {
       }
     }
   }
+}
+
+.dropdown {
+}
+
+.dropdown a {
+}
+
+.dropdown-list {
+  transition: max-height .5s ease-out;
+  max-height: 20em;
+  overflow: hidden;
+  position:absolute;
+}
+.dropdown-list > * {
 }
