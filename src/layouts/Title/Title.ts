@@ -17,6 +17,10 @@ export default class Title extends Vue {
       this.titleText = "about us";
       this.iToggle = true;
       this.cToggle = true;
+    } else if (route == "/team") {
+      this.titleText = "our team";
+      this.iToggle = true;
+      this.cToggle = true;
     } else if (route == "/gallery") {
       this.titleText = "gallery";
       this.iToggle = true;

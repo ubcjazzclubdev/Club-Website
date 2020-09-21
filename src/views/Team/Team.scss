@@ -4,173 +4,121 @@
   overflow-x: hidden;
   overflow-y: auto;
   background-color: var(--club-dark-grey);
-  font-family: "Arial";
+  padding-bottom: 15vw;
+  font-family: Built-Tilting;
+  font-size: 4vw;
 
-  // Divider Parallax with text overlay
-  .divider {
-    position: relative;
-    background: linear-gradient(
-              rgba(0, 0, 0, 0.5), 
-              rgba(0, 0, 0, 0.5)
-            ),
-            url("../../assets/images/jam_5.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 40vh;
+  .desc {
+    margin-top: 17vw;
+    margin-bottom: 15vw;
+  }
 
-    .divider_text {
-      position: absolute;
-      top: 40%;
+  .execs_section {
+    margin-top: 2vw;
 
+    .exec_row {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 10vw;
       width: 100%;
 
-      color: white;
-      font-family: Built-Tilting;
-      font-size: 5vw;
-    }
-  }
+      .exec {
+        position: relative;
+        margin: 2vw;
+        width: 45%;
 
-  .top_section {
-    position: relative;
-    .circle {
-      position: absolute;
-      opacity: 0.5;
-      z-index: 1;
-    }
-  
-    #circle1 {
-      width: 15%;
-      top: 12%;
-      left: 5%;
-    }
-  
-    #circle2 {
-      width: 30%;
-      top: 20%;
-      left: -10%;
-    }
-    
-    #circle3 {
-      width: 37%;
-      top: 27%;
-      right: -5%;
-    }
-    
-    #circle4 {
-      width: 15%;
-      top: 60%;
-      right: -7%;
-    }
-  
-    .description {
-      position: relative;
-      z-index: 5;
-      width: 70%;
-      padding-top: 17vw;
-      padding-bottom: 20vw;
-      margin-left: auto;
-      margin-right: auto;
-  
-      font-size: 1.6vw;
-    }
-  
-    .description_ext {
-      position: relative;
-      z-index: 5;
-      font-size: 1.75vw;
-      font-style: italic;
-      
-      .text_1 {
-        padding-bottom: 10vw;
-      }
-  
-      .text_2 {
-        padding-bottom: 2vw;
-      }
-  
-      .text_3 {
-        padding-bottom: 5vw;
-      }
-    }
-  }
+        &.left {
+          float: left;
+        }
 
-  .ratings {
-    width: 80%;
-    position: relative;
-    font-family: Built-Tilting;
-    font-style: italic;
-    font-weight: normal;
-    margin-top: 2vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20vw;
-    padding-top: 10vw;
-    padding-bottom: 20vw;
+        &.right {
+          float: right;
+        }
 
-    background-image: url(../../assets/review_frame.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 105%;
-
-    .review{
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 2vw;
-      padding-top: 5vw;
-
-      .star_rating {
-        width: 30%;
-        margin-left: auto;
-        margin-right: auto;
-
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding-inline-start: unset;
+        .exec_portrait {
+          position: absolute;
+          top: -7%;
+          z-index: 5;
+          width: 48%;
+          height: 27vw;
           display: flex;
+          justify-content: center;
           align-items: center;
+          border-radius: 50%;
+          background-position: top;
+          background-size: 100%;
+          background-repeat: no-repeat;
+
+          .frame {
+            display: inline-block;
+            width: 93%;
+            height: 93%;
+            border-radius: 50%;
+            border: solid 5px var(--club-yellow);
+          }
         }
 
-        img {
-          width: 50%;
+        .amy {
+          background-image: url(../../assets/images/exec_portraits/amy.jpg);
         }
-      }
 
-      .desc {
-        display: inline-block;
-        padding-top: 1vw;
-        margin-left: auto;
-        margin-right: auto;
-        .author {
-          margin-top: 3vw;
+        .em {
+          background-image: url(../../assets/images/exec_portraits/emily.jpg);
+          background-size: 105%;
         }
-      }
-    }
-  }
 
-  .awards_section {
-    margin-top: 11vw;
-    margin-bottom: 30vw;
+        .chris {
+          background-image: url(../../assets/images/exec_portraits/chris.jpg);
+        }
 
-    .awards_row {
-      display: flex;
-      vertical-align: top;
-      justify-content: center;
+        .ashley {
+          background-image: url(../../assets/images/exec_portraits/ashley.jpg);
+        }
 
-      .award {
-        display: inline-block;
-        padding-left: 4vw;
-        padding-right: 4vw;
-        font-size: 1.25vw;
+        .matt {
+          background-image: url(../../assets/images/exec_portraits/matt.jpg);
+        }
 
-        .desc {
-          text-transform: uppercase;
-          padding-top: 2vw;
-          p {
-            padding-top: 0.5vw;
+        .dylan {
+          background-image: url(../../assets/images/exec_portraits/dolan.jpg);
+        }
+
+        .piyotr {
+          background-image: url(../../assets/images/exec_portraits/piyotr.jpg);
+        }
+
+        .coal {
+          background-image: url(../../assets/images/exec_portraits/coal.jpg);
+        }
+
+        .exec_desc_box {
+          position: relative;
+          z-index: 1;
+          display: block;
+          float: right;
+          width: 70%;
+          height: 30vw;
+          padding: 2vw;
+
+          border: solid 5px var(--club-yellow);
+
+          .exec_desc {
+            font-family: "Arial";
+            font-style: italic;
+            font-size: 1.3vw;
+            text-align: right;
+            width: 65%;
+
+            float: right;
+          }
+
+          .exec_title {
+            position: absolute;
+            text-align: right;
+            margin-right: 2vw;
+            margin-bottom: 1vw;
+            bottom: 0;
+            right: 0;
           }
         }
       }
