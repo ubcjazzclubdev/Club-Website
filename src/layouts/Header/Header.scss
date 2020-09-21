@@ -93,17 +93,19 @@ nav {
       }
 
       .dropdown {
-
+        display: flex;
+        justify-content: center;
         & > a:hover {
           border-bottom: 3px solid rgba(255,255,255,0);
         }
   
         .dropdown-list {
-          transition: max-height .5s ease-out;
+          transition: max-height .5s;
           max-height: 20em;
-          width: 10em;
+          top: 100%;
           overflow: hidden;
           position: absolute;
+          font-size: 1.25vw;
 
           border-top: 3px solid var(--club-yellow);
 
