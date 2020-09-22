@@ -1,141 +1,59 @@
 <div class="container">
-  <div class="top_section">
-    <img class="circle" id="circle1" src="../../assets/circle.png">
-    <img class="circle" id="circle2" src="../../assets/circle.png">
-    <img class="circle" id="circle3" src="../../assets/circle.png">
-    <img class="circle" id="circle4" src="../../assets/circle.png">
-    <div class="description">
-      {{ description }}
-    </div>
-    <div class="description_ext">
-      <div class="text_1">
-        Our core values consist of: expression, acceptance, and fun!
+  <div class="links_wrapper">
+    <div class="link_container">
+      <div class="link" @click="moveTo('.flow')">
+        flowchart
       </div>
-      <div class="text_2">
-        Why just take it from us though?
-      </div>
-      <div class="text_3">
-        Here are some thoughts from a few of our members:
+      <div class="link" @click="moveTo('.merch')">
+        merch
       </div>
     </div>
   </div>
-  <div class="ratings">
-    <div class="review">
-      <div class="star_rating">
-        <ul>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-        </ul>
-      </div>
-      <div class="desc">
-        <div class="quote">
-          "jazz club is very much my home away from home."
-        </div>
-        <div class="author">
-          - dylan (pianist/trumpeter)
-        </div>
-      </div>
-    </div>
-    <div class="review">
-      <div class="star_rating">
-        <ul>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-        </ul>
-      </div>
-      <div class="desc">
-        <div class="quote">
-          "the jazz club is a perfect creative outlet for me. I
-          love having a place where I can jam with my friends
-          and fellow music theory nerds."
-        </div>
-        <div class="author">
-          - edith (bassist)
-        </div>
-      </div>
-    </div>
-    <div class="review">
-      <div class="star_rating">
-        <ul>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-        </ul>
-      </div>
-      <div class="desc">
-        <div class="quote">
-          "the club gives me so much positive energy. every single
-          person in the ubc jazz club is very well-rounded and i
-          always feel welcome. in therms of music and jams, i feel
-          that the club members know that music is not a competition
-          but a joy and love. [these] small things contribute to the
-          loving vibe of the club overall!"
-        </div>
-        <div class="author">
-          - jake (bassist/guitarist)
-        </div>
-      </div>
-    </div>
-    <div class="review">
-      <div class="star_rating">
-        <ul>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-          <li><img src="../../assets/rating_star_sm.png"></li>
-        </ul>
-      </div>
-      <div class="desc">
-        <div class="quote">
-          "[jazz club is] the perfect place to wind down after a
-          long day. i [have also] met some of the most talented
-          musician i've ever play with at our sessions!"
-        </div>
-        <div class="author">
-          - umut (drummer)
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="divider">
+  <div class="divider flow">
     <div class="divider_text">
-      awards
+      flowchart
     </div>
   </div>
-  <div class="awards_section">
-    <div class="awards_row">
-      <div class="award">
-        <img src="../../assets/trophy_icon.png">
-        <div class="desc">
-          <p>leisure/hobby/special interest</p>
-          <p>2015 ams club awards</p>
-        </div>
-      </div>
-      <div class="award">
-        <img src="../../assets/trophy_icon.png">
-        <div class="desc">
-          <p>best media, arts,</p>
-          <p>or performance club award</p>
-          <p>2018 ams club awards</p>
-        </div>
-      </div>
-      <div class="award">
-        <img src="../../assets/trophy_icon.png">
-        <div class="desc">
-          <p>best media, arts,</p>
-          <p>or performance club award</p>
-          <p>2019 ams club awards</p>
-        </div>
-      </div>
+  <div class="flow_container">
+    <img src="../../assets/images/infographic_1.png">
+    <div class="desc">
+      Unsure of which event to attend? Follow the flowchart!
+    </div>
+  </div>
+  <div class="divider merch">
+    <div class="divider_text">
+      merch
+    </div>
+  </div>
+  <div class="merch_container">
+    <div class="title">
+      looking for even more ways to support the club?
+      we appreciate it!
+    </div>
+    <div class="desc">
+      <p>
+        For $10, you can purchase a club long sleeve shirt. All proceeds
+        go towards music equipment and club events.
+      </p>
+      <p>
+        We primarily offer shirts in the beginning of the term, but feel
+        free to contact us during the school year if you're interested.
+      </p>
+    </div>
+    <div class="prices">
+      <p>
+        $10 / shirt
+      </p>
+      <p>
+        sizes: s, m, l - unisex mens
+      </p>
+      <p>
+        black w/ gold
+      </p>
+    </div>
+    <img src="../../assets/jazzshirt.jpg">
+    <div class="desc_2">
+      contact us with your size and name to buy one!
     </div>
   </div>
 </div>
