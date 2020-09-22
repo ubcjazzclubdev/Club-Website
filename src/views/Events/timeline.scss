@@ -1,0 +1,136 @@
+.timeline_wrapper {
+  --paragraph-font: "Arial";
+  color: var(--club-dark-grey);
+
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+
+  max-width: 80%;
+  padding: 3rem 2rem 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  order: 1;
+
+  .timeline {
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    margin-top: 5vw;
+    font-style: italic;
+
+    color: white;
+  
+    &:before {
+      content: "";
+      width: 4px;
+      height: 100%;
+      background-color: var(--club-yellow);
+  
+      position: absolute;
+      top: 0;
+      left: 28%;
+    }
+
+    .timeline_year_w {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+
+      .timeline_year {
+        display: block;
+        float: left;
+        width: 20%;
+  
+        font-size: 2.5vw;
+        font-family: "Arial";
+        font-style: italic;
+        text-align: right;
+      }
+
+      &.separator {
+        margin-top: 10vw;
+      }
+    }
+
+    .timeline_group {
+      position: relative;
+      justify-content: left;
+      display: flex;
+      margin-top: 6vw;
+      width: 100%;
+
+      font-size: 2.5vw;
+      font-family: var(--paragraph-font);
+
+      &.first {
+        margin-top: unset;
+      }
+
+      .timeline_month {
+        margin-right: 4.5vw;
+        width: 20%;
+        text-align: right;
+      }
+
+      .timeline_date {
+        max-height: 1.5em;
+        min-width: 1.5em;
+        margin-right: 4vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--club-yellow);
+
+        .date {
+          margin-left: -0.4vw;
+          max-height: 1.0em;
+        }
+      }
+
+      .timeline_box {
+        display: inline-block;
+        padding: 1vw;
+        width: 58%;
+
+        background-color: var(--club-grey);
+
+        .left {
+          width: 55%;
+          float: left;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .right {
+          display: inline-block;
+          width: 40%;
+
+          text-align: left;
+
+          .title {
+            font-family: Built-Tilting;
+            font-size: 3vw;
+            color: var(--club-yellow);
+          }
+
+          .desc {
+            margin-top: 1vw;
+
+            font-size: 1.2vw;
+          }
+        }
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

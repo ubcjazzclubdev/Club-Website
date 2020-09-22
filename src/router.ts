@@ -7,6 +7,7 @@ import About from "./views/About/About.vue";
 import Contact from "./views/Contactus/Contact.vue";
 import Team from "./views/Team/Team.vue";
 import Involved from "./views/Involvement/Involvement.vue";
+import Events from "./views/Events/Events.vue";
 
 Vue.use(VueRouter);
 
@@ -16,7 +17,8 @@ const routes = [
   { path: "/about", component: About },
   { path: "/team", component: Team},
   { path: "/involvement", component: Involved},
-  { path: "/contact", component: Contact }
+  { path: "/contact", component: Contact },
+  { path: "/events", component: Events }
 ];
 
 // 3. Create the router instance and pass the `routes` option
