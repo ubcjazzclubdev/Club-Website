@@ -1,0 +1,127 @@
+.container {
+  position: relative;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--club-dark-grey);
+  padding-bottom: 15vw;
+  font-family: Built-Tilting;
+  font-size: 4vw;
+
+  .desc {
+    margin-top: 17vw;
+    margin-bottom: 15vw;
+  }
+
+  .execs_section {
+    margin-top: 2vw;
+
+    .exec_row {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 10vw;
+      width: 100%;
+
+      .exec {
+        position: relative;
+        margin: 2vw;
+        width: 45%;
+
+        &.left {
+          float: left;
+        }
+
+        &.right {
+          float: right;
+        }
+
+        .exec_portrait {
+          position: absolute;
+          top: -7%;
+          z-index: 5;
+          width: 48%;
+          height: 27vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background-position: top;
+          background-size: 100%;
+          background-repeat: no-repeat;
+
+          .frame {
+            display: inline-block;
+            width: 93%;
+            height: 93%;
+            border-radius: 50%;
+            border: solid 5px var(--club-yellow);
+          }
+        }
+
+        .amy {
+          background-image: url(../../assets/images/exec_portraits/amy.jpg);
+        }
+
+        .em {
+          background-image: url(../../assets/images/exec_portraits/emily.jpg);
+          background-size: 105%;
+        }
+
+        .chris {
+          background-image: url(../../assets/images/exec_portraits/chris.jpg);
+        }
+
+        .ashley {
+          background-image: url(../../assets/images/exec_portraits/ashley.jpg);
+        }
+
+        .matt {
+          background-image: url(../../assets/images/exec_portraits/matt.jpg);
+        }
+
+        .dylan {
+          background-image: url(../../assets/images/exec_portraits/dolan.jpg);
+        }
+
+        .piyotr {
+          background-image: url(../../assets/images/exec_portraits/piyotr.jpg);
+        }
+
+        .coal {
+          background-image: url(../../assets/images/exec_portraits/coal.jpg);
+        }
+
+        .exec_desc_box {
+          position: relative;
+          z-index: 1;
+          display: block;
+          float: right;
+          width: 70%;
+          height: 30vw;
+          padding: 2vw;
+
+          border: solid 5px var(--club-yellow);
+
+          .exec_desc {
+            font-family: "Arial";
+            font-style: italic;
+            font-size: 1.3vw;
+            text-align: right;
+            width: 65%;
+
+            float: right;
+          }
+
+          .exec_title {
+            position: absolute;
+            text-align: right;
+            margin-right: 2vw;
+            margin-bottom: 1vw;
+            bottom: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}

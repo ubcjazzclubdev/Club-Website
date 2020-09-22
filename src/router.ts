@@ -5,6 +5,8 @@ import VueRouter from "vue-router";
 import Landing from "./views/Landing/Landing.vue";
 import About from "./views/About/About.vue";
 import Contact from "./views/Contactus/Contact.vue";
+import Team from "./views/Team/Team.vue";
+import Involved from "./views/Involvement/Involvement.vue";
 
 Vue.use(VueRouter);
 
@@ -12,6 +14,8 @@ Vue.use(VueRouter);
 const routes = [
   { path: "/", component: Landing },
   { path: "/about", component: About },
+  { path: "/team", component: Team},
+  { path: "/involvement", component: Involved},
   { path: "/contact", component: Contact }
 ];
 

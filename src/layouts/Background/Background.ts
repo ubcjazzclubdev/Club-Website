@@ -13,9 +13,14 @@ export default class Background extends Vue {
     }
     if (route == "/about") {
       this.imageUrl = require("../../assets/about_back.jpg");
-    } else if (route == "/gallery") {
+    }
+    if (route == "/team") {
+      this.imageUrl = require("../../assets/team_back.jpg");
+    }
+    if (route == "/gallery") {
       this.imageUrl = require("../../assets/gallery_back.jpg");
-    } else if (route == "/events") {
+    }
+    if (route == "/events") {
       this.imageUrl = require("../../assets/events_back.jpg");
     }
   }
