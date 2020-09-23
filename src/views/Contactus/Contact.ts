@@ -37,6 +37,7 @@ export default class Contact extends Vue {
 
   sendEmail(e : Event) {
     const form : HTMLFormElement = e.target as HTMLFormElement;
+    console.log(process.env.USER_ID);
     this.errors = [];
 
     const sentTrue = document.querySelector(".status");
