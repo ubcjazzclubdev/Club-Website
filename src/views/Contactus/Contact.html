@@ -13,21 +13,23 @@
     </div>
     <div class="contact_form_container">
       <div id="contact_form_left">
-        <form id="contact_form" action="Contact.html">
+        <form id="contact_form" @submit.prevent="sendEmail">
           <p>
             Name:
           </p>
-          <input name="name" type="text" class="feedback-input" placeholder="Your name..." />
+          <input id="name" name="from_name" type="text" class="feedback-input" placeholder="Your name..." />
           <p>
             Subject:
           </p>
-          <input name="email" type="text" class="feedback-input" placeholder="Subject of message..." />
+          <input id="subject" name="subject" type="text" class="feedback-input" placeholder="Subject of message..." />
           <p>
             Message:
           </p>
-          <textarea name="text" class="feedback-input" placeholder="Enter your message here!"></textarea>
+          <textarea id="message" name="message" class="feedback-input" placeholder="Enter your message here!"></textarea>
           <input type="submit" value="SUBMIT"/>
         </form>
+        <div class="submitted status hide">
+        </div>
       </div>
       <div id="contact_form_right">
         <p>

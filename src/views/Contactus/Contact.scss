@@ -104,6 +104,17 @@
     
           [type="submit"]:hover { background:yellow; }
         }
+
+        .hide {
+          display: none;
+        }
+
+        .submitted {
+          margin-top: 1vw;
+
+          font-family: Built-Tilting;
+          font-size: 3vw;
+        }
       }
 
       #contact_form_right {
