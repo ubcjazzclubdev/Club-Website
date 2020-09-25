@@ -1,0 +1,148 @@
+.container {
+  position: relative;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--club-dark-grey);
+  font-family: Built-Tilting;
+
+  // Divider Parallax with text overlay
+  .divider {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+
+    .divider_text {
+      position: absolute;
+      top: 40%;
+
+      width: 100%;
+
+      color: white;
+      font-family: Built-Tilting;
+      font-size: 6vw;
+    }
+
+    &.calendar {
+      background: linear-gradient(
+              rgba(0, 0, 0, 0.5), 
+              rgba(0, 0, 0, 0.5)
+            ),
+            url("../../assets/images/social_10.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    &.reg_events {
+      background: linear-gradient(
+              rgba(0, 0, 0, 0.7), 
+              rgba(0, 0, 0, 0.7)
+            ),
+            url("../../assets/images/jam_6.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    &.history {
+      background: linear-gradient(
+              rgba(0, 0, 0, 0.5), 
+              rgba(0, 0, 0, 0.5)
+            ),
+            url("../../assets/images/jam_4.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+  }
+
+  // links at the top of the page
+  .links_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+
+    background-color: black;
+
+    .link_container {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      width: 65%;
+
+      display: flex;
+      justify-content: center;
+
+      .link {
+        transition: all 0.2s;
+        font-size: 3.5vw;
+        display: table-cell;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:hover {
+          cursor: pointer;
+          // make sure whole div doesn't move
+          margin-top: -3px;
+          border-bottom: solid 3px white;
+        }
+      }
+    }
+  }
+
+  // calendar
+  .cal_container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vw;
+    margin-bottom: 15vw;
+    width: 85%;
+
+    & > img {
+      width: 100%;
+    }
+  }
+
+  // regular events
+  .reg_events_container {
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .events {
+      width: 90%;
+
+      .event {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+
+        & > img {
+          width: 90%;
+        }
+
+        .e_title {
+          margin-bottom: 2vw;
+          font-size: 5vw;
+          color: var(--club-grey);
+        }
+
+        .e_desc {
+          margin-top: 3vw;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+          font-family: "Arial";
+          font-style: italic;
+          font-size: 1.1vw;
+        }
+      }
+    }
+  }
+}
