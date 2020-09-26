@@ -1,0 +1,30 @@
+<div class="modal-container">
+  
+  <transition name="slide-fade">
+    <div v-if="modalState" class="modal-content" :class="{'small-modal': confirmationModal}">
+
+      <div v-if="confirmationModal">
+        <!-- CONFIRMATION MODAL -->
+        <slot></slot>
+        <div class="button-container">
+          <button @click="acceptButtonClicked" v-t="'modal-button-accept'"></button>
+          <button class="cancel" @click="cancelButtonClicked" v-t="'modal-button-decline'">Cancel</button>
+        </div>
+      </div>
+
+      <div v-else>
+        <!-- FULL SCREEN MODAL -->
+        <!-- CLOSE BUTTON -->
+        <button @click="closeButtonPressed" id="close-button">
+          <p v-t="'modal-close-message'"></p>
+        </button>
+
+        <!-- MODAL CONTENTS -->
+        <slot :close-modal="closeButtonPressed"></slot>
+      </div>
+    </div>
+  </transition>
+
+  <transition name="fade"><div v-if="modalState" class="modal-backdrop" :class="{'modal-light-backdrop': confirmationModal}"></div></transition>
+  
+</div>

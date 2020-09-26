@@ -5,7 +5,6 @@ export default class Footer extends Vue {
   scrollToTop(): void {
     // Find the div#app element and scroll to it
     const element = this.$parent.$root.$el;
-    console.log(element);
     element.scrollIntoView({
       behavior: "smooth",
       block: "start",

@@ -7,7 +7,6 @@ export default class Title extends Vue {
   cToggle = false;
   titleText = "";
   created() {
-    console.log(this.$router.currentRoute.path);
     const route = this.$router.currentRoute.path;
     if (route == "/") {
       this.titleText = "ubc jazz club";

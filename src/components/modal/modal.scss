@@ -1,0 +1,117 @@
+/* Colour Variables */
+$grey-text: var(--club-grey);
+$background-color: var(--club-black);
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active, .slide-fade-leave-active {
+  transition: all .3s ease;
+}
+
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(50vh);
+  opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all .3s ease;
+}
+
+.fade-enter, .fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.modal-container, .modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.modal-container {
+  width: 100%;
+}
+
+.modal-backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.8;
+
+  &.modal-light-backdrop {
+    opacity: 0.6;
+  }
+}
+
+.modal-content {
+  background-color: $background-color;
+  z-index: 4;
+  position: relative;
+  height: calc(100vh - 45px);
+  margin-top: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+
+  // iOS 11.0-11.2
+  @supports (padding-top: constant(safe-area-inset-top)) {
+    margin-top: calc(25px + constant(safe-area-inset-top, 0));
+    padding-left: calc(10px + constant(safe-area-inset-left, 0));
+    padding-right: calc(10px + constant(safe-area-inset-right, 0));
+    
+  }
+
+  // iOS 11.2+
+  @supports (padding-top: env(safe-area-inset-top)) {
+    margin-top: calc(25px + env(safe-area-inset-top, 0));
+    padding-left: calc(10px + env(safe-area-inset-left, 0));
+    padding-right: calc(10px + env(safe-area-inset-right, 0));
+  }
+
+  &.small-modal {
+    height: unset;
+    height: 250px;
+    width: 60%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: calc(50vh - 125px);
+    
+    & > div {
+      height: 100%;
+      width: 100%;
+
+      .button-container {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        width: calc(100% - 20px);
+        flex-direction: column;
+        height: 105px;
+
+        button {
+          margin-top: 10px;
+
+          &.cancel {
+            border-color: $grey-text;
+            color: $grey-text;
+
+            &:hover {
+              background-color: $grey-text;
+              color: $background-color;
+            }
+          }
+        }
+      }
+    }
+
+    
+  }
+}
+
+#close-button {
+  color: $grey-text;
+  background-color: transparent;
+  border: none;  
+}

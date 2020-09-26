@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="featured_wrapper">
+    <img class="wave" src="../../assets/featured_photos_wave.png">
+    <img class="text" src="../../assets/featured_photos_title.png">
+    <div class="featured_photo">
+      <div class="arrows">
+        <div class="left arrow" @click="galleryNext()">
+        </div>
+        <div class="right arrow" @click="galleryBack()">
+        </div>
+      </div>
+      <img class="f_img" v-bind:src="currImg">
+    </div>
+  </div>
+  <div class="divider albums">
+    <div class="divider_text">
+      albums
+    </div>
+  </div>
+  <div class="albums_container">
+    <div class="album_row">
+      <div class="album evnt1">
+        <div class="e_title">
+          cozy christmas
+        </div>
+        <img src="../../assets/images/cardstime2.jpg">
+        <div class="e_desc">
+          Photos from the comfiest night of the year: Cozy Christmas
+          with UBC Jazz Club, hosted on Nov. 29th, 2019.
+          A Peanuts/Vince Gauraldi pajama-casual social with
+          various group games, competitions and most importantly,
+          delicious treats.
+        </div>
+      </div>
+      <div class="album evnt2">
+        <div class="e_title">
+          imagine day 2019
+        </div>
+        <img src="../../assets/images/cardstime2.jpg">
+        <div class="e_desc">
+          A snapshot of our club booth during Imagine Day, 
+          a campus-wide initiative held on the first day of 
+          class in September, allowing students to be introduced 
+          to the many clubs on campus. We’ll be active on our 
+          socials so you’ll know where approximately you can 
+          find us -- although, your best bet is to follow the 
+          sound of jazz music. It’ll bring you home.  
+        </div>
+      </div>
+      <div class="album evnt3">
+        <div class="e_title">
+          weekly jam
+        </div>
+        <img src="../../assets/images/cardstime2.jpg">
+        <div class="e_desc">
+          A peek into our weekly jams. Pictured: Execs, 
+          members and instruments galore. Not pictured: 
+          the occasional chaos, the intermittent <br/>* squeaks *, 
+          the hubbub/flow of conversation and good company.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divider videos">
+    <div class="divider_text">
+      videos
+    </div>
+  </div>
+  <div class="vid_container">
+    <iframe class="video" src="https://www.youtube.com/embed/YXw4z21t92w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="vid_desc">
+      <a href="https://www.youtube.com/embed/YXw4z21t92w">
+        2019 dancing with the stars
+      </a>
+    </div>
+  </div>
+</div>
