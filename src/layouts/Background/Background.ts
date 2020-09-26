@@ -6,7 +6,6 @@ export default class Background extends Vue {
   imageUrl = require("../../assets/main_back.png");
 
   created() {
-    console.log(this.$router.currentRoute.path);
     const route = this.$router.currentRoute.path;
     if (route == "/contact") {
       this.dToggle = true;
