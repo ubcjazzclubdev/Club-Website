@@ -3,11 +3,11 @@ import Modal from '@/components/modal/modal.vue'
 
 
 @Component
-({
-  components: {
-      'modal': Modal
-  }
-})
+// ({
+//   components: {
+//       'modal': Modal
+//   }
+// })
 export default class Gallery extends Vue {
 
   currImg = "";
