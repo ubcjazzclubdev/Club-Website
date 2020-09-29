@@ -131,7 +131,12 @@
           padding-bottom: 1vh;
 
           a {
+            font-weight: 700;
             color: white;
+
+            &:hover {
+              color: var(--club-yellow);
+            }
           }
         }
       }

@@ -13,21 +13,22 @@
     </div>
     <div class="contact_form_container">
       <div id="contact_form_left">
-        <form id="contact_form" @submit.prevent="sendEmail">
+      <form id="contact_form" @submit.prevent="staticSubmit" enctype="text/plain" target="hidden_iframe">
           <p>
             Name:
           </p>
-          <input id="name" name="from_name" type="text" class="feedback-input" placeholder="Your name..." />
+          <input id="name" name="entry.495402710" type="text" class="feedback-input" placeholder="Your name..." />
           <p>
             Subject:
           </p>
-          <input id="subject" name="subject" type="text" class="feedback-input" placeholder="Subject of message..." />
+          <input id="subject" name="entry.308083149" type="text" class="feedback-input" placeholder="Subject of message..." />
           <p>
             Message:
           </p>
-          <textarea id="message" name="message" class="feedback-input" placeholder="Enter your message here!"></textarea>
+          <textarea id="message" name="entry.1511380091" class="feedback-input" placeholder="Enter your message here!"></textarea>
           <input type="submit" value="SUBMIT"/>
         </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
         <div class="submitted status hide">
         </div>
       </div>
@@ -37,29 +38,33 @@
         </p>
         <br/>
         <p>
-          Email:
+          <a href="mailto:jazzclububc@gmail.com">
+            Email:
+          </a>
           <br/>
           jazzclububc@gmail.com
         </p>
         <br/>
         <p>
           <a href="https://www.facebook.com/ubcjazzclub/">
-            FACEBOOK:
+            Facebook:
           </a>
           <br/>
-          https://www.facebook.com/ubcjazzclub/
+          UBC Jazz Club
         </p>
         <br/>
         <p>
           <a href="https://www.instagram.com/ubcjazzclub/">
-            INSTAGRAM:
+            Instagram:
           </a>
           <br/>
           @ubcjazzclub
         </p>
         <br/>
         <p>
-          Hiring Musicians/Gigs:<br/>Google Form:<br/>
+          <a href="https://forms.gle/K7ShouGvhyyWTbUF9">
+            Hiring Musicians/Gigs:
+          </a>
           https://forms.gle/K7ShouGvhyyWTbUF9
         </p>
         <br/>
