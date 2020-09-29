@@ -88,14 +88,4 @@ export default class Contact extends Vue {
     }
     form.reset();
   }
-
-  data() {
-    return {
-      methods: {
-        clearForm() {
-          this.haha();
-        }
-      }
-    }
-  }
 }
