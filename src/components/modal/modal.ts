@@ -21,15 +21,15 @@ import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
 export default class Modal extends Vue {
   modalState = false;
 
-  created() {
-    this.$eventBus.$on('modal-open', key => this.isForThisModal(key).then(this.openModal).catch(() => { /* do nothing */}));
-    this.$eventBus.$on('modal-close', key => this.isForThisModal(key).then(this.closeButtonPressed).catch(() => { /* do nothing */}));
-    this.$eventBus.$on('modal-close-all', this.closeModal);
-  }
+  // created() {
+  //   this.$eventBus.$on('modal-open', key => this.isForThisModal(key).then(this.openModal).catch(() => { /* do nothing */}));
+  //   this.$eventBus.$on('modal-close', key => this.isForThisModal(key).then(this.closeButtonPressed).catch(() => { /* do nothing */}));
+  //   this.$eventBus.$on('modal-close-all', this.closeModal);
+  // }
 
-  beforeDestroy() {
-    this.$eventBus.$off('modal-open', key => this.isForThisModal(key).then(this.openModal).catch(() => { /* do nothing */}));
-    this.$eventBus.$off('modal-close', key => this.isForThisModal(key).then(this.closeButtonPressed).catch(() => { /* do nothing */}));
-    this.$eventBus.$off('modal-close-all', this.closeModal);
-  }
+  // beforeDestroy() {
+  //   this.$eventBus.$off('modal-open', key => this.isForThisModal(key).then(this.openModal).catch(() => { /* do nothing */}));
+  //   this.$eventBus.$off('modal-close', key => this.isForThisModal(key).then(this.closeButtonPressed).catch(() => { /* do nothing */}));
+  //   this.$eventBus.$off('modal-close-all', this.closeModal);
+  // }
 }
