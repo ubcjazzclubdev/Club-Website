@@ -1,4 +1,5 @@
-import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
+import { Vue, Component} from 'vue-property-decorator'
+import {bus} from "@/main";
 
 
 /**
@@ -16,20 +17,33 @@ import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
  *   
  */
 @Component({
-  name: 'modal'
+  name: 'modal',
+  props: ["modal-id"],
+  data: function () {
+    return {
+      modalState: false
+    }
+  },
 })
 export default class Modal extends Vue {
-  modalState = false;
+  confirmationModal = false;
+  callback(id: string) : void {
+    if(id === this.$props.modalId) {
+      console.log("callback "+id);
+      this.$data.modalState = true;
+    }
+  };
 
-  // created() {
-  //   this.$eventBus.$on('modal-open', key => this.isForThisModal(key).then(this.openModal).catch(() => { /* do nothing */}));
-  //   this.$eventBus.$on('modal-close', key => this.isForThisModal(key).then(this.closeButtonPressed).catch(() => { /* do nothing */}));
-  //   this.$eventBus.$on('modal-close-all', this.closeModal);
-  // }
+  created() {
+    bus.$on('modal-open', this.callback);
+  }
 
-  // beforeDestroy() {
-  //   this.$eventBus.$off('modal-open', key => this.isForThisModal(key).then(this.openModal).catch(() => { /* do nothing */}));
-  //   this.$eventBus.$off('modal-close', key => this.isForThisModal(key).then(this.closeButtonPressed).catch(() => { /* do nothing */}));
-  //   this.$eventBus.$off('modal-close-all', this.closeModal);
-  // }
+  destroy() {
+    bus.$off('modal-open', this.callback);
+  }
+
+  hide() : void {
+    console.log("hide");
+    this.$data.modalState = false;
+  }
 }

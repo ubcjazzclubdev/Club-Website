@@ -3,6 +3,7 @@ import App from "./App.vue";
 import Router from "./router";
 
 Vue.config.productionTip = false;
+export const bus = new Vue();
 
 new Vue({
   data: {
