@@ -79,14 +79,24 @@
       .footer_p {
         font-family: 'Calibri';
         font-size: calc(0.7 * 2vw);
+
+        a {
+          color: inherit;
+        }
       }
 
       input[type="text"] {
         border-radius: 10px;
         background-color: var(--club-grey);
+        padding: 5px;
+        color: white;
         width: 45%;
         height: 3vh;
         border-style: unset;
+
+        &:focus {
+          outline: none !important;
+        }
       }
     }
   }
