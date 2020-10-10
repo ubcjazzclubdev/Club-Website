@@ -51,7 +51,8 @@ export default class Contact extends Vue {
       sentTrue!.classList.remove("hide");
       form.reset();
     } else {
-      let output = "Angery >:(<br/>";
+      // let output = "Angery >:(<br/>";
+      let output = "";
       this.errors.forEach(function (err) {
         output += err;
         output += "<br/>";
