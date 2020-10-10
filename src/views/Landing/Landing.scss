@@ -179,8 +179,8 @@
         display: inline-block;
 
         &:hover {
-          width: 102%;
-          cursor: pointer;
+          transform: scale(1.1);
+          // cursor: pointer;
         }
       }
 
