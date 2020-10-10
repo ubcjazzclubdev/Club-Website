@@ -1,6 +1,6 @@
 import { Component, Vue } from "vue-property-decorator";
 import Modal from '@/components/modal/modal.vue'
-import {bus} from "@/main";
+import { bus } from "@/main";
 
 @Component
 ({
@@ -63,7 +63,7 @@ export default class Gallery extends Vue {
   modalImage(event: any) : void  {
     const image:any = event.target;
     const id = image.getAttribute("modal-id");
-    console.log("emit " + id);
+    // console.log("emit " + id);
     bus.$emit("modal-open", id);
   }
 }
