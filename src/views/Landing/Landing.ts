@@ -3,6 +3,6 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 @Component
 export default class Landing extends Vue {
   redirect() {
-    window.location.href = "/events";
+    window.location.href = "/gallery";
   }
 }
