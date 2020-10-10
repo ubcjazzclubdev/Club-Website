@@ -69,49 +69,131 @@ $background-color: var(--club-black);
     padding-left: calc(10px + env(safe-area-inset-left, 0));
     padding-right: calc(10px + env(safe-area-inset-right, 0));
   }
+}
 
-  &.small-modal {
-    height: unset;
-    height: 250px;
-    width: 60%;
-    border-radius: 10px;
-    margin: auto;
-    margin-top: calc(50vh - 125px);
-    
-    & > div {
-      height: 100%;
-      width: 100%;
+#close-button {
+  position: absolute;
+  top: 0;
 
-      .button-container {
-        display: flex;
-        position: absolute;
-        bottom: 0;
-        width: calc(100% - 20px);
-        flex-direction: column;
-        height: 105px;
+  // Center align absolute element
+  left: 0;
+  right: 0;
+  margin: auto;
 
-        button {
-          margin-top: 10px;
+  transition: all 0.3s;
+  font-family: Built-Tilting;
+  font-size: 3vh;
+  color: white;
+  background-color: transparent;
+  border: none;
 
-          &.cancel {
-            border-color: $grey-text;
-            color: $grey-text;
+  & > p {
+    transition: all 0.3s;
+    padding: 1vw;
 
-            &:hover {
-              background-color: $grey-text;
-              color: $background-color;
-            }
-          }
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    &:hover {
+      cursor: pointer;
+      padding: 1.25vw;
+      background-color: rgba(184, 15, 10, 0.6);
+    }
+  }
+}
+
+.gallery_container {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 100%;
+
+  .gallery_photos {
+    position: relative;
+    display: inline-block;
+    height: 65vh;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    .nav_button {
+      $b_radius: 10px;
+      transition: all 0.3s;
+      position: absolute;
+      top: 45%;
+
+      padding-top: 2vw;
+      padding-bottom: 2vw;
+
+      border: none;
+      opacity: .2;
+      background-color: black;
+      color: white;
+
+      &:hover {
+        opacity: 1;
+        background-color: rgba(0,0,0,0.8);
+        cursor: pointer;
+      }
+
+      &.left {
+        left: 0;
+        padding-left: 1vw;
+        border-top-right-radius: $b_radius;
+        border-bottom-right-radius: $b_radius;
+      }
+
+      &.right {
+        right: 0;
+        padding-right: 1vw;
+        border-top-left-radius: $b_radius;
+        border-bottom-left-radius: $b_radius;
+      }
+    }
+  }
+
+  .gallery_thumbnails {
+    position: relative;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .thumbnails {
+      display: inline-box;
+      height: 9vh;
+      padding-top: 3vh;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      & > img {
+        transition: all 0.3s;
+        max-width: 100%;
+        max-height: 100%;
+        margin-left: 1vw;
+        margin-right: 1vw;
+
+        &:hover{
+          cursor: pointer;
+          transform: translateY(-1vh);
+        }
+
+        &.focus {
+          outline: solid 5px var(--club-yellow);
+          outline-offset: 3px;
+          transform: translateY(-1vh);
         }
       }
     }
 
-    
+    .number {
+      margin-top: 1vw;
+    }
   }
-}
-
-#close-button {
-  color: $grey-text;
-  background-color: transparent;
-  border: none;  
 }

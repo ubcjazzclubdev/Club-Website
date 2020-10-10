@@ -1,15 +1,14 @@
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import Modal from '@/components/modal/modal.vue'
-
+import { bus } from "@/main";
 
 @Component
-// ({
-//   components: {
-//       'modal': Modal
-//   }
-// })
+({
+  components: {
+      'modal': Modal
+  },
+})
 export default class Gallery extends Vue {
-
   currImg = "";
   currIdx = 0;
   currSize = 0;
@@ -59,5 +58,12 @@ export default class Gallery extends Vue {
         require("../../assets/images/guitartime.jpg"),
       ]
     }
+  }
+
+  modalImage(event: any) : void  {
+    const image:any = event.target;
+    const id = image.getAttribute("modal-id");
+    // console.log("emit " + id);
+    bus.$emit("modal-open", id);
   }
 }
