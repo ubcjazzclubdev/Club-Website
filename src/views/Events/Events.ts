@@ -29,7 +29,7 @@ export default class Events extends Vue {
                   first : "first",
                   month : "September",
                   date : "30",
-                  image : require("../../assets/images/timeline/2019_christmas.jpg"),
+                  image : require("../../assets/images/timeline/2020_september_rain.jpg"),
                   title : "September in the rain",
                   desc : "After a month of virtual outreach and promotions, we held our first members-only social / icebreaker for the 2020W school year. Participants had the chance to mingle, compete, play games and win prizes. Newcomers in particular had their first opportunity to connect with their new community."
                 },
@@ -37,7 +37,7 @@ export default class Events extends Vue {
                   first : "",
                   month : "August",
                   date : "29",
-                  image : require("../../assets/images/timeline/2019_christmas.jpg"),
+                  image : require("../../assets/images/timeline/2020_august_social.jpg"),
                   title : "The Jazz Must Go On: August Social",
                   desc : "To wrap up the unique 2020 summer, we held a virtual social for our returning members on Zoom. We had a combination of large group games (jazz bingo anyone?) and breakout room competitions where people had the chance to win prizes including a free club membership for 2020/21!"
                 },
@@ -45,7 +45,7 @@ export default class Events extends Vue {
                   first : "",
                   month : "August",
                   date : "16",
-                  image : require("../../assets/images/timeline/2019_christmas.jpg"),
+                  image : require("../../assets/images/timeline/2020_quarantunez_3.jpg"),
                   title : "Quarantunez: Summer Series III",
                   desc : "Over the summer, Vancouver-based club execs live streamed socially distant, face mask-casual jams on Instagram Live. Viewers had the chance to interact with our musicians live via the chat, request songs, and bask in the familiar jazz club vibes. Luckily, our execs in Vancouver also constitute each other’s small social bubbles."
                 },
@@ -53,7 +53,7 @@ export default class Events extends Vue {
                   first : "",
                   month : "July",
                   date : "26",
-                  image : require("../../assets/images/timeline/2019_christmas.jpg"),
+                  image : require("../../assets/images/timeline/2020_quarantunez_2.jpg"),
                   title : "Quarantunez: Summer Series II",
                   desc : "Over the summer, Vancouver-based club execs live streamed socially distant, face mask-casual jams on Instagram Live. Viewers had the chance to interact with our musicians live via the chat, request songs, and bask in the familiar jazz club vibes. Luckily, our execs in Vancouver also constitute each other’s small social bubbles."
                 },
@@ -61,7 +61,7 @@ export default class Events extends Vue {
                   first : "",
                   month : "June",
                   date : "20",
-                  image : require("../../assets/images/timeline/2019_christmas.jpg"),
+                  image : require("../../assets/images/timeline/2020_quarantunez_1.jpg"),
                   title : "Quarantunez: Summer Series",
                   desc : "Over the summer, Vancouver-based club execs live streamed socially distant, face mask-casual jams on Instagram Live. Viewers had the chance to interact with our musicians live via the chat, request songs, and bask in the familiar jazz club vibes. Luckily, our execs in Vancouver also constitute each other’s small social bubbles."
                 }
