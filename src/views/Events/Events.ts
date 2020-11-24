@@ -16,6 +16,17 @@ export default class Events extends Vue {
     }
   }
 
+  /**
+   * Return the events data for the timeline on the page
+   * @return allEvents : in order to generate the correct number of divs
+   * @return eventYear : in order to include style separation for different years
+   * Each eventYear item includes the year definition and whether or not a separation
+   *    gap is required.
+   * For each event make sure to include whether or not its the first entry, because
+   *    there is special styling for the first event of each year.
+   * For the image property make sure to use require otherwise the absolute path will
+   *    be used and it won't function properly.
+   */
   data() {
     return {
       allEvents : [
