@@ -20,6 +20,14 @@
     background-color: black;
     opacity: 0.7;
   }
+
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 1024px)
+  {
+    background-attachment: unset !important;
+    background-position: center top !important;
+  }
 }
 
 .hide {
