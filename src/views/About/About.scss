@@ -1,8 +1,7 @@
 .container {
   position: relative;
   color: white;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   background-color: var(--club-dark-grey);
   font-family: "Arial";
 
@@ -34,6 +33,9 @@
 
   .top_section {
     position: relative;
+    margin-left: 15vw;
+    margin-right: 15vw;
+
     .circle {
       position: absolute;
       opacity: 0.5;
@@ -67,12 +69,8 @@
     .description {
       position: relative;
       z-index: 5;
-      width: 70%;
       padding-top: 17vw;
       padding-bottom: 20vw;
-      margin-left: auto;
-      margin-right: auto;
-  
       font-size: 1.6vw;
     }
   
