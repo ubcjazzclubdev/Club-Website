@@ -1,10 +1,10 @@
 .container {
   position: relative;
   color: white;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   background-color: var(--club-dark-grey);
   font-family: Built-Tilting;
+  font-style: italic;
 
   // Divider Parallax with text overlay
   .divider {
@@ -19,7 +19,6 @@
       width: 100%;
 
       color: white;
-      font-family: Built-Tilting;
       font-size: 6vw;
     }
 
