@@ -37,5 +37,11 @@ export default class App extends Vue {}
   background-color: #333333;
   position: relative;
   height: 100%;
+
+  min-width: 1280px;
+  max-width: 1920px;
+  max-height: 1080px;
+  min-height: 800px;
+  margin: 0 auto;
 }
 </style>
