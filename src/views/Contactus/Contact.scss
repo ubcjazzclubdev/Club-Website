@@ -119,6 +119,7 @@
           margin-top: 1vw;
 
           font-family: Built-Tilting;
+          font-style: italic;
           font-size: 3vw;
         }
       }
@@ -144,6 +145,70 @@
               color: var(--club-yellow);
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    font-size: 12pt;
+    padding: 20em 5em 1em 5em;
+  
+    // Contact title section css
+    #contact_section_title {
+      padding-bottom: 30vh;
+  
+      #contact_title {
+        font-size: 7em;
+      }
+    
+      #contact_caption {
+        font-size: 2em;
+      }
+    }
+  
+    // Contact form section css
+    .contact_section_form {
+      padding-bottom: 10em;
+  
+      .contact_form_title {
+        font-size: 2.5em;
+        width: 50%;
+        padding-bottom: 1em;
+      }
+  
+      .contact_form_container {
+        font-size: 1.5em;
+  
+        #contact_form_left {
+    
+          #contact_form {
+            padding-right: 2em;
+            padding-left: 2em;
+      
+            .feedback-input {
+              font-size: 1em;
+            }
+            
+            [type="submit"] {
+              font-size: 1em;
+            }
+          }
+  
+          .hide {
+            display: none;
+          }
+  
+          .submitted {
+            margin-top: 1vw;
+            font-size: 2em;
+          }
+        }
+  
+        #contact_form_right {
+          padding-left: 2em;
         }
       }
     }

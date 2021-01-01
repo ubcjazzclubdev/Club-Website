@@ -134,3 +134,67 @@
     margin-bottom: 0;
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .timeline_wrapper {
+    font-size: 12pt;
+    margin-bottom: 1.5rem;
+  
+    max-width: 90%;
+    padding: 3em 2em 3em;
+  
+    .timeline {
+      padding-top: 1em;
+      padding-bottom: 3em;
+      margin-top: 5em;
+  
+      .timeline_year_w {
+        .timeline_year {
+          font-size: 2em;
+        }
+  
+        &.separator {
+          margin-top: 4em;
+        }
+      }
+  
+      .timeline_group {
+        margin-top: 1.5em;
+        font-size: 2em;
+  
+        .timeline_month {
+          margin-right: 2em;
+        }
+  
+        .timeline_date {
+          max-height: 1.5em;
+          min-width: 1.5em;
+          margin-right: 4vw;
+  
+          .date {
+            margin-left: -0.4vw;
+            max-height: 1.0em;
+          }
+        }
+  
+        .timeline_box {
+          padding: 0.5em;
+  
+          .right {
+            .title {
+              font-family: Built-Tilting;
+              font-size: 1.25em;
+              color: var(--club-yellow);
+            }
+  
+            .desc {
+              margin-top: 1vw;
+  
+              font-size: 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

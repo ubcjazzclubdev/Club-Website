@@ -124,3 +124,35 @@ nav {
     }
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  nav {
+    font-size: 12pt;
+    padding-top: 0.5em;
+  
+    ul {
+      li {
+        font-size: 1.5em;
+        #logo {
+          #menu-icon {
+            width: 3em;
+          }
+
+          #menu-icon-text {
+            font-size: 1em;
+            letter-spacing: 0.1em;
+            padding: 0.5em;
+          }
+        }
+  
+        .dropdown {
+          .dropdown-list {
+            transition: max-height .5s;
+            max-height: 35em;
+            font-size: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}

@@ -176,3 +176,118 @@
     }
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    font-size: 12pt;
+  
+    // Divider Parallax with text overlay
+    .divider {
+      background-attachment: unset !important;
+      background-position: center top !important;
+      height: 15em;
+  
+      .divider_text {
+        top: 32%;
+        font-size: 4em;
+      }
+    }
+  
+    .top_section {
+      margin-left: 11em;
+      margin-right: 11em;
+    
+      #circle1 {
+        width: 15%;
+        top: 12%;
+        left: 5%;
+      }
+    
+      #circle2 {
+        width: 30%;
+        top: 20%;
+        left: -10%;
+      }
+      
+      #circle3 {
+        width: 37%;
+        top: 27%;
+        right: -5%;
+      }
+      
+      #circle4 {
+        width: 15%;
+        top: 60%;
+        right: -7%;
+      }
+    
+      .description {
+        padding-top: 10em;
+        padding-bottom: 10em;
+        font-size: 1.5em;
+      }
+    
+      .description_ext {
+        font-size: 1.75em;
+        
+        .text_1 {
+          padding-bottom: 3em;
+        }
+    
+        .text_2 {
+          padding-bottom: 1em;
+        }
+    
+        .text_3 {
+          padding-bottom: 2em;
+        }
+      }
+    }
+  
+    .ratings {
+      margin-top: 0em;
+      margin-bottom: 10em;
+      padding-top: 8em;
+      padding-bottom: 20em;
+  
+      background-image: url(../../assets/review_frame.png);
+      background-repeat: no-repeat;
+      background-position: center top !important;
+      background-size: 108%;
+  
+      .review{
+        font-size: 2em;
+        padding-top: 1.5em;
+  
+        .star_rating {
+          width: 50%;
+
+          img {
+            width: 50%;
+          }
+        }
+  
+        .desc {
+          padding-top: 0.25em;
+          .author {
+            margin-top: 0.5em;
+          }
+        }
+      }
+    }
+  
+    .awards_section {
+      margin-top: 5em;
+      margin-bottom: 15em;
+  
+      .awards_row {
+  
+        .award {
+          padding-left: 2em;
+          padding-right: 2em;
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}

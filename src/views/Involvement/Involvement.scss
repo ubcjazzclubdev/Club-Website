@@ -137,3 +137,85 @@
 
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    font-size: 12pt;
+  
+    // Divider Parallax with text overlay
+    .divider {
+      height: 15em;
+
+      .divider_text {
+        top: 32%;
+        font-size: 4em;
+      }
+  
+      &.flow {
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+  
+      &.merch {
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  
+    // links at the top of the page
+    .links_wrapper {
+      padding-top: 2em;
+      padding-bottom: 2em;
+  
+      .link_container {
+        .link {
+          font-size: 3em;
+        }
+      }
+    }
+  
+    // infographic
+    .flow_container {
+      margin-top: 11em;
+      margin-bottom: 15em;
+  
+      .desc {
+        font-size: 3em;
+        margin-bottom: 4em;
+      }
+    }
+  
+    // merch section
+    .merch_container {
+      margin-top: 5em;
+      margin-bottom: 5em;
+  
+      .title {
+        margin-top: 3em;
+        font-size: 3em;
+      }
+  
+      .desc {
+        margin-top: 5em;
+        font-size: 1.5em;
+      }
+  
+      .prices {
+        margin-top: 3em;
+        font-size: 3em;
+      }
+  
+      img {
+        margin-top: 5em;
+        width: 90%;
+      }
+  
+      .desc_2 {
+        margin-top: 3em;
+        margin-bottom: 3em;
+        font-size: 3em;
+      }
+  
+    }
+  }
+}
