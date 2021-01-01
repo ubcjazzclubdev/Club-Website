@@ -6,6 +6,7 @@
   overflow-y: auto;
   background-color: var(--club-dark-grey);
   font-family: Built-Tilting;
+  font-style: italic;
 
   // Divider Parallax with text overlay
   .divider {
@@ -21,6 +22,7 @@
 
       color: white;
       font-family: Built-Tilting;
+      font-style: italic;
       font-size: 6vw;
 
       & > p {
@@ -230,6 +232,147 @@
         }
       }
       font-size: 5vw;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    font-size: 12pt;
+  
+    // Divider Parallax with text overlay
+    .divider {
+      height: 15em;
+  
+      .divider_text {
+        top: 32%;
+        font-size: 4em;
+      }
+  
+      &.albums {
+        background: linear-gradient(
+                rgba(0, 0, 0, 0.5), 
+                rgba(0, 0, 0, 0.5)
+              ),
+              url("../../assets/images/christmas_6.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+  
+      &.videos {
+        background: linear-gradient(
+                rgba(0, 0, 0, 0.7), 
+                rgba(0, 0, 0, 0.7)
+              ),
+              url("../../assets/images/imagine_day_4.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+  
+      &.history {
+        background: linear-gradient(
+                rgba(0, 0, 0, 0.5), 
+                rgba(0, 0, 0, 0.5)
+              ),
+              url("../../assets/images/jam_4.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+    }
+  
+    // featured photos
+    .featured_wrapper {
+      padding-top: 2em;
+      padding-bottom: 7em;
+  
+      .featured_photo {
+        margin-top: 8em;
+        margin-bottom: 2em;
+        margin-right: 7vw;
+  
+        width: 50%;
+        max-height: 35em;
+        min-height: 35em;
+  
+        .f_img {
+          max-height: 30em;
+          max-width: 37em;
+        }
+  
+        .arrows {
+          margin-bottom: 5em;
+          margin-right: 3em;
+  
+          .arrow {
+            border-top: 1.5em solid transparent;
+            border-bottom: 1.5em solid transparent;
+  
+            margin-left: .5em;
+            margin-right: .5em;
+          }
+  
+          .left {
+            border-left: 2.5em solid white;
+  
+            &:hover {
+              border-left: 2.5em solid var(--club-yellow);
+            }
+          }
+  
+          .right {
+            border-right: 2.5em solid white;
+  
+            &:hover {
+              border-right: 2.5em solid var(--club-yellow);
+            }
+          }
+        }
+      }
+    }
+  
+    // regular events
+    .albums_container {
+      margin-top: 5em;
+      margin-bottom: 5em;
+  
+      .album_row {
+        width: 100%;
+        
+        .album {
+          min-height: 35em;
+          max-height: 35em;
+  
+          .e_title {
+            font-size: 4em;
+          }
+
+          .e_desc {
+            margin-top: 1em;
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  
+    // video
+    .vid_container {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 11em;
+      margin-bottom: 11em;
+      width: 80%;
+  
+      .video {
+        width: 100%;
+        height: 45em;
+      }
+  
+      .vid_desc {
+        font-size: 5em;
+      }
     }
   }
 }

@@ -5,6 +5,7 @@
   overflow-y: auto;
   background-color: var(--club-dark-grey);
   font-family: Built-Tilting;
+  font-style: italic;
 
   // Divider Parallax with text overlay
   .divider {
@@ -141,6 +142,102 @@
           font-family: "Arial";
           font-style: italic;
           font-size: 1.1vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    font-size: 12pt;
+  
+    // Divider Parallax with text overlay
+    .divider {
+      height: 15em;
+
+      .divider_text {
+        top: 32%;
+        font-size: 4em;
+      }
+  
+      &.calendar {
+        background: linear-gradient(
+                rgba(0, 0, 0, 0.5), 
+                rgba(0, 0, 0, 0.5)
+              ),
+              url("../../assets/images/social_10.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+  
+      &.reg_events {
+        background: linear-gradient(
+                rgba(0, 0, 0, 0.7), 
+                rgba(0, 0, 0, 0.7)
+              ),
+              url("../../assets/images/jam_6.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+  
+      &.history {
+        background: linear-gradient(
+                rgba(0, 0, 0, 0.5), 
+                rgba(0, 0, 0, 0.5)
+              ),
+              url("../../assets/images/jam_4.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+    }
+  
+    // links at the top of the page
+    .links_wrapper {
+      padding-top: 2em;
+      padding-bottom: 2em;
+  
+      .link_container {
+        .link {
+          font-size: 3em;
+        }
+      }
+    }
+  
+    // calendar
+    .cal_container {
+      margin-top: 8em;
+      margin-bottom: 8em;
+      width: 100%;
+    }
+  
+    // regular events
+    .reg_events_container {
+      margin-top: 5em;
+      margin-bottom: 10em;
+  
+      .events {
+        width: 90%;
+  
+        .event {
+          width: 32%;
+  
+          .e_title {
+            font-size: 5em;
+          }
+  
+          .e_desc {
+            margin-top: 3vw;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: "Arial";
+            font-style: italic;
+            font-size: 1.1em;
+          }
         }
       }
     }

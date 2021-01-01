@@ -225,5 +225,62 @@
       }
     }
   }
+}
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    font-size: 12pt;
+    // Intro Content
+    .intro_content {
+      margin-left: 11em;
+      margin-right: 11em;
+      font-size: 1em;
+  
+      .space {
+        padding-bottom: 40vh;
+      }
+    }
+  
+    // Divider Parallax for ios need to disable parallax
+    .divider {
+      background-attachment: unset !important;
+      background-position: center top !important;
+      min-height: 15em;
+  
+      .divider_text {
+        top: 32%;
+        font-size: 4em;
+      }
+    }
+  
+    // Events Content
+    .events_content {
+  
+      .events_description {
+        padding-top: 20vw;
+        padding-bottom: 18vw;
+        font-size: 1.25em;
+  
+        border-bottom: var(--club-yellow) 0.5em solid;
+      }
+  
+      .events_display {
+        padding-top: 5em;
+  
+        tr {
+          padding: 1em;
+        }
+      }
+  
+      .events_load {
+        margin-right: 0.75em;
+        margin-top: 0.25em;
+        margin-bottom: 5em;
+  
+        padding: 0.5em;
+
+        font-size: 2em;
+      }
+    }
+  }
 }
