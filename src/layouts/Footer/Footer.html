@@ -38,8 +38,11 @@
       <p class="footer_h2">
         subscribe to our newsletter
       </p>
-      <input type="text">
-      <input type="submit" value=">">
+      <form id="contact_form" @submit.prevent="staticSubmit" enctype="text/plain" target="hidden_iframe">
+        <input id="email" name="entry.1374192717" type="text">
+        <input type="submit" value=">">
+      </form>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
     </div>
   </div>
   <div class="footer_copyright">
