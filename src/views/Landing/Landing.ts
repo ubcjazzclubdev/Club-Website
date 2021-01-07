@@ -5,4 +5,8 @@ export default class Landing extends Vue {
   redirect() {
     window.location.href = "/gallery";
   }
+
+  mounted() {
+    return;
+  }
 }

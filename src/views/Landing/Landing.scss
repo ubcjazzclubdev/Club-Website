@@ -232,12 +232,51 @@
     font-size: 12pt;
     // Intro Content
     .intro_content {
-      margin-left: 11em;
-      margin-right: 11em;
-      font-size: 1em;
+      margin-left: 11rem;
+      margin-right: 11rem;
+      font-size: 1.25em;
+      height: 65rem;
+
+      #circle2 {
+        // Big Background circle
+        top: -10%;
+        right: 45%;
+        width: 145%;
+      }
+
+      .intro_1 {
+        position: relative;
+        padding-top: 12rem;
+      }
+  
+      .intro_2 {
+        padding-top: 10rem;
+  
+        .table {
+  
+          .circle {
+            top: -4rem;
+          }
+  
+          .table_right {
+            margin-top: 1.5rem;
+          }
+        }
+      }
+  
+      .intro_3 {
+        padding-top: 20rem;
+        padding-right: 2rem;
+  
+        .circle {
+          top: 60%;
+          right: 0;
+          width: 30%;
+        }
+      }
   
       .space {
-        padding-bottom: 40vh;
+        padding-bottom: 10rem;
       }
     }
   
