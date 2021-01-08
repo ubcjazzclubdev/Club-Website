@@ -2,7 +2,10 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class Team extends Vue {
+  eEggClass = "meme";
+  eEggCount = 30;
   description = "";
+  clickCount = 0;
 
   created() {
     this.description = `
@@ -14,5 +17,22 @@ export default class Team extends Vue {
     that foster connections among our members and community, organized
     in collaboration with like-minded clubs.
     `
+  }
+
+  count(e : Event) {
+    const sFrame = e.target as HTMLDivElement;
+    const sPortrait = sFrame.parentElement as HTMLDivElement;
+    this.clickCount += 1;
+    if (this.clickCount >= this.eEggCount) {
+      this.togglePicture(sPortrait);
+    }
+  }
+
+  togglePicture(selectedDiv : HTMLDivElement) {
+    if (selectedDiv.classList.contains(this.eEggClass)) {
+      selectedDiv.classList.remove(this.eEggClass);
+    } else {
+      selectedDiv.classList.add(this.eEggClass);
+    }
   }
 }
