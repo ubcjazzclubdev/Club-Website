@@ -33,11 +33,33 @@ export default class Events extends Vue {
         {
           eventYear : [
             { 
-              year : "2020",
+              year : "2021",
               sep : "",
               events : [
                 {
                   first : "first",
+                  month : "January",
+                  date : "29",
+                  image : require("../../assets/images/timeline/2021_housewarming.jpg"),
+                  title : "A Harmonic Housewarming",
+                  desc : "In the midst of trying times -- a global pandemic and lockdown no less -- it’s time to bring the hibernating jazz members together again for term 2. This one’s special because it’ll be the first opportunity for new members to meet existing members and executives. Huddle up, we’re going to have a good time!"
+                }
+              ]
+            },
+            { 
+              year : "2020",
+              sep : "separator",
+              events : [
+                {
+                  first : "first",
+                  month : "November",
+                  date : "28",
+                  image : require("../../assets/images/timeline/2020_jazz_halls.jpg"),
+                  title : "Jazz the Halls",
+                  desc : "Our annual Holiday Season event! We brought our members together with holiday themed jazzpardy (jeopardy + jazz). This intense game had all of our participants at the edge of their seats as they competed in trivia for a gift card."
+                },
+                {
+                  first : "",
                   month : "September",
                   date : "30",
                   image : require("../../assets/images/timeline/2020_september_rain.jpg"),
