@@ -22,6 +22,17 @@
       font-size: 6vw;
     }
 
+    // &.info {
+    //   background: linear-gradient(
+    //           rgba(0, 0, 0, 0.7), 
+    //           rgba(0, 0, 0, 0.7)
+    //         ),
+    //         url("../../assets/images/imagine_day/imagine_day_9.jpg");
+    //   background-size: cover;
+    //   background-attachment: fixed;
+    //   background-repeat: no-repeat;
+    // }
+
     &.flow {
       background: linear-gradient(
               rgba(0, 0, 0, 0.7), 
@@ -107,6 +118,17 @@
     margin-top: 15vw;
     margin-bottom: 35vw;
     width: 85%;
+
+    a {
+      text-decoration: none;
+      color: var(--club-yellow);
+      &:hover {
+        transition: all 0.3s;
+        color: white;
+        // box-shadow: -10px 10px 4px 2px rgba(0, 0, 0, 0.3);
+        text-decoration: underline;
+      }
+    }
 
     .title {
       font-size: 4vw;

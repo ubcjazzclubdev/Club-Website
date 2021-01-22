@@ -160,39 +160,6 @@
         top: 32%;
         font-size: 4em;
       }
-  
-      &.calendar {
-        background: linear-gradient(
-                rgba(0, 0, 0, 0.5), 
-                rgba(0, 0, 0, 0.5)
-              ),
-              url("../../assets/images/social_10.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-      }
-  
-      &.reg_events {
-        background: linear-gradient(
-                rgba(0, 0, 0, 0.7), 
-                rgba(0, 0, 0, 0.7)
-              ),
-              url("../../assets/images/jam_6.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-      }
-  
-      &.history {
-        background: linear-gradient(
-                rgba(0, 0, 0, 0.5), 
-                rgba(0, 0, 0, 0.5)
-              ),
-              url("../../assets/images/jam_4.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-      }
     }
   
     // links at the top of the page
