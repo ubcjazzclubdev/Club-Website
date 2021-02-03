@@ -6,6 +6,59 @@
   font-family: Built-Tilting;
   font-style: italic;
 
+  // Divs that are meant to fit an entire row
+  .row {
+    font-size: 12pt;
+    width: 100%;
+
+    &.title {
+      margin-top: 10vw;
+      margin-bottom: 10vw;
+      font-size: 4vw;
+    }
+
+    &.left {
+      text-align: left;
+    }
+
+    h1 {
+      margin: 3vw;
+      font-size: 5vw; 
+    }
+
+    h2 {
+      margin: 3vw;
+      font-size: 4vw;
+    }
+
+    h3 {
+      margin: 3vw;
+      font-size: 2vw;
+    }
+
+    p {
+      margin: 2vw;
+      font-size: 2vw;
+    }
+
+    .inline {
+      display: inline;
+    }
+  }
+
+  // For inline manipulation
+  span {
+
+    &.yellow {
+      color: var(--club-yellow);
+    }
+
+    &.space {
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
+  }
+
   // Divider Parallax with text overlay
   .divider {
     position: relative;
@@ -111,6 +164,44 @@
     }
   }
 
+  // members section
+  .member_container {
+    padding-top: 5vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
+
+    a {
+      &.m_link {
+        transition: all 0.4s;
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--club-yellow);
+        }
+      }
+
+      &.g_link {
+        transition: text-decoration 0.4s;
+        display: inline-block;
+        text-decoration: none;
+        color: var(--club-yellow);
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--club-yellow);
+        }
+      }
+    }
+
+    .mem_link {
+      margin-top: 10vw;
+      margin-bottom: 10vw;
+    }
+  }
+
   // merch section
   .merch_container {
     margin-left: auto;
@@ -150,6 +241,16 @@
     img {
       margin-top: 10vw;
       width: 50%;
+
+      &.sticker {
+        margin-top: 1vw;
+        transition: all 0.3s;
+        width: 30%;
+
+        &:hover {
+          width: 40%;
+        }
+      }
     }
 
     .desc_2 {
@@ -164,6 +265,38 @@
   .container {
     font-size: 12pt;
   
+    // Divs that are meant to fit an entire row
+  .row {
+    font-size: 12pt;
+    width: 100%;
+
+    &.title {
+      margin-top: 10rem;
+      margin-bottom: 10rem;
+      font-size: 4rem;
+    }
+
+    h1 {
+      margin: 3rem;
+      font-size: 5rem; 
+    }
+
+    h2 {
+      margin: 3rem;
+      font-size: 4rem;
+    }
+
+    h3 {
+      margin: 3rem;
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 2rem;
+      font-size: 2rem;
+    }
+  }
+
     // Divider Parallax with text overlay
     .divider {
       height: 15em;
@@ -174,6 +307,11 @@
       }
   
       &.flow {
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      &.member {
         background-size: cover;
         background-repeat: no-repeat;
       }
@@ -206,6 +344,18 @@
         margin-bottom: 4em;
       }
     }
+
+    // members section
+  .member_container {
+    padding-top: 5rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+
+    .mem_link {
+      margin-top: 10rem;
+      margin-bottom: 10rem;
+    }
+  }
   
     // merch section
     .merch_container {
