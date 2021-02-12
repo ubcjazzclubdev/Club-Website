@@ -233,6 +233,11 @@
       font-style: italic;
     }
 
+    .desc_2 {
+      margin-top: 10vw;
+      font-size: 3.5vw;
+    }
+
     .prices {
       margin-top: 10vw;
       font-size: 3.5vw;
@@ -253,9 +258,21 @@
       }
     }
 
-    .desc_2 {
-      margin-top: 10vw;
-      font-size: 3.5vw;
+    .past-stickers {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      width: 100%;
+
+      .sticker-past {
+        margin-top: 1vw;
+        transition: all 0.3s;
+        width: 10%;
+
+        &:hover {
+          width: 15%;
+        }
+      }
     }
 
   }
