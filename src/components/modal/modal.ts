@@ -17,6 +17,7 @@ import {bus} from "@/main";
 })
 
 export default class Modal extends Vue {
+
   // Intermediary var to prevent multiple require calls
   allSrcs : string[][] = [];
 
@@ -45,11 +46,10 @@ export default class Modal extends Vue {
       this.currSize = this.displayList.length;
       this.currLen = this.currSize - 1;
 
-
       this.$data.modalState = true;
     }
   }
-
+  
   /**
    * Next slide scroll
    */
