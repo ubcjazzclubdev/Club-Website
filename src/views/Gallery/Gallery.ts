@@ -8,11 +8,13 @@ import { bus } from "@/main";
       'modal': Modal
   },
 })
+
 export default class Gallery extends Vue {
   currImg = "";
   currIdx = 0;
   currSize = 0;
   featuredImgs : string[] = [];
+  timerId = 0;
 
   moveTo(refName : string) : void {
     // console.log(refName);
@@ -27,11 +29,12 @@ export default class Gallery extends Vue {
   }
 
   galleryNext() : void {
-    if ((this.currIdx + 1) > this.currSize) {
-      this.currIdx = 0;
-    } else {
-      this.currIdx++;
-    }
+    // if ((this.currIdx + 1) > this.currSize) {
+    //   this.currIdx = 0;
+    // } else {
+    //   this.currIdx++;
+    // }
+    this.currIdx = (this.currIdx += 1) % this.currSize
     this.currImg = this.featuredImgs[this.currIdx];
   }
 
@@ -44,10 +47,16 @@ export default class Gallery extends Vue {
     this.currImg = this.featuredImgs[this.currIdx];
   }
 
+  /**
+   * Gets all the featured photos
+   * Sets currentsize to featuredImgs.length for ease of access
+   * Sets featured images to auto change on a timer
+   */
   created() {
     this.featuredImgs = this.getPhotos().featuredPhotos as string[];
     this.currImg = this.featuredImgs[this.currIdx];
-    this.currSize = this.featuredImgs.length - 1;
+    this.currSize = this.featuredImgs.length;
+    this.timerId = setInterval(this.galleryNext, 5000);
   }
 
   getPhotos() {
@@ -63,7 +72,6 @@ export default class Gallery extends Vue {
   modalImage(event: any) : void  {
     const image:any = event.target;
     const id = image.getAttribute("modal-id");
-    // console.log("emit " + id);
     bus.$emit("modal-open", id);
   }
 }
