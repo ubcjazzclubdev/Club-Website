@@ -80,6 +80,11 @@ export default class Modal extends Vue {
    * Update the slides after next/prev
    */
   updateSlide() {
+    // Check if modal has been loaded
+    if (this.displayList.length == 0) {
+      return;
+    }
+
     let parent : Element | null;
     if (this.currElement == null) {
       parent = document.getElementsByClassName("thumbnails")[this.modId];
