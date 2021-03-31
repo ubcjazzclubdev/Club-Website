@@ -1,4 +1,7 @@
 .container {
+  // Divider brightness
+  $brightness: 0.5;
+
   position: relative;
   color: white;
   overflow: hidden;
@@ -59,55 +62,31 @@
     }
   }
 
-  // Divider Parallax with text overlay
-  .divider {
-    position: relative;
-    width: 100%;
-    height: 40vh;
-
-    .divider_text {
-      position: absolute;
-      top: 40%;
-
-      width: 100%;
-
-      color: white;
-      font-size: 6vw;
-    }
-
-    &.member {
-      background: linear-gradient(
-              rgba(0, 0, 0, 0.7), 
-              rgba(0, 0, 0, 0.7)
-            ),
-            url("../../assets/images/cozy_christmas/cozy_christmas_11.jpg");
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-    }
-
-    &.flow {
-      background: linear-gradient(
-              rgba(0, 0, 0, 0.7), 
-              rgba(0, 0, 0, 0.7)
-            ),
-            url("../../assets/images/christmas_1.jpg");
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-    }
-
-    &.merch {
-      background: linear-gradient(
-              rgba(0, 0, 0, 0.5), 
-              rgba(0, 0, 0, 0.5)
-            ),
-            url("../../assets/images/gallery_3.jpg");
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-    }
+  // Divider background images
+  .member {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, $brightness), 
+            rgba(0, 0, 0, $brightness)
+          ),
+          url("../../assets/images/cozy_christmas/cozy_christmas_11.jpg");
   }
+
+  .flow {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, $brightness), 
+            rgba(0, 0, 0, $brightness)
+          ),
+          url("../../assets/images/christmas_1.jpg");
+  }
+
+  .merch {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, $brightness), 
+            rgba(0, 0, 0, $brightness)
+          ),
+          url("../../assets/images/gallery_3.jpg");
+  }
+
 
   // links at the top of the page
   .links_wrapper {

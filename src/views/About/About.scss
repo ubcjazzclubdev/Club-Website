@@ -5,31 +5,12 @@
   background-color: var(--club-dark-grey);
   font-family: "Arial";
 
-  // Divider Parallax with text overlay
-  .divider {
-    position: relative;
-    background: linear-gradient(
+  .div_about {
+    background-image: linear-gradient(
               rgba(0, 0, 0, 0.5), 
               rgba(0, 0, 0, 0.5)
             ),
             url("../../assets/images/jam_5.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 40vh;
-
-    .divider_text {
-      position: absolute;
-      top: 40%;
-
-      width: 100%;
-
-      color: white;
-      font-family: Built-Tilting;
-      font-style: italic;
-      font-size: 5vw;
-    }
   }
 
   .top_section {
@@ -180,18 +161,6 @@
 @media screen and (min-width: 320px) and (max-width: 1024px) {
   .container {
     font-size: 12pt;
-  
-    // Divider Parallax with text overlay
-    .divider {
-      background-attachment: unset !important;
-      background-position: center top !important;
-      height: 15em;
-  
-      .divider_text {
-        top: 32%;
-        font-size: 4em;
-      }
-    }
   
     .top_section {
       margin-left: 11em;
