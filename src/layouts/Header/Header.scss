@@ -147,6 +147,30 @@ nav {
 
 // Mobile
 @media screen and (max-width: 767px) and (orientation: portrait) {
+  .arrow {
+    $arrow-size: 1.2vh;
+    display: inline-block;
+    width: 0;
+  
+    border-top: $arrow-size solid transparent;
+    border-bottom: $arrow-size solid transparent;
+    margin-left: 2vh;
+
+    transition: transform 0.5s;
+  
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.left {
+      border-left: $arrow-size + 0.75vh solid white;
+
+      &:hover {
+        border-left: $arrow-size + 0.75vh solid var(--club-yellow);
+      }
+    }
+  }
+
   nav {
     padding-top: 0.5em;
     font-size: 12pt;
@@ -188,7 +212,7 @@ nav {
       }
 
       .dropdown {
-        display: none;
+        display:none;
       }
 
       li:not(.logo) {
@@ -246,6 +270,15 @@ nav {
       padding-right: 3vw;
       padding-bottom: 2vw;
     }
+
+    .side-dropdown {
+      position: relative;
+      z-index: 0;
+      transition: all 0.7s;
+      transform: translateY(-20vh);
+
+      padding-left: 10%;
+    }
   }
 }
 
@@ -268,7 +301,13 @@ nav {
   }
 
   .menu-item {
+    position: relative;
+    z-index: 1;
     text-transform: uppercase;
+
+    transition: all 0.3s;
+
+    background-color: var(--club-dark-grey);
 
     text-align: left;
     font-size: 3vh;

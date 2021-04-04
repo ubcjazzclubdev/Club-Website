@@ -39,6 +39,23 @@ export default class Header extends Vue {
     }
   }
 
+  async displayDrop() {
+    const dropdown = document.querySelector('.side-dropdown')!;
+    const arrow = document.querySelector('.arrow')!;
+    if (dropdown.classList.contains("none")) {
+      dropdown.classList.remove("none");
+      await this.sleep(50);
+      dropdown.setAttribute("style", "transform: translateY(0vh);");
+      arrow.setAttribute("style", "transform: rotate(90deg);");
+    }
+    else {
+      arrow.setAttribute("style", "transform: rotate(0deg);");
+      dropdown.setAttribute("style", "transform: translateY(-20vh);");
+      await this.sleep(300);
+      dropdown.classList.add("none");
+    }
+  }
+
   sleep(ms : number) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
