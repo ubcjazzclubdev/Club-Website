@@ -31,7 +31,7 @@
       <div class="side-menu">
         <img class="close-btn" src="../../assets/images/graphics/icon_menu_close.png" @click="displayMenu()">
         <div class="menu-items-wrapper">
-          <div class="menu-item">
+          <div class="menu-item first">
             <a href="/">home</a>
           </div>
           <div class="menu-item">
@@ -39,8 +39,16 @@
             <div class="arrow left" @click="displayDrop()"></div>
           </div>
           <div class="side-dropdown none">
-            <div class="menu-item">our team</div>
-            <div class="menu-item">get involved</div>
+            <div class="menu-item">
+              <a href="/team">
+                our team
+              </a>
+            </div>
+            <div class="menu-item">
+              <a href="/involvement">
+                get involved
+              </a>
+            </div>
           </div>
           <div class="menu-item">
             <a href="/gallery">gallery</a>

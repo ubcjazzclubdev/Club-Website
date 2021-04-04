@@ -293,7 +293,7 @@ nav {
   font-family: "Trocchi", sans-serif;
 
   margin-top: 8vh;
-  padding: 3vh;
+  padding: 3vh 5vh 3vh 5vh;
 
   a {
     text-decoration: none;
@@ -314,5 +314,9 @@ nav {
 
     padding-top: 5vw;
     padding-bottom: 5vw;
+
+    &.first {
+      border-top: var(--club-yellow) solid 2px;
+    }
   }
 }
