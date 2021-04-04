@@ -1,4 +1,7 @@
 .container {
+  // divider brightness
+  $brightness: 0.5;
+
   position: relative;
   z-index: 20;
   color: white;
@@ -8,60 +11,28 @@
   font-family: Built-Tilting;
   font-style: italic;
 
-  // Divider Parallax with text overlay
-  .divider {
-    position: relative;
-    width: 100%;
-    height: 40vh;
+  .albums {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, $brightness), 
+            rgba(0, 0, 0, $brightness)
+          ),
+          url("../../assets/images/christmas_6.jpg");
+  }
 
-    .divider_text {
-      position: absolute;
-      top: 35%;
+  .videos {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, $brightness), 
+            rgba(0, 0, 0, $brightness)
+          ),
+          url("../../assets/images/imagine_day_4.jpg");
+  }
 
-      width: 100%;
-
-      color: white;
-      font-family: Built-Tilting;
-      font-style: italic;
-      font-size: 6vw;
-
-      & > p {
-        text-align: center;
-      }
-    }
-
-    &.albums {
-      background: linear-gradient(
-              rgba(0, 0, 0, 0.5), 
-              rgba(0, 0, 0, 0.5)
-            ),
-            url("../../assets/images/christmas_6.jpg");
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-    }
-
-    &.videos {
-      background: linear-gradient(
-              rgba(0, 0, 0, 0.7), 
-              rgba(0, 0, 0, 0.7)
-            ),
-            url("../../assets/images/imagine_day_4.jpg");
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-    }
-
-    &.history {
-      background: linear-gradient(
-              rgba(0, 0, 0, 0.5), 
-              rgba(0, 0, 0, 0.5)
-            ),
-            url("../../assets/images/jam_4.jpg");
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-    }
+  .history {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, $brightness), 
+            rgba(0, 0, 0, $brightness)
+          ),
+          url("../../assets/images/jam_4.jpg");
   }
 
   // featured photos
