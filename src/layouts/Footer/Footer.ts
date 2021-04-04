@@ -6,6 +6,12 @@ interface FormElements extends HTMLFormControlsCollection {
 
 @Component
 export default class Footer extends Vue {
+  copyright = "copyright ubcjazzclub 2021";
+
+  created() {
+    // to-do
+  }
+
   scrollToTop(): void {
     // Find the div#app element and scroll to it
     const element = this.$parent.$root.$el;
