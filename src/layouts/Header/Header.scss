@@ -61,7 +61,7 @@ nav {
       a {
         color: #FFF;
         text-decoration: none;
-        padding: 20px;
+        padding: 1vw;
         text-transform: uppercase;
         &:hover {
           transition: 0.2s;
@@ -102,6 +102,10 @@ nav {
           vertical-align: middle;
           text-align: left;
         }
+      }
+
+      &.space {
+        width: 5vw;
       }
 
       .dropdown {
@@ -172,6 +176,7 @@ nav {
   }
 
   nav {
+    background-color: rgba(0,0,0,0.5);
     padding-top: 0.5em;
     font-size: 12pt;
 
@@ -295,11 +300,6 @@ nav {
   margin-top: 8vh;
   padding: 3vh 5vh 3vh 5vh;
 
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
   .menu-item {
     position: relative;
     z-index: 1;
@@ -317,6 +317,15 @@ nav {
 
     &.first {
       border-top: var(--club-yellow) solid 2px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        color: var(--club-yellow);
+      }
     }
   }
 }
