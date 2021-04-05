@@ -56,6 +56,8 @@
     justify-content: center;
 
     .events {
+      display: flex;
+      justify-content: center;
       width: 90%;
 
       .event {
@@ -98,27 +100,54 @@
   
     // regular events
     .reg_events_container {
-      margin-top: 5vw;
+      margin-top: 10vw;
       margin-bottom: 10vw;
   
       .events {
+        flex-direction: column;
+        align-items: center;
         width: 90%;
   
         .event {
-          width: 32%;
+          width: 80%;
   
           .e_title {
-            font-size: 5vw;
+            font-size: 10vw;
+          }
+
+          img {
+            width: 70%;
           }
   
           .e_desc {
-            margin-top: 3vw;
-            width: 90%;
+            position: relative;
+            width: 100%;
+
+            padding-bottom: 4vw;
+
+            margin-top: 7vw;
+            margin-bottom: 7vw;
             margin-left: auto;
             margin-right: auto;
+
             font-family: "Arial";
             font-style: italic;
-            font-size: 1.1vw;
+            font-size: 3vw;
+
+            // Trick to get resizable bottom border
+            &:after {
+              position: absolute;
+              display: block;
+              left: 50%;
+              bottom: 0;
+              content: '';
+
+              width: 70%;
+              height: 1px;
+
+              background-color: var(--club-yellow);
+              transform: translate(-50%,0);
+            }
           }
         }
       }
