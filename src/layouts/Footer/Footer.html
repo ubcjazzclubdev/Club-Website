@@ -1,51 +1,59 @@
 <div id="footer-container">
-  <div class="footer_back_top" @click="scrollToTop">
+  <div class="footer-return" @click="scrollToTop">
     back to the top
   </div>
-  <div class="footer_content">
-    <div class="footer_left">
-      <div class="logo">
-        <!-- <img src="../../assets/Jazz_Club_Logo_1.png"> -->
-        <img src="../../assets/club-logo-emblem.png">
-      </div>
-      <div class="icons">
-        <a href="https://www.instagram.com/ubcjazzclub/">
-          <img src="../../assets/instagram_icon.svg">
-        </a>
-        <a href="https://www.facebook.com/ubcjazzclub/">
-          <img src="../../assets/facebook_icon.svg">
-        </a>
-      </div>
-    </div>
-    <div class="footer_right">
-      <p class="footer_h1">
-        helpful links
-      </p>
-      <p class="footer_h2">
-        email us
-      </p>
-      <p class="footer_p">
-        jazzclububc@gmail.com
-      </p>
-      <p class="footer_h2">
-        hire us
-      </p>
-      <p class="footer_p">
-        <a href="https://forms.gle/K7ShouGvhyyWTbUF9">
-          https://forms.gle/K7ShouGvhyyWTbUF9
-        </a>
-      </p>
-      <p class="footer_h2">
+  <div class="footer-content">
+    <div class="footer-row news">
+      <span class="sub-text">
         subscribe to our newsletter
-      </p>
-      <form id="contact_form" @submit.prevent="staticSubmit" enctype="text/plain" target="hidden_iframe">
+      </span>
+      <form id="contact-form" @submit.prevent="staticSubmit" enctype="text/plain" target="hidden_iframe">
         <input id="email" name="entry.1374192717" type="text">
-        <input type="submit" value=">">
+        <input id="image" type="image" name="submit" :src="require('../../assets/images/graphics/trumpet_1.png')">
       </form>
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
     </div>
+    <div class="footer-row info">
+      <div class="footer-row item">
+        <a href="https://www.instagram.com/ubcjazzclub/?hl=en">
+          <img src="../../assets/images/graphics/icon_mail.png">
+        </a>
+        <p>
+          {{ this.email }}
+        </p>
+      </div>
+      <div class="footer-row item">
+        <a href="https://www.instagram.com/ubcjazzclub/?hl=en">
+          <img src="../../assets/images/graphics/icon_inst.png">
+        </a>
+        <p>
+          {{ this.lnk_insta }}
+        </p>
+      </div>
+      <div class="footer-row item">
+        <a href="https://www.instagram.com/ubcjazzclub/?hl=en">
+          <img src="../../assets/images/graphics/icon_fb.png">
+        </a>
+        <p>
+          {{ this.lnk_fb }}
+        </p>
+      </div>
+      <div class="footer-row item">
+        <a href="https://www.instagram.com/ubcjazzclub/?hl=en">
+          <img src="../../assets/images/graphics/icon_loc.png">
+        </a>
+        <div class="wrapper-loc">
+          <p>
+            {{ this.room }}
+          </p>
+          <p>
+            {{ this.address }}
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="footer_copyright">
-    copyright ubcjazzclub 2020
+  <div class="footer-copyright">
+    {{ copyright }}
   </div>
 </div>

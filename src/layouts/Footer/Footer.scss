@@ -2,12 +2,13 @@
 @import url("https://fonts.googleapis.com/css?family=Trocchi");
 
 #footer-container {
+  position: relative;
   background-color: black;
   color: white;
   padding: 10vh 0 7vh 0;
   font-family: Trocchi;
 
-  .footer_back_top {
+  .footer-return {
     display: inline-block;
     text-transform: uppercase;
     font-style: italic;
@@ -17,170 +18,201 @@
     font-family: Built-Tilting;
   }
 
-  .footer_back_top:hover {
+  .footer-return:hover {
     cursor: pointer;
     color: var(--club-yellow);
     background-color: #111111;
   }
 
-  .footer_content {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    display: table;
+  .footer-content {
+    $font-scale: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 5vw 25vw 5vw 25vw;
+
     margin-left: auto;
     margin-right: auto;
 
-    .footer_left {
-      display: table-cell;
-      padding-right: 2vw;
-      width: 50%;
+    .footer-row {
+      display: inline-block;
+      width: 100%;
+      
+      margin-top: 2vw;
+      margin-bottom: 2vw;
+    }
 
-      .logo {
-        text-align: right;
-        img { width: 30%; }
+    .news {
+      display: flex;
+      flex-direction: column;
+      
+      .sub-text {
+        display: inline-block;
+
+        margin-bottom: 5vw;
+
+        text-align: left;
+        font-size: $font-scale + 1.5vw;
       }
+    }
 
-      .icons {
-        text-align: right;
+    .info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      width: 85%;
 
-        a:first-child {
-          padding-right: 1vw;
+      .item {
+        display: flex;
+        align-items: center;
+
+        a {
+          display: inline-block;
+          width: 15%;
+          text-decoration: none;
+
+          img {
+            width: 100%;
+            display: inline-block;
+          }
         }
 
-        a:last-child {
-          padding-right: 2.4vw;
+        p {
+          display: inline-block;
+
+          padding-left: 2vw;
+
+          font-family: Arial, Helvetica, sans-serif;
+          font-style: italic;
+          font-size: $font-scale + 1vw;
+          text-transform: uppercase;
         }
 
-        img {
-          width: 4vw;
+        .wrapper-loc {
+          display: inline-block;
+          width: 80%;
+          p {
+            width: 100%;
+            font-size: $font-scale + 0.5vw;
+            text-transform: none;
+            text-align: left;
+          }
         }
       }
     }
 
-    .footer_right {
-      display: table-cell;
-      vertical-align: top;
-      text-align: left;
-      padding-left: 2vw;
-      border-left: solid var(--club-yellow) 3pt;
-      width: 50%;
-
-      .footer_h1 {
-        color: var(--club-yellow);
-        font-size: 2vw;
-      }
-
-      .footer_h2 {
-        color: var(--club-yellow);
-        padding-top: 2vh;
-        font-size: calc(0.7 * 2vw);
-      }
-
-      .footer_p {
-        font-family: 'Calibri';
-        font-size: calc(0.7 * 2vw);
-
-        a {
-          color: inherit;
-        }
-      }
+    #contact-form {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 5vh;
 
       input[type="text"] {
-        border-radius: 10px;
+        border-radius: 5px;
         background-color: var(--club-grey);
         padding: 5px;
         color: white;
-        width: 45%;
-        height: 3vh;
-        border-style: unset;
+        width: 80%;
+        height: 4vh;
+        border-style: inset;
 
         &:focus {
           outline: none !important;
         }
       }
+  
+      input[type="image"] {
+        position: absolute;
+        align-self: center;
 
-      input[type="submit"] {
-        border-radius: 10px;
-        margin-left: -2.5vw;
-        padding: 0.5vw 1vw 0.5vw 1vw;
-        color: var(--club-grey);
-        background-color: var(--club-yellow);
-        border-color: white;
-        border-style: outset;
-
+        border-radius: 5px;
+        height: 115%;
+        right: 9%;
+  
         &:focus {
           outline: none !important;
         }
-
+  
         &:active {
-          border-style: inset;
+          border: solid white 1px;
+          margin-left: calc((-8%) - 1px);
+          margin-right: -1px;
         }
-
+  
         &:hover {
           cursor: pointer;
-          color: var(--club-yellow);
-          background-color: var(--club-grey);
+          outline: white;
         }
       }
     }
   }
 
-  .footer_copyright {
+  .footer-copyright {
     text-transform: uppercase;
     font-size: 2vh;
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 1024px) {
+@media screen and (min-width: 320px) and (max-width: 1023px) {
   #footer-container {
     font-size: 12pt;
+    padding: 5vh 0vh 4vh 0vh;
   
-    .footer_back_top {
-      font-size: 2em;
+    .footer-return {
+      font-size: 5vw;
+      padding: 3vw;
     }
   
-    .footer_content {
-      padding-top: 5em;
-      padding-bottom: 5em;
-  
-      .footer_left {
-        padding-right: 1em;
-  
-        .icons {
-  
-          a:first-child {
-            padding-right: 1em;
-          }
-  
-          a:last-child {
-            padding-right: 1.4em;
-          }
+    .footer-content {
+      padding-left: 3vw;
+      padding-right: 3vw;
+      padding-top: calc(min(5vh, 7vw));
+      padding-bottom: calc(min(5vh, 7vw));
 
-          img {
-            width: 4em;
-          }
+      #contact-form {
+        input[type="text"] {
+          height: 3.5vh;
+        }
+
+        input[type="image"] {
+          right: 8%;
         }
       }
-  
-      .footer_right {
-        padding-left: 1em;
-  
-        .footer_h1 {
-          font-size: 2em;
+
+      .news {
+        .sub-text {
+          margin-left: 3vw;
+          font-size: 4vw;
         }
+      }
+
+      .info {
+        .item {
   
-        .footer_h2 {
-          font-size: 1em;
-        }
+          a {
+            width: 15%;
   
-        .footer_p {
-          font-size: 0.75em;
-        }
+            img {
+              width: 100%;
+            }
+          }
   
-        input[type="submit"] {
-          border-radius: 10px;
-          margin-left: -2.5em;
-          padding: 0.5em 1em 0.5em 1em;
+          p {
+            padding-left: 2vw;
+            font-size: 4vw;
+          }
+  
+          .wrapper-loc {
+            margin-top: -1vw;
+            p {
+              font-size: 3vw;
+            }
+          }
         }
       }
     }
