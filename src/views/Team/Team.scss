@@ -147,39 +147,56 @@
 
 @media screen and (min-width: 320px) and (max-width: 1024px) {
   .container {
-    font-size: 12pt;
-    padding-bottom: 10em;
-  
+
     .desc {
-      margin-top: 3em;
-      margin-bottom: 2em;
-      font-size: 4em;
+      margin-top: 17vw;
+      margin-bottom: 15vw;
+      font-size: 5vw;
     }
-  
+
     .execs_section {
+      margin-top: 2vw;
   
       .exec_row {
-        margin-bottom: 3em;
+        margin-bottom: 10vw;
+        width: 100%;
   
         .exec {
-          margin: 2em;
+          margin: 2vw;
+          width: 45%;
+  
+          &.left {
+            float: left;
+          }
+  
+          &.right {
+            float: right;
+          }
   
           .exec_portrait {
-            height: 20em;
+            top: -7%;
+            z-index: 5;
+            width: 48%;
+            height: 27vw;
+  
+            .frame {
+              width: 93%;
+              height: 93%;
+              border: solid 2px var(--club-yellow);
+            }
           }
   
           .exec_desc_box {
-            height: 25em;
-            padding: 1em;
+            border: solid 2px var(--club-yellow);
   
             .exec_desc {
-              font-size: 1.25em;
+              font-size: 1.3vw;
+              width: 65%;
             }
   
             .exec_title {
-              margin-right: 0.35em;
-              margin-bottom: 0.35em;
-              font-size: 3em;
+              margin-right: 2vw;
+              margin-bottom: 1vw;
             }
           }
         }
