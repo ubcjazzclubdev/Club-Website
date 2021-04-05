@@ -47,7 +47,10 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 1024px) {
+@media screen
+and (max-width: 1024px)
+and (orientation: portrait)
+{
   .title_text_overlay {
     top: 25%;
 
