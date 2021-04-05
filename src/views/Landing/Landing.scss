@@ -135,7 +135,8 @@
     width: 100%;
 
     .events_description {
-      padding-top: 20vw;
+      margin-top: 15vw;
+      padding-top: 8vw;
       padding-bottom: 18vw;
       font-family: sans-serif;
       font-style: italic;
@@ -145,7 +146,7 @@
       margin-right: auto;
       width: 70%;
 
-      border-bottom: var(--club-yellow) 0.5vw solid;
+      border-top: var(--club-yellow) 0.75vw solid;
     }
 
     .events_display {
@@ -200,7 +201,7 @@
 
       &:hover {
         cursor: pointer;
-        background-color: black;
+        background-color: var(--club-dark-grey);
         color: var(--club-yellow);
         border: var(--club-yellow) 2px solid;
       }
@@ -210,96 +211,127 @@
 
 @media screen and (min-width: 320px) and (max-width: 1024px) {
   .container {
-    font-size: 12pt;
-    // Intro Content
+    $text-padding: 1vw;
+      // Intro Content
     .intro_content {
-      margin-left: 11rem;
-      margin-right: 11rem;
-      font-size: 1.25em;
-      height: 65rem;
+      margin-left: 5vw;
+      margin-right: 5vw;
+      font-size: 3.5vw;
+
+      .back_circle {
+        opacity: 0.5;
+      }
+
+      #circle1 {
+        // Intro3 background circle
+        width: 15%;
+        bottom: 33%;
+        right: 0;
+      }
 
       #circle2 {
         // Big Background circle
-        top: -10%;
-        right: 45%;
-        width: 145%;
+        display: none;
+      }
+
+      #circle3 {
+        // Miscellaneous Decoration Circle
+        width: 15%;
+        bottom: 10%;
+        left: 0;
       }
 
       .intro_1 {
-        position: relative;
-        padding-top: 12rem;
+        padding-top: 10vw;
+
+        p {
+          font-size: 4vw;
+          padding: $text-padding;
+        }
       }
-  
+
       .intro_2 {
-        padding-top: 10rem;
-  
+        padding-top: 20vw;
+        padding-bottom: 20vw;
+
         .table {
-  
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
           .circle {
-            top: -4rem;
+            top: -6vh;
+            left: 10%;
+            width: 50%;
           }
-  
+
+          .table_left {
+            display: inline-block;
+            padding: 0;
+            margin-right: auto;
+          }
+
           .table_right {
-            margin-top: 1.5rem;
+            display: inline-block;
+            padding: $text-padding;
+            margin-left: auto;
+
+            margin-top: 2vw;
+            p { padding: 0; }
+          }
+        }
+
+        p {
+          padding: $text-padding;
+        }
+      }
+
+      .intro_3 {
+        padding-top: 10vw;
+        padding-right: 5vw;
+
+        .circle {
+          top: 0;
+          right: 0;
+          width: 50%;
+        }
+
+        .desc {
+          display: flex;
+          flex-direction: column;
+          background-color: unset;
+          align-items: flex-end;
+
+          p {
+            display: inline-block;
+            margin-left: auto;
+            background-color: var(--club-dark-grey);
+          }
+
+          p:first-child{
+            width: 70%;
+            padding-top: $text-padding;
+          }
+
+          p:last-child {
+            padding-bottom: $text-padding;
           }
         }
       }
-  
-      .intro_3 {
-        padding-top: 20rem;
-        padding-right: 2rem;
-  
-        .circle {
-          top: 60%;
-          right: 0;
-          width: 30%;
-        }
-      }
-  
+
       .space {
-        padding-bottom: 10rem;
+        padding-bottom: 20vw;
       }
     }
-  
-    // Divider Parallax for ios need to disable parallax
-    .divider {
-      background-attachment: unset !important;
-      background-position: center top !important;
-      min-height: 15em;
-  
-      .divider_text {
-        top: 32%;
-        font-size: 4em;
-      }
-    }
-  
+
     // Events Content
     .events_content {
-  
-      .events_description {
-        padding-top: 20vw;
-        padding-bottom: 18vw;
-        font-size: 1.25em;
-  
-        border-bottom: var(--club-yellow) 0.5em solid;
-      }
-  
-      .events_display {
-        padding-top: 5em;
-  
-        tr {
-          padding: 1em;
-        }
-      }
-  
-      .events_load {
-        margin-right: 0.75em;
-        margin-top: 0.25em;
-        margin-bottom: 5em;
-  
-        padding: 0.5em;
 
-        font-size: 2em;
+      .events_description {
+        padding-top: 4vw;
+        padding-bottom: 10vw;
+        font-size: 2.5vw;
+        width: 80%;
       }
     }
   }
