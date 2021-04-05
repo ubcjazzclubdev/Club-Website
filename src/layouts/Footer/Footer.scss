@@ -131,13 +131,8 @@
         align-self: center;
 
         border-radius: 5px;
-  
-        color: var(--club-grey);
-        background-color: var(--club-yellow);
-
-        height: 80%;
-
-        right: 10%;
+        height: 115%;
+        right: 9%;
   
         &:focus {
           outline: none !important;
@@ -182,6 +177,10 @@
       #contact-form {
         input[type="text"] {
           height: 3.5vh;
+        }
+
+        input[type="image"] {
+          right: 8%;
         }
       }
 
