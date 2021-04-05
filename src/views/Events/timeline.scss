@@ -138,60 +138,85 @@
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .timeline_wrapper {
-    font-size: 12pt;
-    margin-bottom: 1.5rvw;
+    margin-bottom: 1.5vw;
   
-    max-width: 90%;
+    max-width: 100%;
     padding: 3vw 2vw 3vw;
   
     .timeline {
       padding-top: 1vw;
       padding-bottom: 3vw;
-      margin-top: 5vw;
+      margin-top: 10vw;
+      margin-bottom: 10vw;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 24%;
+        content: "";
+
+        width: 2px;
+        height: 100%;
+
+        background-color: var(--club-yellow);
+      }
   
       .timeline_year_w {
         .timeline_year {
-          font-size: 2vw;
+          font-size: 3vw;
         }
   
         &.separator {
-          margin-top: 4vw;
+          margin-top: 10vw;
         }
       }
   
       .timeline_group {
-        margin-top: 1.5vw;
-        font-size: 2vw;
+        margin-top: 3vw;
+        font-size: 3vw;
   
         .timeline_month {
           margin-right: 2vw;
         }
   
         .timeline_date {
-          max-height: 1.5vw;
-          min-width: 1.5vw;
+          max-height: 4vw;
+          min-width: 4vw;
           margin-right: 4vw;
   
           .date {
-            margin-left: -0.4vw;
-            max-height: 1.0vw;
+            margin-left: 0vw;
+            max-height: 4vw;
           }
         }
   
         .timeline_box {
-          padding: 0.5vw;
+          display: flex;
+          flex-direction: column;
+          padding: 2vw;
+          width: 60%;
+
+          .left {
+            width: 100%;
+            float: left;
   
+            img {
+              width: 100%;
+            }
+          }
+
           .right {
+            width: 100%;
             .title {
               font-family: Built-Tilting;
-              font-size: 1.25vw;
+              font-size: 4vw;
               color: var(--club-yellow);
             }
   
             .desc {
               margin-top: 1vw;
   
-              font-size: 0.5vw;
+              font-size: 2vw;
             }
           }
         }
