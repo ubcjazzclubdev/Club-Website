@@ -9,12 +9,48 @@
       </span>
       <form id="contact-form" @submit.prevent="staticSubmit" enctype="text/plain" target="hidden_iframe">
         <input id="email" name="entry.1374192717" type="text">
-        <input type="submit" value=">">
+        <input id="image" type="image" name="submit" src="/img/trumpet.aaaeee95.png">
       </form>
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
     </div>
-    <div class="footer-row">
-
+    <div class="footer-row info">
+      <div class="footer-row item">
+        <a href="https://www.instagram.com/ubcjazzclub/?hl=en">
+          <img src="../../assets/images/graphics/icon_mail.png">
+        </a>
+        <p>
+          {{ this.email }}
+        </p>
+      </div>
+      <div class="footer-row item">
+        <a href="https://www.instagram.com/ubcjazzclub/?hl=en">
+          <img src="../../assets/images/graphics/icon_inst.png">
+        </a>
+        <p>
+          {{ this.lnk_insta }}
+        </p>
+      </div>
+      <div class="footer-row item">
+        <a href="https://www.instagram.com/ubcjazzclub/?hl=en">
+          <img src="../../assets/images/graphics/icon_fb.png">
+        </a>
+        <p>
+          {{ this.lnk_fb }}
+        </p>
+      </div>
+      <div class="footer-row item">
+        <a href="https://www.instagram.com/ubcjazzclub/?hl=en">
+          <img src="../../assets/images/graphics/icon_loc.png">
+        </a>
+        <div class="wrapper-loc">
+          <p>
+            {{ this.room }}
+          </p>
+          <p>
+            {{ this.address }}
+          </p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="footer-copyright">
