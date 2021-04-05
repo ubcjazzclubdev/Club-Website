@@ -208,15 +208,16 @@
           .right {
             width: 100%;
             .title {
+              margin-top: 1vw;
               font-family: Built-Tilting;
-              font-size: 4vw;
+              font-size: 5vw;
               color: var(--club-yellow);
             }
   
             .desc {
               margin-top: 1vw;
   
-              font-size: 2vw;
+              font-size: 2.5vw;
             }
           }
         }
