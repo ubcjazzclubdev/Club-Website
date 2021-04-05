@@ -25,24 +25,28 @@
     }
   
     #circle1 {
+      // Top-left small circle
       width: 15%;
       top: 12%;
       left: 5%;
     }
   
     #circle2 {
+      // Top-left big circle
       width: 30%;
       top: 20%;
       left: -10%;
     }
     
     #circle3 {
+      // Bot-right big circle
       width: 37%;
       top: 27%;
       right: -5%;
     }
     
     #circle4 {
+      // Bot-right small circle
       width: 15%;
       top: 60%;
       right: -7%;
@@ -146,7 +150,7 @@
 
     .awards_row {
       display: flex;
-      vertical-align: top;
+      align-items: flex-start;
       justify-content: center;
 
       .award {
@@ -154,6 +158,10 @@
         padding-left: 4vw;
         padding-right: 4vw;
         font-size: 1.25vw;
+
+        img {
+          width: 20vw;
+        }
 
         .desc {
           text-transform: uppercase;
@@ -167,101 +175,131 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (orientation: portrait) {
   .container {
-    font-size: 12pt;
-  
     .top_section {
-      margin-left: 11em;
-      margin-right: 11em;
+      position: relative;
+      margin-left: 10vw;
+      margin-right: 10vw;
+      $circle-scale: 25%;
+  
+      .circle {
+        position: absolute;
+        opacity: 0.5;
+        z-index: 1;
+      }
     
       #circle1 {
-        width: 15%;
-        top: 12%;
-        left: 5%;
+        // Top-left small circle
+        width: $circle-scale * 0.7;
+        top: 5%;
+        left: -10%;
       }
     
       #circle2 {
-        width: 30%;
-        top: 20%;
-        left: -10%;
+        // Top-left big circle
+        width: $circle-scale * 1.5;
+        top: 9%;
+        left: -30%;
       }
       
       #circle3 {
-        width: 37%;
-        top: 27%;
-        right: -5%;
+        // Bot-right big circle
+        width: $circle-scale * 2;
+        top: 20%;
+        right: -27%;
       }
       
       #circle4 {
-        width: 15%;
-        top: 60%;
-        right: -7%;
+        // Bot-right small circle
+        width: $circle-scale;
+        top: 55%;
+        right: -27%;
       }
     
       .description {
-        padding-top: 10em;
-        padding-bottom: 10em;
-        font-size: 1.5em;
+        position: relative;
+        z-index: 5;
+        padding-top: 20vw;
+        padding-bottom: 20vw;
+        font-size: 3.5vw;
       }
     
       .description_ext {
-        font-size: 1.75em;
+        position: relative;
+        z-index: 5;
+        font-size: 4vw;
+        font-style: italic;
         
         .text_1 {
-          padding-bottom: 3em;
+          padding-bottom: 20vw;
         }
     
         .text_2 {
-          padding-bottom: 1em;
+          padding-bottom: 7vw;
         }
     
         .text_3 {
-          padding-bottom: 2em;
+          margin-bottom: 20vw;
         }
       }
     }
-  
+
     .ratings {
-      margin-top: 0rem;
-      margin-bottom: 10rem;
-
-      padding-top: 8rem;
-      padding-bottom: 8rem;
-
-      background-size: 108%;
+      width: 70%;
+  
+      // Margins
+      margin-top: 2vw;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20vw;
+  
+      // Padding
+      padding-top: 5vw;
+      padding-bottom: 5vw;
+  
+      // Yellow border
+      border-width: 2pt;
   
       .review{
-        font-size: 2rem;
-        padding-top: 1.5rem;
+        width: 70%;
+        font-size: 5vw;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
   
         .star_rating {
           width: 50%;
-
+  
           img {
-            width: 50%;
+            width: 60%;
           }
         }
   
         .desc {
-          padding-top: 0.25rem;
+          padding-top: 2vw;
           .author {
-            margin-top: 0.5rem;
+            margin-top: 3vw;
           }
         }
       }
     }
-  
+
     .awards_section {
-      margin-top: 5rem;
-      margin-bottom: 15rem;
+      margin-top: 11vw;
+      margin-bottom: 30vw;
   
       .awards_row {
-  
         .award {
-          padding-left: 2rem;
-          padding-right: 2rem;
-          font-size: 1.5rem;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 2vw;
+  
+          .desc {
+            padding-top: 2vw;
+            p {
+              padding-top: 0.5vw;
+            }
+          }
         }
       }
     }
