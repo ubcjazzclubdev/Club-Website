@@ -37,7 +37,8 @@ nav {
     width: 100%;
     list-style-type: none;
     margin: 0;
-    padding-inline-end: 1em;
+    padding-inline-end: 2vw;
+    padding-inline-start: 2vw;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -151,7 +152,7 @@ nav {
 
 // Mobile
 @media screen
-and (max-width: 1023px)
+and (max-width: 768px)
 and (orientation: portrait) {
   .arrow {
     $arrow-size: 1.2vh;
