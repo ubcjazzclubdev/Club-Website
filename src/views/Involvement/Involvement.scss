@@ -11,13 +11,19 @@
 
   // Divs that are meant to fit an entire row
   .row {
-    font-size: 12pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 
     &.title {
       margin-top: 10vw;
       margin-bottom: 10vw;
       font-size: 4vw;
+
+      span {
+        margin-left: 0.5vw;
+      }
     }
 
     &.left {
@@ -49,16 +55,15 @@
     }
   }
 
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
+
   // For inline manipulation
   span {
-
     &.yellow {
       color: var(--club-yellow);
-    }
-
-    &.space {
-      padding-right: 3rem;
-      padding-left: 3rem;
     }
   }
 
@@ -87,44 +92,6 @@
           url("../../assets/images/gallery_3.jpg");
   }
 
-
-  // links at the top of the page
-  .links_wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    padding-top: 3vw;
-    padding-bottom: 3vw;
-
-    background-color: black;
-
-    .link_container {
-      position: relative;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-
-      display: flex;
-      justify-content: center;
-
-      .link {
-        transition: all 0.2s;
-        font-size: 3.5vw;
-        display: table-cell;
-        margin-left: auto;
-        margin-right: auto;
-
-        &:hover {
-          cursor: pointer;
-          // make sure whole div doesn't move
-          margin-top: -3px;
-          border-bottom: solid 3px white;
-        }
-      }
-    }
-  }
-
   // infographic
   .flow_container {
     margin-left: auto;
@@ -148,6 +115,28 @@
     padding-top: 5vw;
     padding-left: 6vw;
     padding-right: 6vw;
+
+    .item {
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: 3vw;
+      margin-bottom: 3vw;
+  
+      span {
+        margin-right: -7vw;
+        margin-left: 5vw;
+        margin-top: -0.5vw;
+        width: 15%;
+  
+        font-size: 2vw;
+      }
+  
+      h3 {
+        width: 85%;
+        margin: 0;
+        font-size: 2vw;
+      }
+    }
 
     a {
       &.m_link {
@@ -178,6 +167,13 @@
     .mem_link {
       margin-top: 10vw;
       margin-bottom: 10vw;
+
+      .m_link {
+        h1 {
+          font-size: 4.5vw;
+          text-decoration: underline;
+        }
+      }
     }
   }
 
@@ -225,15 +221,15 @@
     img {
       margin-top: 10vw;
       width: 50%;
+    }
 
-      &.sticker {
-        margin-top: 1vw;
-        transition: all 0.3s;
-        width: 30%;
+    .sticker {
+      margin-top: 1vw;
+      transition: all 0.3s;
+      width: 30%;
 
-        &:hover {
-          width: 40%;
-        }
+      &:hover {
+        width: 40%;
       }
     }
 
@@ -259,49 +255,9 @@
 
 @media screen and (min-width: 320px) and (max-width: 1024px) {
   .container {
-    font-size: 12pt;
-  
-    // Divs that are meant to fit an entire row
-  .row {
-    font-size: 12pt;
-    width: 100%;
-
-    &.title {
-      margin-top: 10rem;
-      margin-bottom: 10rem;
-      font-size: 4rem;
-    }
-
-    h1 {
-      margin: 3rem;
-      font-size: 5rem; 
-    }
-
-    h2 {
-      margin: 3rem;
-      font-size: 4rem;
-    }
-
-    h3 {
-      margin: 3rem;
-      font-size: 2rem;
-    }
-
-    p {
-      margin: 2rem;
-      font-size: 2rem;
-    }
-  }
 
     // Divider Parallax with text overlay
     .divider {
-      height: 15em;
-
-      .divider_text {
-        top: 32%;
-        font-size: 4em;
-      }
-  
       &.flow {
         background-size: cover;
         background-repeat: no-repeat;
@@ -317,73 +273,122 @@
         background-repeat: no-repeat;
       }
     }
-  
-    // links at the top of the page
-    .links_wrapper {
-      padding-top: 2em;
-      padding-bottom: 2em;
-  
-      .link_container {
-        .link {
-          font-size: 3em;
-        }
-      }
-    }
-  
+
     // infographic
     .flow_container {
-      margin-top: 11em;
-      margin-bottom: 15em;
+      margin-top: 20vw;
+      margin-bottom: 10vw;
   
       .desc {
-        font-size: 3em;
+        font-size: 4.5vw;
         margin-bottom: 4em;
       }
     }
 
     // members section
   .member_container {
-    padding-top: 5rem;
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-top: 5vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
+
+    .row {
+      &.title {
+        font-size: 7vw;
+      }
+    }
+
+    .item {
+      span {
+        margin-left: 4vw;
+        margin-right: -5vw;
+        width: 15%;
+        font-size: 3vw;
+      }
+
+      h3 {
+        width: 85%;
+        font-size: 3vw;
+      }
+    }
 
     .mem_link {
-      margin-top: 10rem;
-      margin-bottom: 10rem;
+      margin-top: 10vw;
+      margin-bottom: 10vw;
+
+      .m_link {
+        h1 {
+          font-size: 6vw;
+          text-decoration: underline;
+        }
+      }
+
+      #mem_notes {
+        font-size: 3vw;
+      }
     }
   }
   
     // merch section
     .merch_container {
-      margin-top: 5em;
-      margin-bottom: 5em;
+      margin-top: 5vw;
+      margin-bottom: 5vw;
+
+      color: #c8c8c8;
   
       .title {
-        margin-top: 3em;
-        font-size: 3em;
+        margin-top: 10vw;
+        font-size: 4vw;
       }
   
       .desc {
-        margin-top: 5em;
-        font-size: 1.5em;
+        margin-top: 5vw;
+        font-size: 2.5vw;
+        text-align: center;
+        p {
+          display: inline-block;
+          width: 85%;
+        }
       }
   
       .prices {
-        margin-top: 3em;
-        font-size: 3em;
+        margin-top: 10vw;
+        font-size: 4vw;
       }
   
       img {
-        margin-top: 5em;
+        margin-top: 10vw;
         width: 90%;
       }
   
       .desc_2 {
-        margin-top: 3em;
-        margin-bottom: 3em;
-        font-size: 3em;
+        margin-top: 10vw;
+        margin-bottom: 10vw;
+        font-size: 4vw;
       }
+
+      .sticker {
+        margin-top: 4vw;
+        transition: all 0.3s;
+        width: 50%;
   
+        &:hover {
+          width: 90%;
+        }
+      }
+
+      .past-stickers {
+        margin-top: 5vw;
+        margin-bottom: 20vw;
+        .sticker-past {
+          margin-top: 1vw;
+          transition: all 0.3s;
+          width: 10%;
+  
+          &:hover {
+            width: 50%;
+          }
+        }
+      }
     }
   }
 }

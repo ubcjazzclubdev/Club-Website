@@ -47,25 +47,26 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 1024px) {
+@media screen
+and (max-width: 1024px)
+and (orientation: portrait)
+{
   .title_text_overlay {
-    font-size: 12pt;
-  
+    top: 25%;
+
     .title_box {
       h1 {
-        font-size: 7em;
+        font-size: 15vw;
       }
       img {
-        width: 8em;
-        padding-right: 2em;
+        width: 15vw;
       }
     }
-  
     .title_caption {
-      padding-top: 15vh;
-      padding-bottom: 15vh;
-      font-size: 2em;
-      background-size: 35%;
+      font-size: 5vw;
+      margin-top: -7vh;
+
+      background-size: 60%;
     }
   }
 }

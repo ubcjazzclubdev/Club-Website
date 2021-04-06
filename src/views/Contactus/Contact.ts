@@ -10,8 +10,26 @@ interface FormElements extends HTMLFormControlsCollection {
 @Component
 export default class Contact extends Vue {
 
+  bookingInfo = "";
+  bookingDesc = "";
+  bookingPolicy = "";
+
   errors : string[] = [];
   submitted = false;
+
+  created() {
+    this.bookingInfo = `
+    Due to COVID-19, our bookings are closed temporarily.
+    Thank you for your patience and support.
+    Feel free to contact us through our email or social media
+    if you have any questions.`;
+    this.bookingDesc = `
+    Placeholder
+    `;
+    this.bookingPolicy = `
+    Placeholder
+    `;
+  }
 
   checkForm(form : HTMLFormElement): boolean {
     const elements : FormElements = form.elements as FormElements;

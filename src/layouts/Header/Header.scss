@@ -37,7 +37,8 @@ nav {
     width: 100%;
     list-style-type: none;
     margin: 0;
-    padding-inline-end: 1em;
+    padding-inline-end: 2vw;
+    padding-inline-start: 2vw;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -146,11 +147,13 @@ nav {
 
 // Tablet Portrait
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-
+  // Maybe?
 }
 
 // Mobile
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen
+and (max-width: 768px)
+and (orientation: portrait) {
   .arrow {
     $arrow-size: 1.2vh;
     display: inline-block;
@@ -176,7 +179,8 @@ nav {
   }
 
   nav {
-    background-color: rgba(0,0,0,0.5);
+    // Navbar shadow
+    background-color: rgba(0,0,0,0.2);
     padding-top: 0.5em;
     font-size: 12pt;
 
@@ -285,46 +289,63 @@ nav {
       padding-left: 10%;
     }
   }
+
+  .menu-items-wrapper {
+    position: relative;
+    align-self: flex-start;
+  
+    height: 100%;
+    width: 100%;
+  
+    color: white;
+    font-family: "Trocchi", sans-serif;
+  
+    margin-top: 8vh;
+    padding: 3vh 5vh 3vh 5vh;
+  
+    .menu-item {
+      position: relative;
+      z-index: 1;
+      text-transform: uppercase;
+  
+      transition: all 0.3s;
+  
+      background-color: var(--club-dark-grey);
+  
+      text-align: left;
+      font-size: 3vh;
+  
+      padding-top: 5vw;
+      padding-bottom: 5vw;
+  
+      &.first {
+        border-top: var(--club-yellow) solid 2px;
+      }
+  
+      a {
+        text-decoration: none;
+        color: white;
+  
+        &:hover {
+          color: var(--club-yellow);
+        }
+      }
+    }
+  }
 }
 
-.menu-items-wrapper {
-  position: relative;
-  align-self: flex-start;
+// Mobile Landscape
+@media screen
+and (max-width: 1023px)
+and (orientation: landscape) {
+  nav {
+    ul {
+      padding-inline-start: 0;
 
-  height: 100%;
-  width: 100%;
-
-  color: white;
-  font-family: "Trocchi", sans-serif;
-
-  margin-top: 8vh;
-  padding: 3vh 5vh 3vh 5vh;
-
-  .menu-item {
-    position: relative;
-    z-index: 1;
-    text-transform: uppercase;
-
-    transition: all 0.3s;
-
-    background-color: var(--club-dark-grey);
-
-    text-align: left;
-    font-size: 3vh;
-
-    padding-top: 5vw;
-    padding-bottom: 5vw;
-
-    &.first {
-      border-top: var(--club-yellow) solid 2px;
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-
-      &:hover {
-        color: var(--club-yellow);
+      li {
+        #logo {
+          padding-left: 3vw;
+        }
       }
     }
   }

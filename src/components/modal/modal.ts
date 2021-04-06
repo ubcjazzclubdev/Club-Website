@@ -36,7 +36,6 @@ export default class Modal extends Vue {
    */
   callback(id: string) : void {
     if(id === this.$props.modalId) {
-      // console.log("callback "+id);
 
       this.modId = +id.split("-")[1]; // Modal id for differing albums, Integer
 
@@ -142,6 +141,7 @@ export default class Modal extends Vue {
 
   hide() : void {
     this.$data.modalState = false;
+    bus.$emit('unhide-nav', this.$data.modalState);
   }
 
   readJson(file : File) {

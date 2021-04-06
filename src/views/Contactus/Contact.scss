@@ -1,34 +1,51 @@
 .container {
-  padding: 40vh 15vw 1rem 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30vw;
   color: white;
   background-color: #333333;
 
+  .hide {
+    display: none;
+  }
+
   // Contact title section css
   #contact_section_title {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
     padding-bottom: 30vh;
 
     #contact_title {
+      display: inline-block;
+      align-self: flex-start;
+
+      margin-left: 5%;
+
       font-size: 8vw;
       font-style: italic;
       color: var(--club-yellow);
       text-transform: uppercase;
       font-family: "Built-Tilting";
-
-      display: inline-block;
-      padding-right: 35%;
     }
   
     #contact_caption {
+      display: inline-block;
+      align-self: flex-end;
+
+      margin-right: 5%;
+
       font-size: 3vw;
       font-style: italic;
-
-      display: inline-block;
-      padding-left: 25%;
     }
   }
 
   // Contact form section css
   .contact_section_form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
     padding-bottom: 10vh;
 
     .contact_form_title {
@@ -40,13 +57,15 @@
     }
 
     .contact_form_container {
-      display: table;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 16pt;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 1.5vw;
 
       #contact_form_left {
-        display: table-cell;
+        display: inline-block;
         width: 50%;
 
         p:first-child {
@@ -111,10 +130,6 @@
           }
         }
 
-        .hide {
-          display: none;
-        }
-
         .submitted {
           margin-top: 1vw;
 
@@ -125,11 +140,11 @@
       }
 
       #contact_form_right {
-        display: table-cell;
-        width: 50%;
+        display: inline-block;
+        width: 46%;
         padding-top: 1vh;
         padding-bottom: 1vh;
-        padding-left: 4vw;
+        padding-left: 4%;
         border-left: solid var(--club-yellow) 4pt;
 
         p {
@@ -151,49 +166,57 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 1024px) {
+@media screen 
+and (max-width: 1024px)
+{
   .container {
-    font-size: 12pt;
-    padding: 20em 5em 1em 5em;
+    width: 100%;
   
     // Contact title section css
     #contact_section_title {
-      padding-bottom: 30vh;
+      width: 90%;
+      padding-bottom: 30vw;
   
       #contact_title {
-        font-size: 7em;
+        font-size: 10vw;
       }
     
       #contact_caption {
-        font-size: 2em;
+        font-size: 4vw;
       }
     }
   
     // Contact form section css
     .contact_section_form {
-      padding-bottom: 10em;
+      padding-bottom: 10vw;
   
       .contact_form_title {
-        font-size: 2.5em;
-        width: 50%;
-        padding-bottom: 1em;
+        font-size: 5vw;
+        width: 100%;
+        padding-bottom: 1vw;
       }
   
       .contact_form_container {
-        font-size: 1.5em;
+        flex-direction: column;
+        font-size: 4vw;
   
         #contact_form_left {
+          position: relative;
+          width: 90%;
+
+          padding-bottom: 10vw;
+          margin-bottom: 10vw;
     
           #contact_form {
-            padding-right: 2em;
-            padding-left: 2em;
+            padding-right: 2vw;
+            padding-left: 2vw;
       
             .feedback-input {
-              font-size: 1em;
+              font-size: 4vw;
             }
             
             [type="submit"] {
-              font-size: 1em;
+              font-size: 4vw;
             }
           }
   
@@ -202,13 +225,34 @@
           }
   
           .submitted {
-            margin-top: 1vw;
-            font-size: 2em;
+            margin-top: 4vw;
+            font-size: 6vw;
+          }
+
+          // Trick to get resizable bottom border
+          &:after {
+            position: absolute;
+            display: block;
+            left: 50%;
+            bottom: 0;
+            content: '';
+
+            width: 70%;
+            height: 2px;
+
+            background-color: var(--club-yellow);
+            transform: translate(-50%,0);
           }
         }
   
         #contact_form_right {
-          padding-left: 2em;
+          width: 90%;
+          padding-left: 2vw;
+
+          border-left: none;
+          p {
+            text-align: center;
+          }
         }
       }
     }
