@@ -57,6 +57,7 @@ export default class Gallery extends Vue {
     this.currImg = this.featuredImgs[this.currIdx];
     this.currSize = this.featuredImgs.length;
     this.timerId = setInterval(this.galleryNext, 5000);
+    bus.$on('unhide-nav', this.toggleNavbar);
   }
 
   getPhotos() {
@@ -69,9 +70,22 @@ export default class Gallery extends Vue {
     }
   }
 
+  /**
+   * Hides the mobile navbar, because of z-indicies.
+   */
+  toggleNavbar() {
+    const nav = document.querySelector("#navigation-bar")!;
+    if (nav.classList.contains("hide")) {
+      nav.classList.remove("hide");
+    } else {
+      nav.classList.add("hide");
+    }
+  }
+
   modalImage(event: any) : void  {
     const image:any = event.target;
     const id = image.getAttribute("modal-id");
     bus.$emit("modal-open", id);
+    this.toggleNavbar();
   }
 }
