@@ -224,13 +224,6 @@ and (max-width: 1023px) {
         opacity: 0.5;
       }
 
-      #circle1 {
-        // Intro3 background circle
-        width: 15%;
-        bottom: 33%;
-        right: 0;
-      }
-
       #circle2 {
         // Big Background circle
         display: none;
@@ -244,6 +237,7 @@ and (max-width: 1023px) {
       }
 
       .intro_1 {
+        margin-top: 0;
         padding-top: 10vw;
 
         p {
@@ -253,6 +247,7 @@ and (max-width: 1023px) {
       }
 
       .intro_2 {
+        margin-top: 0;
         padding-top: 20vw;
         padding-bottom: 20vw;
 
@@ -289,6 +284,7 @@ and (max-width: 1023px) {
       }
 
       .intro_3 {
+        margin-top: 0;
         padding-top: 10vw;
         padding-right: 5vw;
 
@@ -296,6 +292,12 @@ and (max-width: 1023px) {
           top: 0;
           right: 0;
           width: 50%;
+        }
+
+        #circle1 {
+          // Intro3 background circle
+          top: -10%;
+          right: 0;
         }
 
         .desc {
