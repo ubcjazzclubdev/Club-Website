@@ -9,7 +9,7 @@ export default class Footer extends Vue {
   email = "jazzclububc@gmail.com";
   lnk_insta = "@ubcjazzclub";
   lnk_fb = "ubc jazz club"
-  room = "Room TBD";
+  room = "Room 3206D";
   address = "AMS Student Nest 6133 University Blvd, Vancouver, BC V6T 1Z1";
   copyright = "copyright ubcjazzclub 2021";
 
