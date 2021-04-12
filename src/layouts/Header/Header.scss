@@ -152,7 +152,7 @@ nav {
 
 // Mobile
 @media screen
-and (max-width: 768px)
+and (max-width: 767px)
 and (orientation: portrait) {
   .arrow {
     $arrow-size: 1.2vh;
@@ -328,23 +328,6 @@ and (orientation: portrait) {
   
         &:hover {
           color: var(--club-yellow);
-        }
-      }
-    }
-  }
-}
-
-// Mobile Landscape
-@media screen
-and (max-width: 1023px)
-and (orientation: landscape) {
-  nav {
-    ul {
-      padding-inline-start: 0;
-
-      li {
-        #logo {
-          padding-left: 3vw;
         }
       }
     }

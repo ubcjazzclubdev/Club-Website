@@ -28,18 +28,11 @@
       opacity: 0.5;
     }
 
-    #circle1 {
-      // Intro3 background circle
-      width: 15%;
-      bottom: 33%;
-      right: 0;
-    }
-
     #circle2 {
       // Big Background circle
-      top: -10%;
-      right: 45%;
-      width: 200vh;
+      top: -30vw;
+      right: 40%;
+      width: 150vw;
     }
 
     #circle3 {
@@ -51,7 +44,7 @@
 
     .intro_1 {
       position: relative;
-      padding-top: 40vh;
+      margin-top: 20vw;
 
       p {
         background-color: var(--club-dark-grey);
@@ -61,15 +54,16 @@
 
     .intro_2 {
       position: relative;
-      padding-top: 30vh;
+      margin-top: 30vw;
       text-align: left;
 
       .table {
         position: relative;
+        display: inline-block;
         width: 50%;
 
         .circle {
-          top: -6vh;
+          top: -6vw;
           left: 15%;
           position: absolute;
           width: 60%;
@@ -97,15 +91,22 @@
 
     .intro_3 {
       position: relative;
-      padding-top: 40vh;
-      padding-right: 10vw;
+      margin-top: 30vw;
+      padding-right: 8vw;
       text-align: right;
 
       .circle {
         position: absolute;
-        top: 60%;
+        top: -150%;
         right: 0;
-        width: 30%;
+        width: 35%;
+      }
+
+      #circle1 {
+        // Intro3 background circle
+        width: 15%;
+        top: -220%;
+        right: 0%;
       }
 
       .desc {
@@ -116,7 +117,7 @@
     }
 
     .space {
-      padding-bottom: 40vh;
+      padding-bottom: 30vw;
     }
   }
 
@@ -209,7 +210,8 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 1024px) {
+@media screen 
+and (max-width: 1023px) {
   .container {
     $text-padding: 1vw;
       // Intro Content
@@ -260,7 +262,7 @@
           width: 100%;
 
           .circle {
-            top: -6vh;
+            top: -6vw;
             left: 10%;
             width: 50%;
           }

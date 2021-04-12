@@ -167,7 +167,8 @@
 }
 
 @media screen 
-and (max-width: 1024px)
+and (max-width: 1023px)
+and (orientation: portrait)
 {
   .container {
     width: 100%;
