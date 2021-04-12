@@ -13,6 +13,7 @@ export default class Contact extends Vue {
   bookingInfo = "";
   bookingDesc = "";
   bookingPolicy = "";
+  compensation = "";
 
   errors : string[] = [];
   submitted = false;
@@ -22,12 +23,19 @@ export default class Contact extends Vue {
     Due to COVID-19, our bookings are closed temporarily.
     Thank you for your patience and support.
     Feel free to contact us through our email or social media
-    if you have any questions.`;
+    if you have any questions.
+    `;
     this.bookingDesc = `
-    Placeholder
+    We offer any size of band (duos/trios/quartets, big band, etc.)
+    as long as our musicians are available!
     `;
     this.bookingPolicy = `
-    Placeholder
+    We accept gigs
+    from any AMS and/or UBC-affiliated group
+    on or off campus
+    `;
+    this.compensation = `
+    Musicians must be compensated (monetarily or other - if specified)
     `;
   }
 
