@@ -1,5 +1,4 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import VueRouter, { createRouter } from "vue-router";
 
 // Import components to route to
 import Landing from "./views/Landing/Landing.vue";
@@ -9,8 +8,6 @@ import Team from "./views/Team/Team.vue";
 import Involved from "./views/Involvement/Involvement.vue";
 import Events from "./views/Events/Events.vue";
 import Gallery from "./views/Gallery/Gallery.vue";
-
-Vue.use(VueRouter);
 
 // Define routes
 const routes = [
@@ -23,9 +20,9 @@ const routes = [
   { path: "/events", component: Events }
 ];
 
-const router = new VueRouter({
+const router = createRouter({
   routes, // short for `routes: routes`
-  mode: "history" // get rid of the `#` symbol
+  history: VueRouter.createWebHashHistory(),
 });
 
 export default router;

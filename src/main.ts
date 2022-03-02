@@ -1,9 +1,19 @@
-import Vue from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
 import Router from "./router";
+import mitt, { Emitter } from 'mitt';
 
-Vue.config.productionTip = false;
-export const bus = new Vue();
+type Events = {
+  "modal-open": string,
+  "unhide-nav": boolean
+};
+
+export const emitter: Emitter<Events> = mitt<Events>();
+const app = createApp(App)
+  .use(Router);
+app.config.globalProperties.emitter = emitter;
+app.mount("#app")
+/*export const bus = new Vue();
 
 new Vue({
   data: {
@@ -11,4 +21,4 @@ new Vue({
   },
   router: Router,
   render: h => h(App)
-}).$mount("#app");
+}).$mount("#app");*/
