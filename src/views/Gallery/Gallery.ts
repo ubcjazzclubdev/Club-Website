@@ -1,51 +1,21 @@
-import { Component, Vue } from "vue-property-decorator";
 import Modal from '@/components/modal/modal.vue'
-import { bus } from "@/main";
+import { emitter } from "@/main";
+import { defineComponent } from 'vue';
 
-@Component
-({
+export default defineComponent({
   components: {
       'modal': Modal
   },
-})
 
-export default class Gallery extends Vue {
-  currImg = "";
-  currIdx = 0;
-  currSize = 0;
-  featuredImgs : string[] = [];
-  timerId = 0;
-
-  moveTo(refName : string) : void {
-    // console.log(refName);
-    const el = document.querySelector(refName);
-    if (el != null) {
-      el.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest"
-      });
-    }
-  }
-
-  galleryNext() : void {
-    // if ((this.currIdx + 1) > this.currSize) {
-    //   this.currIdx = 0;
-    // } else {
-    //   this.currIdx++;
-    // }
-    this.currIdx = (this.currIdx += 1) % this.currSize
-    this.currImg = this.featuredImgs[this.currIdx];
-  }
-
-  galleryBack() : void {
-    if ((this.currIdx - 1) < 0) {
-      this.currIdx = this.currSize;
-    } else {
-      this.currIdx--;
-    }
-    this.currImg = this.featuredImgs[this.currIdx];
-  }
+  data() {
+    return {
+      currImg: "",
+      currIdx: 0,
+      currSize: 0,
+      featuredImgs: new Array<string>(),
+      timerId: 0
+    };
+  },
 
   /**
    * Gets all the featured photos
@@ -57,35 +27,68 @@ export default class Gallery extends Vue {
     this.currImg = this.featuredImgs[this.currIdx];
     this.currSize = this.featuredImgs.length;
     this.timerId = setInterval(this.galleryNext, 5000);
-    bus.$on('unhide-nav', this.toggleNavbar);
-  }
+    emitter.on('unhide-nav', this.toggleNavbar);
+  },
 
-  getPhotos() {
-    return {
-      featuredPhotos : [
-        require("../../assets/images/imagine_day_5.jpg"),
-        require("../../assets/images/singtime.jpg"),
-        require("../../assets/images/guitartime.jpg"),
-      ]
+  methods: {
+    moveTo(refName : string) : void {
+      // console.log(refName);
+      const el = document.querySelector(refName);
+      if (el != null) {
+        el.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest"
+        });
+      }
+    },
+  
+    galleryNext() : void {
+      // if ((this.currIdx + 1) > this.currSize) {
+      //   this.currIdx = 0;
+      // } else {
+      //   this.currIdx++;
+      // }
+      this.currIdx = (this.currIdx += 1) % this.currSize
+      this.currImg = this.featuredImgs[this.currIdx];
+    },
+  
+    galleryBack() : void {
+      if ((this.currIdx - 1) < 0) {
+        this.currIdx = this.currSize;
+      } else {
+        this.currIdx--;
+      }
+      this.currImg = this.featuredImgs[this.currIdx];
+    },
+
+    getPhotos() {
+      return {
+        featuredPhotos : [
+          require("../../assets/images/imagine_day_5.jpg"),
+          require("../../assets/images/singtime.jpg"),
+          require("../../assets/images/guitartime.jpg"),
+        ]
+      }
+    },
+  
+    /**
+     * Hides the mobile navbar, because of z-indicies.
+     */
+    toggleNavbar() {
+      const nav = document.querySelector("#navigation-bar")!;
+      if (nav.classList.contains("hide")) {
+        nav.classList.remove("hide");
+      } else {
+        nav.classList.add("hide");
+      }
+    },
+  
+    modalImage(event: any) : void  {
+      const image:any = event.target;
+      const id = image.getAttribute("modal-id");
+      emitter.emit("modal-open", id);
+      this.toggleNavbar();
     }
   }
-
-  /**
-   * Hides the mobile navbar, because of z-indicies.
-   */
-  toggleNavbar() {
-    const nav = document.querySelector("#navigation-bar")!;
-    if (nav.classList.contains("hide")) {
-      nav.classList.remove("hide");
-    } else {
-      nav.classList.add("hide");
-    }
-  }
-
-  modalImage(event: any) : void  {
-    const image:any = event.target;
-    const id = image.getAttribute("modal-id");
-    bus.$emit("modal-open", id);
-    this.toggleNavbar();
-  }
-}
+})

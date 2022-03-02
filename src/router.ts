@@ -1,4 +1,4 @@
-import VueRouter, { createRouter } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router'
 
 // Import components to route to
 import Landing from "./views/Landing/Landing.vue";
@@ -22,7 +22,7 @@ const routes = [
 
 const router = createRouter({
   routes, // short for `routes: routes`
-  history: VueRouter.createWebHashHistory(),
+  history: createWebHistory(),
 });
 
 export default router;

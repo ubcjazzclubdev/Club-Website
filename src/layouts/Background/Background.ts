@@ -1,12 +1,15 @@
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { defineComponent } from "vue";
 
-@Component
-export default class Background extends Vue {
-  dToggle = false;
-  imageUrl = require("../../assets/images/page_bgs/main_back.png");
+export default defineComponent({
+  data() {
+    return {
+      dToggle: false,
+      imageUrl: require("../../assets/images/page_bgs/main_back.png")
+    };
+  },
 
   created() {
-    const route = this.$router.currentRoute.path;
+    const route = this.$router.currentRoute.value.path;
     if (route == "/contact") {
       this.dToggle = true;
     }
@@ -26,4 +29,4 @@ export default class Background extends Vue {
       this.imageUrl = require("../../assets/images/page_bgs/events_back.jpg");
     }
   }
-}
+})

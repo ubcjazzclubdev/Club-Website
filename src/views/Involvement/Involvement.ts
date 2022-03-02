@@ -1,8 +1,6 @@
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { defineComponent } from "vue";
 
-@Component
-export default class Involvement extends Vue {
-
+export default defineComponent({
   moveTo(refName : string) : void {
     // console.log(refName);
     const el = document.querySelector(refName);
@@ -15,4 +13,4 @@ export default class Involvement extends Vue {
       });
     }
   }
-}
+})

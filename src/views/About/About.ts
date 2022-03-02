@@ -1,8 +1,11 @@
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { defineComponent } from "vue";
 
-@Component
-export default class About extends Vue {
-  description = "";
+export default defineComponent({
+  data() {
+    return {
+      description: ""
+    }
+  },
 
   created() {
     this.description = `
@@ -15,4 +18,4 @@ export default class About extends Vue {
     in collaboration with like-minded clubs.
     `
   }
-}
+})

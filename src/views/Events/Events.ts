@@ -1,7 +1,6 @@
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { defineComponent } from "vue";
 
-@Component
-export default class Events extends Vue {
+export default defineComponent({
 
   moveTo(refName : string) : void {
     // console.log(refName);
@@ -14,7 +13,7 @@ export default class Events extends Vue {
         inline: "nearest"
       });
     }
-  }
+  },
 
   /**
    * Return the events data for the timeline on the page
@@ -151,4 +150,4 @@ export default class Events extends Vue {
       ]
     }
   }
-}
+})

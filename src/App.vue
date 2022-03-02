@@ -9,13 +9,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
 import Header from "./layouts/Header/Header.vue";
 import Title from "./layouts/Title/Title.vue";
 import Footer from "./layouts/Footer/Footer.vue";
 import Background from "./layouts/Background/Background.vue";
+import { defineComponent } from "vue";
 
-@Component({
+export default defineComponent({
   components: {
     Header,
     Title,
@@ -23,7 +23,6 @@ import Background from "./layouts/Background/Background.vue";
     Background
   }
 })
-export default class App extends Vue {}
 </script>
 
 <style lang="scss">
