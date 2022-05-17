@@ -11,7 +11,6 @@ export default defineComponent({
 
   data: function() {
     return {
-      bookingInfo: "",
       bookingDesc: "",
       bookingPolicy: "",
       compensation: "",
@@ -22,12 +21,6 @@ export default defineComponent({
   },  
 
   created() {
-    this.bookingInfo = `
-    Due to COVID-19, our bookings are closed temporarily.
-    Thank you for your patience and support.
-    Feel free to contact us through our email or social media
-    if you have any questions.
-    `;
     this.bookingDesc = `
     We offer any size of band (duos/trios/quartets, big band, etc.)
     as long as our musicians are available!
