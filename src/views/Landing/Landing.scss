@@ -159,10 +159,6 @@
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 1rem;
 
-      .t1x1 {
-        grid-row: span 1;
-      }
-
       .t1x2 {
         grid-row: span 2;
       }

@@ -16,128 +16,167 @@
 
   .execs_section {
     margin-top: 2vw;
+    position: relative;
+    margin-bottom: 10vw;
+    width: 100%;
 
-    .exec_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    .exec {
       position: relative;
-      display: inline-block;
-      margin-bottom: 10vw;
-      width: 100%;
+      margin: 2vw;
 
-      .exec {
-        position: relative;
-        margin: 2vw;
-        width: 45%;
+      .exec_portrait {
+        position: absolute;
+        top: -7%;
+        z-index: 5;
+        width: 21vw;
+        height: 27vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-position: top;
+        background-size: 100%;
+        background-repeat: no-repeat;
 
-        &.left {
-          float: left;
-        }
-
-        &.right {
-          float: right;
-        }
-
-        .exec_portrait {
-          position: absolute;
-          top: -7%;
-          z-index: 5;
-          width: 48%;
-          height: 27vw;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        .frame {
+          display: inline-block;
+          width: 93%;
+          height: 93%;
           border-radius: 50%;
-          background-position: top;
-          background-size: 100%;
-          background-repeat: no-repeat;
-
-          .frame {
-            display: inline-block;
-            width: 93%;
-            height: 93%;
-            border-radius: 50%;
-            border: solid 5px var(--club-yellow);
-          }
-        }
-
-        .amy {
-          background-image: url(../../assets/images/exec_portraits/amy.jpg);
-        }
-
-        .em {
-          background-image: url(../../assets/images/exec_portraits/emily.jpg);
-          background-size: 105%;
-        }
-
-        .chris {
-          background-image: url(../../assets/images/exec_portraits/chris.jpg);
-        }
-
-        .ashley {
-          background-image: url(../../assets/images/exec_portraits/ashley.jpg);
-        }
-
-        .matt {
-          background-image: url(../../assets/images/exec_portraits/matt.jpg);
-        }
-
-        .matt.meme {
-          background-image: url(../../assets/images/exec_portraits/MattCam_meme.jpg);
-        }
-
-        .dylan {
-          background-image: url(../../assets/images/exec_portraits/dolan.jpg);
-        }
-
-        .piyotr {
-          background-image: url(../../assets/images/exec_portraits/piyotr.jpg);
-        }
-
-        .coal {
-          background-image: url(../../assets/images/exec_portraits/coal.jpg);
-        }
-
-        .daniel {
-          background-image: url(../../assets/images/exec_portraits/daniel.jpg);
-          background-size: 130%;
-        }
-
-        .maxwell {
-          background-image: url(../../assets/images/exec_portraits/maxwell.png);
-          background-size: 130%;
-        }
-
-        .maxwell.meme {
-          background-image: url(../../assets/images/exec_portraits/maxwell_meme.png);
-        }
-
-        .exec_desc_box {
-          position: relative;
-          z-index: 1;
-          display: block;
-          float: right;
-          width: 70%;
-          height: 30vw;
-          padding: 2vw;
-
           border: solid 5px var(--club-yellow);
 
-          .exec_desc {
-            font-family: "Arial";
-            font-style: italic;
-            font-size: 1.3vw;
-            text-align: right;
-            width: 65%;
+          &.missing {
+            font-size: 20vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+          }
+        }
+      }
 
-            float: right;
+      .dylan {
+        background-image: url(../../assets/images/exec_portraits/Dylan.jpg);
+      }
+
+      .dylan2 {
+        background-image: url(../../assets/images/exec_portraits/Dylan2.jpg);
+        background-size: 150%;
+        background-position-y: 25%;
+      }
+
+      .steven {
+        background-image: url(../../assets/images/exec_portraits/Steven.jpg);
+        background-size: 120%;
+        background-position-y: 7%;
+      }
+
+      .steven2 {
+        background-image: url(../../assets/images/exec_portraits/Steven2.jpg);
+        background-size: 150%;
+        background-position-y: 30%;
+      }
+
+      .isabel {
+        background-image: url(../../assets/images/exec_portraits/Isabel.jpg);
+        background-size: 150%;
+        background-position-y: 25%;
+      }
+
+      .lida {
+        background-image: url(../../assets/images/exec_portraits/Lida.jpg);
+        background-size: 150%;
+        background-position-y: 25%;
+      }
+
+      .ben {
+        background-image: url(../../assets/images/exec_portraits/Ben.jpg);
+        background-size: 130%;
+        background-position-y: 40%;
+      }
+
+      .chris {
+        background-image: url(../../assets/images/exec_portraits/Chris.jpg);
+      }
+
+      .chris2 {
+        background-image: url(../../assets/images/exec_portraits/Chris2.jpg);
+        background-size: 150%;
+        background-position-y: 18%;
+        background-position-x: 59%;
+      }
+
+      .ashley {
+        background-image: url(../../assets/images/exec_portraits/Ashley.jpg);
+        background-size: 150%;
+        background-position-y: 20%;
+        background-position-x: 50%;
+      }
+
+      .angela {
+        background-image: url(../../assets/images/exec_portraits/Angela.jpg);
+        background-position-y: 20%;
+      }
+
+      .exec_desc_box {
+        position: relative;
+        z-index: 1;
+        display: block;
+        float: right;
+        width: calc(100% - 15vw);
+        height: 30vw;
+        padding: 2vw;
+
+        border: solid 5px var(--club-yellow);
+
+        .exec_desc {
+          font-family: "Arial";
+          font-style: italic;
+          font-size: 1.3vw;
+          text-align: right;
+          width: 65%;
+
+          float: right;
+
+
+          &:not(.missing) {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: .3rem;
           }
 
-          .exec_title {
-            position: absolute;
-            text-align: right;
-            margin-right: 2vw;
-            margin-bottom: 1vw;
-            bottom: 0;
-            right: 0;
+          &.missing {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60%;
+          }
+
+          div:nth-child(2n+1) {
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight:bold;
+          }
+          div:nth-child(2n) {
+            padding-bottom: .3rem;
+          }
+        }
+
+        .exec_title {
+          text-align: right;
+          margin-right: 2vw;
+          margin-bottom: 1vw;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+
+          .special {
+            font-size: .4em;
+            color: var(--club-yellow);
           }
         }
       }
@@ -158,48 +197,52 @@ and (orientation: portrait) {
 
     .execs_section {
       margin-top: 2vw;
+      grid-template-columns: 1fr;
   
-      .exec_row {
-        margin-bottom: 10vw;
-        width: 100%;
-  
-        .exec {
-          margin: 2vw;
-          width: 45%;
-  
-          &.left {
-            float: left;
-          }
-  
-          &.right {
-            float: right;
-          }
-  
-          .exec_portrait {
-            top: -7%;
-            z-index: 5;
-            width: 48%;
-            height: 27vw;
-  
-            .frame {
-              width: 93%;
-              height: 93%;
-              border: solid 2px var(--club-yellow);
-            }
-          }
-  
-          .exec_desc_box {
+      .exec {
+        margin: 2vw;
+
+        .exec_portrait {
+          z-index: 5;
+          width: calc(21vw * 1.5);
+          height: calc(27vw * 1.5);
+
+          .frame {
+            width: 93%;
+            height: 93%;
             border: solid 2px var(--club-yellow);
-  
-            .exec_desc {
-              font-size: 1.3vw;
-              width: 65%;
+          }
+        }
+
+        .exec_desc_box {
+          border: solid 2px var(--club-yellow);
+          height: 40vw;
+
+          .exec_desc {
+            position: relative;
+            left: 20vw;
+            font-size: 2.5vw;
+            text-align: left;
+            float: left;
+
+
+            &:not(.missing) {
+              grid-template-columns: 1fr 1fr;
+              column-gap: 1rem;
             }
-  
-            .exec_title {
-              margin-right: 2vw;
-              margin-bottom: 1vw;
+
+            div:nth-child(2n+1) {
+              text-align: right;
             }
+
+            div:nth-child(2n) {
+              text-align: left;
+            }
+          }
+
+          .exec_title {
+            margin-right: 2vw;
+            margin-bottom: 1vw;
           }
         }
       }
