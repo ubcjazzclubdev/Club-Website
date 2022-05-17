@@ -1,12 +1,11 @@
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { defineComponent } from "vue";
 
-@Component
-export default class Landing extends Vue {
+export default defineComponent({
   redirect() {
     window.location.href = "/gallery";
-  }
+  },
 
   mounted() {
     return;
   }
-}
+})
