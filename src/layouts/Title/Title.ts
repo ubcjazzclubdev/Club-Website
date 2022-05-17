@@ -1,4 +1,6 @@
-import { defineComponent, watch } from "vue";
+import { defineComponent } from "vue";
+import { useRoute } from 'vue-router';
+import { watch } from 'vue';
 
 export default defineComponent({
   data() {
@@ -10,8 +12,17 @@ export default defineComponent({
     }
   },
   created() {
-    watch(() => this.$router.currentRoute, newRoute => {
-      const route = newRoute.value.path;
+    this.titleText = "ubc jazz club";
+    const route = useRoute();
+    watch(
+      () => route.path,
+      async newPath => {
+        this.update(newPath)
+      }
+    )
+  },
+  methods: {
+    update(route: string) {
       if (route == "/") {
         this.titleText = "ubc jazz club";
       } else if (route == "/contact") {
@@ -37,6 +48,6 @@ export default defineComponent({
         this.iToggle = true;
         this.cToggle = true;
       }
-    })
+    }
   }
 })

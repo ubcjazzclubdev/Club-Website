@@ -1,4 +1,6 @@
 import { defineComponent } from "vue";
+import { useRoute } from 'vue-router';
+import { watch } from 'vue';
 
 export default defineComponent({
   data() {
@@ -7,10 +9,16 @@ export default defineComponent({
     }
   },
   created() {
-    const route = this.$router.currentRoute.value.path;
-    if (route == "/") {
-      this.iToggle = true;
-    }
+    this.iToggle = true;
+    const route = useRoute();
+    watch(
+      () => route.path,
+      async newPath => {
+        if(newPath != "/") {
+          this.iToggle = false;
+        }
+      }
+    )
     
     window.addEventListener("load", function() {
       const dropdown = document.querySelector('.dropdown');
