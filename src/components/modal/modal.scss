@@ -4,8 +4,9 @@ $background-color: var(--club-black);
 
 /* Enter and leave animations can use different */
 /* durations and timing functions.              */
-.slide-fade-enter-active, .slide-fade-leave-active {
-  transition: all .3s ease;
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
 }
 
 .slide-fade-enter, .slide-fade-leave-to
@@ -14,8 +15,9 @@ $background-color: var(--club-black);
   opacity: 0;
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: all .3s ease;
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s ease;
 }
 
 .fade-enter, .fade-leave-to
@@ -23,7 +25,8 @@ $background-color: var(--club-black);
   opacity: 0;
 }
 
-.modal-container, .modal-backdrop {
+.modal-container,
+.modal-backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -64,7 +67,6 @@ $background-color: var(--club-black);
     margin-top: calc(25px + constant(safe-area-inset-top, 0));
     padding-left: calc(10px + constant(safe-area-inset-left, 0));
     padding-right: calc(10px + constant(safe-area-inset-right, 0));
-    
   }
 
   // iOS 11.2+
@@ -106,19 +108,16 @@ $background-color: var(--club-black);
     }
   }
 
-  @media screen 
-  and (min-width: 320px) 
-  and (max-width: 1024px) 
-  and (orientation: portrait) {
+  @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: portrait) {
     & > p {
       transition: all 0.3s;
       padding: 2vw;
 
       font-size: 5vw;
-  
+
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
-  
+
       &:hover {
         cursor: pointer;
         padding: 3vw;
@@ -127,19 +126,16 @@ $background-color: var(--club-black);
     }
   }
 
-  @media screen 
-  and (min-width: 320px) 
-  and (max-width: 1024px) 
-  and (orientation: landscape) {
+  @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
     & > p {
       transition: all 0.3s;
       padding: 1vw;
 
       font-size: 3vw;
-  
+
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
-  
+
       &:hover {
         cursor: pointer;
         padding: 2vw;
@@ -175,13 +171,13 @@ $background-color: var(--club-black);
       padding-bottom: 2vw;
 
       border: none;
-      opacity: .2;
+      opacity: 0.2;
       background-color: black;
       color: white;
 
       &:hover {
         opacity: 1;
-        background-color: rgba(0,0,0,0.8);
+        background-color: rgba(0, 0, 0, 0.8);
         cursor: pointer;
       }
 
@@ -226,7 +222,7 @@ $background-color: var(--club-black);
         margin-left: 1vw;
         margin-right: 1vw;
 
-        &:hover{
+        &:hover {
           cursor: pointer;
           transform: translateY(-1vh);
         }
@@ -245,10 +241,7 @@ $background-color: var(--club-black);
   }
 }
 
-@media screen 
-and (max-width: 1024px)
-and (orientation: portrait)
-{
+@media screen and (max-width: 1024px) and (orientation: portrait) {
   .modal-content {
     display: inline-block;
     position: relative;
@@ -262,7 +255,7 @@ and (orientation: portrait)
 
     .gallery_photos {
       height: 55vw;
-  
+
       .nav_button {
         top: 40%;
 
@@ -270,32 +263,32 @@ and (orientation: portrait)
 
         padding-top: 4vw;
         padding-bottom: 4vw;
-  
+
         &.left {
           padding-left: 1vw;
         }
-  
+
         &.right {
           padding-right: 1vw;
         }
       }
     }
-  
+
     .gallery_thumbnails {
       width: 90%;
-  
+
       .thumbnails {
         height: 15vw;
         padding-top: 7vw;
-  
+
         &::-webkit-scrollbar {
           display: none;
         }
-  
+
         & > img {
           margin-left: 0.5vw;
           margin-right: 0.5vw;
-  
+
           &.focus {
             outline: solid 2px var(--club-yellow);
             outline-offset: 1px;
@@ -303,7 +296,7 @@ and (orientation: portrait)
           }
         }
       }
-  
+
       .number {
         margin-top: 4vw;
         font-size: 4vw;
@@ -312,9 +305,7 @@ and (orientation: portrait)
   }
 }
 
-@media screen and (min-width: 320px)
-and (max-width: 1024px)
-and (orientation: landscape) {
+@media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
   .modal-content {
     height: 100vh;
     margin-top: 10px;
@@ -326,7 +317,7 @@ and (orientation: landscape) {
 
     .gallery_photos {
       height: 25vw;
-  
+
       .nav_button {
         top: 40%;
 
@@ -334,32 +325,32 @@ and (orientation: landscape) {
 
         padding-top: 2vw;
         padding-bottom: 2vw;
-  
+
         &.left {
           padding-left: 1vw;
         }
-  
+
         &.right {
           padding-right: 1vw;
         }
       }
     }
-  
+
     .gallery_thumbnails {
       width: 90%;
-  
+
       .thumbnails {
         height: 5vw;
         padding-top: 3vw;
-  
+
         &::-webkit-scrollbar {
           display: none;
         }
-  
+
         & > img {
           margin-left: 0.5vw;
           margin-right: 0.5vw;
-  
+
           &.focus {
             outline: solid 2px var(--club-yellow);
             outline-offset: 1px;
@@ -367,7 +358,7 @@ and (orientation: landscape) {
           }
         }
       }
-  
+
       .number {
         margin-top: 1vw;
         font-size: 3vw;

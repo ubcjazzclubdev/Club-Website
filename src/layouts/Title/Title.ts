@@ -1,6 +1,6 @@
 import { defineComponent } from "vue";
-import { useRoute } from 'vue-router';
-import { watch } from 'vue';
+import { useRoute } from "vue-router";
+import { watch } from "vue";
 
 export default defineComponent({
   data() {
@@ -8,18 +8,18 @@ export default defineComponent({
       dToggle: false,
       iToggle: false,
       cToggle: false,
-      titleText: ""
-    }
+      titleText: "",
+    };
   },
   created() {
     this.titleText = "ubc jazz club";
     const route = useRoute();
     watch(
       () => route.path,
-      async newPath => {
-        this.update(newPath)
+      async (newPath) => {
+        this.update(newPath);
       }
-    )
+    );
   },
   methods: {
     update(route: string) {
@@ -48,6 +48,6 @@ export default defineComponent({
         this.iToggle = true;
         this.cToggle = true;
       }
-    }
-  }
-})
+    },
+  },
+});

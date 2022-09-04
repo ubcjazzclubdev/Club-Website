@@ -1,14 +1,13 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  
   data() {
     return {
       eEggClass: "meme",
       eEggCount: 30,
       description: "",
-      clickCount: 0
-    }
+      clickCount: 0,
+    };
   },
 
   created() {
@@ -20,10 +19,10 @@ export default defineComponent({
     clubs and organizations. These include an array of eclectic events
     that foster connections among our members and community, organized
     in collaboration with like-minded clubs.
-    `
+    `;
   },
 
-  count(e : Event) {
+  count(e: Event) {
     const sFrame = e.target as HTMLDivElement;
     const sPortrait = sFrame.parentElement as HTMLDivElement;
     this.clickCount += 1;
@@ -31,14 +30,14 @@ export default defineComponent({
       this.togglePicture(sPortrait);
     }
   },
-  
-  methods:{
-    togglePicture(selectedDiv : HTMLDivElement) {
+
+  methods: {
+    togglePicture(selectedDiv: HTMLDivElement) {
       if (selectedDiv.classList.contains(this.eEggClass)) {
         selectedDiv.classList.remove(this.eEggClass);
       } else {
         selectedDiv.classList.add(this.eEggClass);
       }
-    }
-  }
-})
+    },
+  },
+});

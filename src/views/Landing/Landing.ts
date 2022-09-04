@@ -7,5 +7,5 @@ export default defineComponent({
 
   mounted() {
     return;
-  }
-})
+  },
+});

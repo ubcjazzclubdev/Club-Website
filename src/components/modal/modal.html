@@ -1,39 +1,31 @@
 <div class="modal-container">
-
   <transition name="slide-fade">
     <div v-show="modalState" class="modal-content">
       <!-- FULL SCREEN MODAL -->
 
       <!-- CLOSE BUTTON -->
       <button @click="hide" id="close-button">
-        <p>
-          close
-        </p>
+        <p>close</p>
       </button>
 
       <!-- MODAL CONTENTS -->
       <div class="gallery_container">
         <div class="gallery_photos">
-          <img v-bind:src="currImg">
-          <button @click="prevSlide" class="nav_button left">
-            &#10094;
-          </button>
-          <button @click="nextSlide" class="nav_button right">
-            &#10095;
-          </button>
+          <img v-bind:src="currImg" />
+          <button @click="prevSlide" class="nav_button left">&#10094;</button>
+          <button @click="nextSlide" class="nav_button right">&#10095;</button>
         </div>
         <div class="gallery_thumbnails">
           <div class="thumbnails">
-            <img v-for="img in displayList" :src="img" @click="setSlide">
+            <img v-for="img in displayList" :src="img" @click="setSlide" />
           </div>
-          <div class="number">
-            {{currIdx + 1}} / {{ currSize }}
-          </div>
+          <div class="number">{{currIdx + 1}} / {{ currSize }}</div>
         </div>
       </div>
     </div>
   </transition>
 
-  <transition name="fade"><div v-if="modalState" class="modal-backdrop"></div></transition>
-
+  <transition name="fade"
+    ><div v-if="modalState" class="modal-backdrop"></div
+  ></transition>
 </div>

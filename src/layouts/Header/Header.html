@@ -2,27 +2,29 @@
   <nav>
     <ul>
       <div class="mobile_icon" @click="displayMenu()">
-        <img src="../../assets/images/graphics/icon_menu.png">
+        <img src="../../assets/images/graphics/icon_menu.png" />
       </div>
       <li class="logo">
         <a href="/" id="logo" :class="{ hide : iToggle }">
-          <img src="../../assets/club-logo.png" id="menu-icon" alt="Club Logo">
-          <span id="menu-icon-text">
-            UBC JAZZ CLUB
-          </span>
+          <img
+            src="../../assets/club-logo.png"
+            id="menu-icon"
+            alt="Club Logo"
+          />
+          <span id="menu-icon-text"> UBC JAZZ CLUB </span>
         </a>
       </li>
       <li class="space"></li>
       <li><a href="/">Home</a></li>
       <li>
-          <div class="dropdown">
-              <a href="/about">About</a>
-              <div class="dropdown-list hide">
-                  <a class="option" href="/about">who are we?</a>
-                  <a class="option" href="/team">our team</a>
-                  <a class="option" href="/involvement">get involved</a>
-              </div>
+        <div class="dropdown">
+          <a href="/about">About</a>
+          <div class="dropdown-list hide">
+            <a class="option" href="/about">who are we?</a>
+            <a class="option" href="/team">our team</a>
+            <a class="option" href="/involvement">get involved</a>
           </div>
+        </div>
       </li>
       <li><a href="/gallery">Gallery</a></li>
       <li><a href="/contact">Contact</a></li>
@@ -30,7 +32,11 @@
     </ul>
     <div class="side-menu-wrapper hide">
       <div class="side-menu">
-        <img class="close-btn" src="../../assets/images/graphics/icon_menu_close.png" @click="displayMenu()">
+        <img
+          class="close-btn"
+          src="../../assets/images/graphics/icon_menu_close.png"
+          @click="displayMenu()"
+        />
         <div class="menu-items-wrapper">
           <div class="menu-item first">
             <a href="/">home</a>
@@ -41,14 +47,10 @@
           </div>
           <div class="side-dropdown none">
             <div class="menu-item">
-              <a href="/team">
-                our team
-              </a>
+              <a href="/team"> our team </a>
             </div>
             <div class="menu-item">
-              <a href="/involvement">
-                get involved
-              </a>
+              <a href="/involvement"> get involved </a>
             </div>
           </div>
           <div class="menu-item">
@@ -61,7 +63,7 @@
             <a href="/events">events</a>
           </div>
         </div>
-        <img class="logo" src="../../assets/Jazz_Club_Logo_1.png">
+        <img class="logo" src="../../assets/Jazz_Club_Logo_1.png" />
       </div>
     </div>
   </nav>

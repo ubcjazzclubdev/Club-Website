@@ -1,12 +1,12 @@
 import { defineComponent } from "vue";
-import { useRoute } from 'vue-router';
-import { watch } from 'vue';
+import { useRoute } from "vue-router";
+import { watch } from "vue";
 
 export default defineComponent({
   data() {
     return {
       dToggle: false,
-      imageUrl: require("../../assets/images/page_bgs/main_back.png")
+      imageUrl: require("../../assets/images/page_bgs/main_back.png"),
     };
   },
 
@@ -14,7 +14,7 @@ export default defineComponent({
     const route = useRoute();
     watch(
       () => route.path,
-      async path => {
+      async (path) => {
         if (path == "/contact") {
           this.dToggle = true;
         }
@@ -34,6 +34,6 @@ export default defineComponent({
           this.imageUrl = require("../../assets/images/page_bgs/events_back.jpg");
         }
       }
-    )
-  }
-})
+    );
+  },
+});

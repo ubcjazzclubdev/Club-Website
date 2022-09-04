@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
 // Import components to route to
 import Landing from "./views/Landing/Landing.vue";
@@ -13,11 +13,11 @@ import Gallery from "./views/Gallery/Gallery.vue";
 const routes = [
   { path: "/", component: Landing },
   { path: "/about", component: About },
-  { path: "/team", component: Team},
-  { path: "/involvement", component: Involved},
+  { path: "/team", component: Team },
+  { path: "/involvement", component: Involved },
   { path: "/gallery", component: Gallery },
   { path: "/contact", component: Contact },
-  { path: "/events", component: Events }
+  { path: "/events", component: Events },
 ];
 
 const router = createRouter({

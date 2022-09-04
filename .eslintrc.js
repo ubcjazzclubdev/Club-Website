@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
   },
   extends: [
     "plugin:@typescript-eslint/recommended",
@@ -11,12 +11,12 @@ module.exports = {
     "@vue/typescript",
   ],
   parserOptions: {
-    ecmaVersion: 2020
+    ecmaVersion: 2020,
   },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     "prettier/prettier": "warn",
-    "vue/multi-word-component-names": "off"
-  }
+    "vue/multi-word-component-names": "off",
+  },
 };

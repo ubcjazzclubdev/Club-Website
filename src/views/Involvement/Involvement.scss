@@ -32,7 +32,7 @@
 
     h1 {
       margin: 3vw;
-      font-size: 5vw; 
+      font-size: 5vw;
     }
 
     h2 {
@@ -70,26 +70,26 @@
   // Divider background images
   .member {
     background-image: linear-gradient(
-            rgba(0, 0, 0, $brightness), 
-            rgba(0, 0, 0, $brightness)
-          ),
-          url("../../assets/images/cozy_christmas/cozy_christmas_11.jpg");
+        rgba(0, 0, 0, $brightness),
+        rgba(0, 0, 0, $brightness)
+      ),
+      url("../../assets/images/cozy_christmas/cozy_christmas_11.jpg");
   }
 
   .flow {
     background-image: linear-gradient(
-            rgba(0, 0, 0, $brightness), 
-            rgba(0, 0, 0, $brightness)
-          ),
-          url("../../assets/images/christmas_1.jpg");
+        rgba(0, 0, 0, $brightness),
+        rgba(0, 0, 0, $brightness)
+      ),
+      url("../../assets/images/christmas_1.jpg");
   }
 
   .merch {
     background-image: linear-gradient(
-            rgba(0, 0, 0, $brightness), 
-            rgba(0, 0, 0, $brightness)
-          ),
-          url("../../assets/images/gallery_3.jpg");
+        rgba(0, 0, 0, $brightness),
+        rgba(0, 0, 0, $brightness)
+      ),
+      url("../../assets/images/gallery_3.jpg");
   }
 
   // infographic
@@ -121,16 +121,16 @@
       align-items: flex-start;
       margin-top: 3vw;
       margin-bottom: 3vw;
-  
+
       span {
         margin-right: -7vw;
         margin-left: 5vw;
         margin-top: -0.5vw;
         width: 15%;
-  
+
         font-size: 2vw;
       }
-  
+
       h3 {
         width: 85%;
         margin: 0;
@@ -249,15 +249,11 @@
         }
       }
     }
-
   }
 }
 
-@media screen
-and (max-width: 1023px)
-and (orientation: portrait) {
+@media screen and (max-width: 1023px) and (orientation: portrait) {
   .container {
-
     // Divider Parallax with text overlay
     .divider {
       &.flow {
@@ -269,7 +265,7 @@ and (orientation: portrait) {
         background-size: cover;
         background-repeat: no-repeat;
       }
-  
+
       &.merch {
         background-size: cover;
         background-repeat: no-repeat;
@@ -280,7 +276,7 @@ and (orientation: portrait) {
     .flow_container {
       margin-top: 20vw;
       margin-bottom: 10vw;
-  
+
       .desc {
         font-size: 4.5vw;
         margin-bottom: 4em;
@@ -288,60 +284,60 @@ and (orientation: portrait) {
     }
 
     // members section
-  .member_container {
-    padding-top: 5vw;
-    padding-left: 6vw;
-    padding-right: 6vw;
+    .member_container {
+      padding-top: 5vw;
+      padding-left: 6vw;
+      padding-right: 6vw;
 
-    .row {
-      &.title {
-        font-size: 7vw;
-      }
-    }
-
-    .item {
-      span {
-        margin-left: 4vw;
-        margin-right: -5vw;
-        width: 15%;
-        font-size: 3vw;
-      }
-
-      h3 {
-        width: 85%;
-        font-size: 3vw;
-      }
-    }
-
-    .mem_link {
-      margin-top: 10vw;
-      margin-bottom: 10vw;
-
-      .m_link {
-        h1 {
-          font-size: 6vw;
-          text-decoration: underline;
+      .row {
+        &.title {
+          font-size: 7vw;
         }
       }
 
-      #mem_notes {
-        font-size: 3vw;
+      .item {
+        span {
+          margin-left: 4vw;
+          margin-right: -5vw;
+          width: 15%;
+          font-size: 3vw;
+        }
+
+        h3 {
+          width: 85%;
+          font-size: 3vw;
+        }
+      }
+
+      .mem_link {
+        margin-top: 10vw;
+        margin-bottom: 10vw;
+
+        .m_link {
+          h1 {
+            font-size: 6vw;
+            text-decoration: underline;
+          }
+        }
+
+        #mem_notes {
+          font-size: 3vw;
+        }
       }
     }
-  }
-  
+
     // merch section
     .merch_container {
       margin-top: 5vw;
       margin-bottom: 5vw;
 
       color: #c8c8c8;
-  
+
       .title {
         margin-top: 10vw;
         font-size: 4vw;
       }
-  
+
       .desc {
         margin-top: 5vw;
         font-size: 2.5vw;
@@ -351,17 +347,17 @@ and (orientation: portrait) {
           width: 85%;
         }
       }
-  
+
       .prices {
         margin-top: 10vw;
         font-size: 4vw;
       }
-  
+
       img {
         margin-top: 10vw;
         width: 90%;
       }
-  
+
       .desc_2 {
         margin-top: 10vw;
         margin-bottom: 10vw;
@@ -372,7 +368,7 @@ and (orientation: portrait) {
         margin-top: 4vw;
         transition: all 0.3s;
         width: 50%;
-  
+
         &:hover {
           width: 90%;
         }
@@ -385,7 +381,7 @@ and (orientation: portrait) {
           margin-top: 1vw;
           transition: all 0.3s;
           width: 10%;
-  
+
           &:hover {
             width: 50%;
           }

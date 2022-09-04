@@ -1,18 +1,18 @@
-import {emitter} from "@/main";
+import { emitter } from "@/main";
 import { defineComponent } from "vue";
 
 interface ModalData {
-  modalState: boolean,
+  modalState: boolean;
   // Intermediary var to prevent multiple require calls
-  allSrcs: string[][],
+  allSrcs: string[][];
 
-  displayList : string[],
-  currElement : null | HTMLElement,
-  modId: number,
-  currImg: string,
-  currIdx: number,
-  currSize: number,
-  currLen: number
+  displayList: string[];
+  currElement: null | HTMLElement;
+  modId: number;
+  currImg: string;
+  currIdx: number;
+  currSize: number;
+  currLen: number;
 }
 
 /**
@@ -21,10 +21,9 @@ interface ModalData {
  */
 
 export default defineComponent({
-
-  name: 'modal',
+  name: "modal",
   props: {
-    modalId: String
+    modalId: String,
   },
   data: function (): ModalData {
     return {
@@ -32,19 +31,19 @@ export default defineComponent({
       // Intermediary var to prevent multiple require calls
       allSrcs: new Array<Array<string>>(),
 
-      displayList : new Array<string>(),
-      currElement : null,
+      displayList: new Array<string>(),
+      currElement: null,
       modId: 0,
       currImg: "",
       currIdx: 0,
       currSize: 0,
-      currLen: 0
-    }
+      currLen: 0,
+    };
   },
 
   created() {
     this.allSrcs = this.getData();
-    emitter.on('modal-open', this.callback);
+    emitter.on("modal-open", this.callback);
   },
 
   updated() {
@@ -52,22 +51,21 @@ export default defineComponent({
   },
 
   destroy() {
-    emitter.off('modal-open', this.callback);
+    emitter.off("modal-open", this.callback);
     this.displayList = [];
   },
 
-  hide() : void {
+  hide(): void {
     this.$data.modalState = false;
-    emitter.emit('unhide-nav', this.$data.modalState);
+    emitter.emit("unhide-nav", this.$data.modalState);
   },
 
   methods: {
-
     /**
      * Update the focus of the gallery
      * @param newEl New element in focus
      */
-    updateFocus(newEl : HTMLElement) {
+    updateFocus(newEl: HTMLElement) {
       if (this.currElement != null) {
         this.currElement.classList.remove("focus");
         this.currElement = newEl;
@@ -77,15 +75,15 @@ export default defineComponent({
       newEl.classList.add("focus");
     },
 
-    readJson(file : File) {
+    /* readJson(file: File) {
       // To-Do
-    },
-  
+    }, */
+
     /**
      * Next slide scroll
      */
-    nextSlide() : void {
-      if ((this.currIdx + 1) > this.currLen) {
+    nextSlide(): void {
+      if (this.currIdx + 1 > this.currLen) {
         this.currIdx = 0;
       } else {
         this.currIdx++;
@@ -93,12 +91,12 @@ export default defineComponent({
       this.currImg = this.displayList[this.currIdx];
       this.updateSlide();
     },
-  
+
     /**
      * Prev slide scroll
      */
     prevSlide() {
-      if ((this.currIdx - 1) < 0) {
+      if (this.currIdx - 1 < 0) {
         this.currIdx = this.currLen;
       } else {
         this.currIdx--;
@@ -106,7 +104,7 @@ export default defineComponent({
       this.currImg = this.displayList[this.currIdx];
       this.updateSlide();
     },
-  
+
     /**
      * Update the slides after next/prev
      */
@@ -115,8 +113,8 @@ export default defineComponent({
       if (this.displayList.length == 0) {
         return;
       }
-  
-      let parent : Element | null;
+
+      let parent: Element | null;
       if (this.currElement == null) {
         parent = document.getElementsByClassName("thumbnails")[this.modId];
       } else {
@@ -126,31 +124,31 @@ export default defineComponent({
       this.updateFocus(tempEl);
       tempEl.scrollIntoView({
         behavior: "smooth",
-        block: "end"
+        block: "end",
       });
     },
 
     /**
      * Finds the index of the thumbnail slide according to its
      * parent element
-     * 
+     *
      * @param slide The thumbnail slide
      */
-    getSlideIndex(slide : HTMLElement) : number {
-      const parent = slide.parentNode; 
+    getSlideIndex(slide: HTMLElement): number {
+      const parent = slide.parentNode;
       const temp = Array.prototype.indexOf.call(parent!.children, slide);
       return temp;
     },
-  
+
     /**
      * Set slide according to which thumbnail the user clicked
      * @param e Click event
      */
-    setSlide(e : Event) {
+    setSlide(e: Event) {
       const selected = e.target as HTMLElement;
-  
+
       this.currIdx = this.getSlideIndex(selected);
-  
+
       this.currImg = this.displayList[this.currIdx];
       this.updateFocus(selected);
     },
@@ -188,7 +186,7 @@ export default defineComponent({
           require("../../assets/images/imagine_day/imagine_day_5.jpg"),
           require("../../assets/images/imagine_day/imagine_day_6.jpg"),
           require("../../assets/images/imagine_day/imagine_day_7.jpg"),
-          require("../../assets/images/imagine_day/imagine_day_8.jpg")
+          require("../../assets/images/imagine_day/imagine_day_8.jpg"),
         ],
         [
           require("../../assets/images/weekly_jams/weekly_1.jpg"),
@@ -229,27 +227,26 @@ export default defineComponent({
           require("../../assets/images/weekly_jams/weekly_38.jpg"),
           require("../../assets/images/weekly_jams/weekly_39.jpg"),
         ],
-      ]
+      ];
     },
 
     /**
      * Callback function to determine which modal the user clicked
-     * 
+     *
      * @param id Modal id
      */
-    callback(id: string) : void {
-      if(id === this.$props.modalId) {
-  
+    callback(id: string): void {
+      if (id === this.$props.modalId) {
         this.modId = +id.split("-")[1]; // Modal id for differing albums, Integer
-  
-        const albumSrc : string[] = this.allSrcs[this.modId] as string[];
+
+        const albumSrc: string[] = this.allSrcs[this.modId] as string[];
         this.displayList = albumSrc;
         this.currImg = this.displayList[this.currIdx];
         this.currSize = this.displayList.length;
         this.currLen = this.currSize - 1;
-  
+
         this.$data.modalState = true;
       }
     },
-  }
-})
+  },
+});

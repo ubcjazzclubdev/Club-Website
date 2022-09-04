@@ -1,15 +1,12 @@
 <template>
   <div class="container">
     <h1>Hi</h1>
-    <p>
-      Default Page
-    </p>
+    <p>Default Page</p>
   </div>
 </template>
 
 <script lang="ts">
-
-export default {}
+export default {};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

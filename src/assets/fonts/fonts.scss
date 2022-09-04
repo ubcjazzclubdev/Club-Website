@@ -1,13 +1,12 @@
 @font-face {
   font-family: "Built-Tilting";
-  src: url(./assets/fonts/built-tilting-rg-it.ttf) format('truetype');
+  src: url(./assets/fonts/built-tilting-rg-it.ttf) format("truetype");
 
-  src: 
-      url(./assets/fonts/built-tilting-rg-it.eot) format('embedded-opentype'),
-      url(./assets/fonts/built-tilting-rg-it.otf) format('opentype'),
-      url(./assets/fonts/built-tilting-rg-it.woff) format('woff'),
-      url(./assets/fonts/built-tilting-rg-it.woff2) format('woff2'),
-      url(./assets/fonts/built-tilting-rg-it.svg) format('svg');
+  src: url(./assets/fonts/built-tilting-rg-it.eot) format("embedded-opentype"),
+    url(./assets/fonts/built-tilting-rg-it.otf) format("opentype"),
+    url(./assets/fonts/built-tilting-rg-it.woff) format("woff"),
+    url(./assets/fonts/built-tilting-rg-it.woff2) format("woff2"),
+    url(./assets/fonts/built-tilting-rg-it.svg) format("svg");
 
   font-style: italic;
   font-weight: normal;
@@ -15,13 +14,12 @@
 
 @font-face {
   font-family: "Built-Tilting";
-  src: url(./assets/fonts/built-tilting-sb-it.ttf) format('truetype');
-  src: 
-      url(./assets/fonts/built-tilting-sb-it.eot) format('embedded-opentype'),
-      url(./assets/fonts/built-tilting-sb-it.otf) format('opentype'),
-      url(./assets/fonts/built-tilting-sb-it.woff) format('woff'),
-      url(./assets/fonts/built-tilting-sb-it.woff2) format('woff2'),
-      url(./assets/fonts/built-tilting-sb-it.svg) format('svg');
+  src: url(./assets/fonts/built-tilting-sb-it.ttf) format("truetype");
+  src: url(./assets/fonts/built-tilting-sb-it.eot) format("embedded-opentype"),
+    url(./assets/fonts/built-tilting-sb-it.otf) format("opentype"),
+    url(./assets/fonts/built-tilting-sb-it.woff) format("woff"),
+    url(./assets/fonts/built-tilting-sb-it.woff2) format("woff2"),
+    url(./assets/fonts/built-tilting-sb-it.svg) format("svg");
   font-style: italic;
   font-weight: 800;
 }

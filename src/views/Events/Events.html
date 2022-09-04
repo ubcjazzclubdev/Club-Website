@@ -1,106 +1,76 @@
 <div class="container">
   <div class="links_wrapper">
     <div class="link_container">
-      <div class="link" @click="moveTo('.calendar')">
-        calendar
-      </div>
-      <div class="link" @click="moveTo('.reg_events')">
-        regular events
-      </div>
-      <div class="link" @click="moveTo('.history')">
-        timeline
-      </div>
+      <div class="link" @click="moveTo('.calendar')">calendar</div>
+      <div class="link" @click="moveTo('.reg_events')">regular events</div>
+      <div class="link" @click="moveTo('.history')">timeline</div>
     </div>
   </div>
   <div class="divider calendar">
-    <div class="divider_text">
-      calendar
-    </div>
+    <div class="divider_text">calendar</div>
   </div>
   <div class="cal_container">
-    <img src="../../assets/images/calendars/cal_2021_mar.png">
+    <img src="../../assets/images/calendars/cal_2021_mar.png" />
   </div>
   <div class="divider reg_events">
-    <div class="divider_text">
-      regular events
-    </div>
+    <div class="divider_text">regular events</div>
   </div>
   <div class="reg_events_container">
     <div class="events">
       <div class="event evnt1">
-        <div class="e_title">
-          casual jams
-        </div>
-        <img src="../../assets/images/jam_4.jpg">
+        <div class="e_title">casual jams</div>
+        <img src="../../assets/images/jam_4.jpg" />
         <div class="e_desc">
-          Meant for musicians to collaborate with each other 
-          and listeners to enjoy; a weekly no-pressure environment 
-          where you can mingle with your fellow members, practice 
-          with other musicians and/or lounge for a couple hours.
+          Meant for musicians to collaborate with each other and listeners to
+          enjoy; a weekly no-pressure environment where you can mingle with your
+          fellow members, practice with other musicians and/or lounge for a
+          couple hours.
         </div>
       </div>
       <div class="event evnt2">
-        <div class="e_title">
-          genre nights
-        </div>
-        <img src="../../assets/images/weekly_jams/weekly_4.jpg">
+        <div class="e_title">genre nights</div>
+        <img src="../../assets/images/weekly_jams/weekly_4.jpg" />
         <div class="e_desc">
-          Know how to play an instrument but not in jazz? We got you. 
-          Genre nights focus on specific genres of jazz and the 
-          techniques associated. With the guidance of our veteran 
-          musicians you’re sure to get it down.
+          Know how to play an instrument but not in jazz? We got you. Genre
+          nights focus on specific genres of jazz and the techniques associated.
+          With the guidance of our veteran musicians you’re sure to get it down.
         </div>
       </div>
       <div class="event evnt3">
-        <div class="e_title">
-          concerts
-        </div>
-        <img src="../../assets/images/social_10.jpg">
+        <div class="e_title">concerts</div>
+        <img src="../../assets/images/social_10.jpg" />
         <div class="e_desc">
-          At the end of every term, we like to feature the growth 
-          and talents of our musicians in a more formal setting. 
-          With snacks and social intermissions, it’s a great place 
-          to enjoy all the best things about Jazz Club: our engaged 
-          listeners and talented musicians.
+          At the end of every term, we like to feature the growth and talents of
+          our musicians in a more formal setting. With snacks and social
+          intermissions, it’s a great place to enjoy all the best things about
+          Jazz Club: our engaged listeners and talented musicians.
         </div>
       </div>
     </div>
   </div>
   <div class="divider history">
-    <div class="divider_text">
-      our history
-    </div>
+    <div class="divider_text">our history</div>
   </div>
   <div class="timeline_wrapper">
     <div class="timeline">
       <div v-for="i in allEvents">
         <div v-for="j in i.eventYear">
           <div class="timeline_year_w" v-bind:class="j.sep">
-              <div class="timeline_year">
-                {{ j.year }}
-              </div>
+            <div class="timeline_year">{{ j.year }}</div>
           </div>
           <div v-for="event in j.events">
             <div class="timeline_group" v-bind:class="event.first">
-              <div class="timeline_month">
-                {{ event.month }}
-              </div>
+              <div class="timeline_month">{{ event.month }}</div>
               <div class="timeline_date">
-                <span class="date">
-                  {{ event.date }}
-                </span>
+                <span class="date"> {{ event.date }} </span>
               </div>
               <div class="timeline_box">
                 <div class="left">
-                  <img v-bind:src="event.image">
+                  <img v-bind:src="event.image" />
                 </div>
                 <div class="right">
-                  <div class="title">
-                    {{ event.title }}
-                  </div>
-                  <div class="desc">
-                    {{ event.desc }}
-                  </div>
+                  <div class="title">{{ event.title }}</div>
+                  <div class="desc">{{ event.desc }}</div>
                 </div>
               </div>
             </div>
