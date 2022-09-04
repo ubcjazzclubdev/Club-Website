@@ -123,11 +123,8 @@
 
   // Divider background images
   .div_home {
-    background-image: linear-gradient(
-              rgba(0, 0, 0, 0.5), 
-              rgba(0, 0, 0, 0.5)
-            ),
-            url("../../assets/images/home_events_divider.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../../assets/images/home_events_divider.jpg");
   }
 
   // Events Content
@@ -203,11 +200,10 @@
   }
 }
 
-@media screen 
-and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
   .container {
     $text-padding: 1vw;
-      // Intro Content
+    // Intro Content
     .intro_content {
       margin-left: 5vw;
       margin-right: 5vw;
@@ -267,7 +263,9 @@ and (max-width: 1023px) {
             margin-left: auto;
 
             margin-top: 2vw;
-            p { padding: 0; }
+            p {
+              padding: 0;
+            }
           }
         }
 
@@ -305,7 +303,7 @@ and (max-width: 1023px) {
             background-color: var(--club-dark-grey);
           }
 
-          p:first-child{
+          p:first-child {
             width: 70%;
             padding-top: $text-padding;
           }
@@ -323,7 +321,6 @@ and (max-width: 1023px) {
 
     // Events Content
     .events_content {
-
       .events_description {
         padding-top: 4vw;
         padding-bottom: 10vw;

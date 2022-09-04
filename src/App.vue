@@ -20,9 +20,9 @@ export default defineComponent({
     Header,
     Title,
     Footer,
-    Background
-  }
-})
+    Background,
+  },
+});
 </script>
 
 <style lang="scss">

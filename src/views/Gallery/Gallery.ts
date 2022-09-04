@@ -1,10 +1,10 @@
-import Modal from '@/components/modal/modal.vue'
+import Modal from "@/components/modal/modal.vue";
 import { emitter } from "@/main";
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
   components: {
-      'modal': Modal
+    modal: Modal,
   },
 
   data() {
@@ -13,7 +13,7 @@ export default defineComponent({
       currIdx: 0,
       currSize: 0,
       featuredImgs: new Array<string>(),
-      timerId: 0
+      timerId: 0,
     };
   },
 
@@ -27,34 +27,34 @@ export default defineComponent({
     this.currImg = this.featuredImgs[this.currIdx];
     this.currSize = this.featuredImgs.length;
     this.timerId = setInterval(this.galleryNext, 5000);
-    emitter.on('unhide-nav', this.toggleNavbar);
+    emitter.on("unhide-nav", this.toggleNavbar);
   },
 
   methods: {
-    moveTo(refName : string) : void {
+    moveTo(refName: string): void {
       // console.log(refName);
       const el = document.querySelector(refName);
       if (el != null) {
         el.scrollIntoView({
           behavior: "smooth",
           block: "start",
-          inline: "nearest"
+          inline: "nearest",
         });
       }
     },
-  
-    galleryNext() : void {
+
+    galleryNext(): void {
       // if ((this.currIdx + 1) > this.currSize) {
       //   this.currIdx = 0;
       // } else {
       //   this.currIdx++;
       // }
-      this.currIdx = (this.currIdx += 1) % this.currSize
+      this.currIdx = (this.currIdx += 1) % this.currSize;
       this.currImg = this.featuredImgs[this.currIdx];
     },
-  
-    galleryBack() : void {
-      if ((this.currIdx - 1) < 0) {
+
+    galleryBack(): void {
+      if (this.currIdx - 1 < 0) {
         this.currIdx = this.currSize;
       } else {
         this.currIdx--;
@@ -64,14 +64,14 @@ export default defineComponent({
 
     getPhotos() {
       return {
-        featuredPhotos : [
+        featuredPhotos: [
           require("../../assets/images/imagine_day_5.jpg"),
           require("../../assets/images/singtime.jpg"),
           require("../../assets/images/guitartime.jpg"),
-        ]
-      }
+        ],
+      };
     },
-  
+
     /**
      * Hides the mobile navbar, because of z-indicies.
      */
@@ -83,12 +83,12 @@ export default defineComponent({
         nav.classList.add("hide");
       }
     },
-  
-    modalImage(event: any) : void  {
-      const image:any = event.target;
+
+    modalImage(event: Event): void {
+      const image: any = event.target;
       const id = image.getAttribute("modal-id");
       emitter.emit("modal-open", id);
       this.toggleNavbar();
-    }
-  }
-})
+    },
+  },
+});

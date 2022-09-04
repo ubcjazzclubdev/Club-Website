@@ -3,8 +3,8 @@ import { defineComponent } from "vue";
 export default defineComponent({
   data() {
     return {
-      description: ""
-    }
+      description: "",
+    };
   },
 
   created() {
@@ -16,6 +16,6 @@ export default defineComponent({
     clubs and organizations. These include an array of eclectic events
     that foster connections among our members and community, organized
     in collaboration with like-minded clubs.
-    `
-  }
-})
+    `;
+  },
+});

@@ -38,7 +38,7 @@
     .footer-row {
       display: inline-block;
       width: 100%;
-      
+
       margin-top: 2vw;
       margin-bottom: 2vw;
     }
@@ -46,7 +46,7 @@
     .news {
       display: flex;
       flex-direction: column;
-      
+
       .sub-text {
         display: inline-block;
 
@@ -125,7 +125,7 @@
           outline: none !important;
         }
       }
-  
+
       input[type="image"] {
         position: absolute;
         align-self: center;
@@ -133,17 +133,17 @@
         border-radius: 5px;
         height: 4vw;
         right: 4.5vw;
-  
+
         &:focus {
           outline: none !important;
         }
-  
+
         &:active {
           border: solid white 1px;
           margin-left: calc((-8%) - 1px);
           margin-right: -1px;
         }
-  
+
         &:hover {
           cursor: pointer;
           outline: white;
@@ -158,18 +158,16 @@
   }
 }
 
-@media screen 
-and (max-width: 768px)
-and (orientation: portrait) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
   #footer-container {
     font-size: 12pt;
     padding: 5vh 0vh 4vh 0vh;
-  
+
     .footer-return {
       font-size: 5vw;
       padding: 3vw;
     }
-  
+
     .footer-content {
       padding-left: 3vw;
       padding-right: 3vw;
@@ -196,20 +194,19 @@ and (orientation: portrait) {
 
       .info {
         .item {
-  
           a {
             width: 15%;
-  
+
             img {
               width: 100%;
             }
           }
-  
+
           p {
             padding-left: 2vw;
             font-size: 4vw;
           }
-  
+
           .wrapper-loc {
             margin-top: -1vw;
             p {

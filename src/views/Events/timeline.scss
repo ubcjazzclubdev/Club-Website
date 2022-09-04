@@ -24,13 +24,13 @@
     font-style: italic;
 
     color: white;
-  
+
     &:before {
       content: "";
       width: 4px;
       height: 100%;
       background-color: var(--club-yellow);
-  
+
       position: absolute;
       top: 0;
       left: 28%;
@@ -45,7 +45,7 @@
         display: block;
         float: left;
         width: 20%;
-  
+
         font-size: 2.5vw;
         font-family: "Arial";
         font-style: italic;
@@ -139,10 +139,10 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .timeline_wrapper {
     margin-bottom: 1.5vw;
-  
+
     max-width: 100%;
     padding: 3vw 2vw 3vw;
-  
+
     .timeline {
       padding-top: 1vw;
       padding-bottom: 3vw;
@@ -160,36 +160,36 @@
 
         background-color: var(--club-yellow);
       }
-  
+
       .timeline_year_w {
         .timeline_year {
           font-size: 3vw;
         }
-  
+
         &.separator {
           margin-top: 10vw;
         }
       }
-  
+
       .timeline_group {
         margin-top: 3vw;
         font-size: 3vw;
-  
+
         .timeline_month {
           margin-right: 2vw;
         }
-  
+
         .timeline_date {
           max-height: 4vw;
           min-width: 4vw;
           margin-right: 4vw;
-  
+
           .date {
             margin-left: 0vw;
             max-height: 4vw;
           }
         }
-  
+
         .timeline_box {
           display: flex;
           flex-direction: column;
@@ -199,7 +199,7 @@
           .left {
             width: 100%;
             float: left;
-  
+
             img {
               width: 100%;
             }
@@ -213,10 +213,10 @@
               font-size: 5vw;
               color: var(--club-yellow);
             }
-  
+
             .desc {
               margin-top: 1vw;
-  
+
               font-size: 2.5vw;
             }
           }

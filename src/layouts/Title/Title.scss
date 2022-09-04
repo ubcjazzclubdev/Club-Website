@@ -11,7 +11,8 @@
     margin-left: auto;
     margin-right: auto;
 
-    .title_left, .title_right {
+    .title_left,
+    .title_right {
       display: table-cell;
       vertical-align: middle;
     }
@@ -47,10 +48,7 @@
   }
 }
 
-@media screen
-and (max-width: 1024px)
-and (orientation: portrait)
-{
+@media screen and (max-width: 1024px) and (orientation: portrait) {
   .title_text_overlay {
     top: 25%;
 

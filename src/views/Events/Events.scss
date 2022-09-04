@@ -1,7 +1,7 @@
 .container {
   // Divider brightness
   $brightness: 0.5;
-  
+
   position: relative;
   color: white;
   overflow-x: hidden;
@@ -11,27 +11,27 @@
   font-style: italic;
 
   .calendar {
-      background-image: linear-gradient(
-              rgba(0, 0, 0, $brightness), 
-              rgba(0, 0, 0, $brightness)
-            ),
-            url("../../assets/images/social_10.jpg");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, $brightness),
+        rgba(0, 0, 0, $brightness)
+      ),
+      url("../../assets/images/social_10.jpg");
   }
 
   .reg_events {
     background-image: linear-gradient(
-            rgba(0, 0, 0, $brightness), 
-            rgba(0, 0, 0, $brightness)
-          ),
-          url("../../assets/images/weekly_jams/weekly_16.jpg");
+        rgba(0, 0, 0, $brightness),
+        rgba(0, 0, 0, $brightness)
+      ),
+      url("../../assets/images/weekly_jams/weekly_16.jpg");
   }
 
   .history {
     background-image: linear-gradient(
-            rgba(0, 0, 0, $brightness), 
-            rgba(0, 0, 0, $brightness)
-          ),
-          url("../../assets/images/jam_4.jpg");
+        rgba(0, 0, 0, $brightness),
+        rgba(0, 0, 0, $brightness)
+      ),
+      url("../../assets/images/jam_4.jpg");
   }
 
   // calendar
@@ -89,9 +89,7 @@
   }
 }
 
-@media screen
-and (max-width: 1023px)
-and (orientation: portrait) {
+@media screen and (max-width: 1023px) and (orientation: portrait) {
   .container {
     // calendar
     .cal_container {
@@ -99,20 +97,20 @@ and (orientation: portrait) {
       margin-bottom: 8vw;
       width: 100%;
     }
-  
+
     // regular events
     .reg_events_container {
       margin-top: 10vw;
       margin-bottom: 10vw;
-  
+
       .events {
         flex-direction: column;
         align-items: center;
         width: 90%;
-  
+
         .event {
           width: 80%;
-  
+
           .e_title {
             font-size: 10vw;
           }
@@ -120,7 +118,7 @@ and (orientation: portrait) {
           img {
             width: 70%;
           }
-  
+
           .e_desc {
             position: relative;
             width: 100%;
@@ -142,13 +140,13 @@ and (orientation: portrait) {
               display: block;
               left: 50%;
               bottom: 0;
-              content: '';
+              content: "";
 
               width: 70%;
               height: 1px;
 
               background-color: var(--club-yellow);
-              transform: translate(-50%,0);
+              transform: translate(-50%, 0);
             }
           }
         }
