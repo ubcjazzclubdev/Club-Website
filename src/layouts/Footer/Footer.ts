@@ -7,7 +7,7 @@ interface FormElements extends HTMLFormControlsCollection {
 export default defineComponent({
   data() {
     return {
-      email: "jazzclububc@gmail.com",
+      email: "president@ubcjazzclub.ca",
       lnk_insta: "@ubcjazzclub",
       lnk_fb: "ubc jazz club",
       room: "Room 3206D",

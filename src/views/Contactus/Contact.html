@@ -13,11 +13,16 @@
     </div>
     <div class="contact_form_container">
       <div id="contact_form_left">
+      <!--https://docs.google.com/forms/d/e/1FAIpQLScc24G44FRIWIhSidM3qM70BJbTZsJK_TOdPbdrEyyjlEJ8kw/viewform?usp=pp_url&entry.495402710=Name&entry.146365604=Email@gmail.com&entry.308083149=Subject&entry.1511380091=Message-->
       <form id="contact_form" @submit.prevent="staticSubmit" enctype="text/plain" target="hidden_iframe">
           <p>
             Name:
           </p>
           <input id="name" name="entry.495402710" type="text" class="feedback-input" placeholder="Your name..." />
+          <p>
+            Email:
+          </p>
+          <input id="email" name="entry.146365604" type="text" class="feedback-input" placeholder="Your email..." />
           <p>
             Subject:
           </p>
@@ -52,7 +57,7 @@
         </p>
         <br/>
         <p>
-          Reach out to us on Facebook, Instagram, or via our email to book a gig! Links are down below.
+          Reach out to us on Facebook, Instagram, or at <a href="mailto:music@ubcjazzclub.ca">music@ubcjazzclub.ca</a> to book a gig! Social links are down below.
         </p>
       </div>
     </div>

@@ -1,8 +1,10 @@
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { defineComponent } from "vue";
+import {validate} from "email-validator";
 
 interface FormElements extends HTMLFormControlsCollection {
   name : HTMLInputElement;
+  email: HTMLInputElement;
   subject : HTMLInputElement;
   message : HTMLTextAreaElement;
 }
@@ -31,7 +33,7 @@ export default defineComponent({
     on or off campus
     `;
     this.compensation = `
-    Musicians must be compensated (monetarily or other - if specified)
+    Musicians must be compensated (monetarily or otherwise - if specified)
     `;
   },
 
@@ -41,6 +43,10 @@ export default defineComponent({
       if (elements.name.value == "")
       {
         this.errors.push("Name Empty");
+      }
+      if (!validate(elements.email.value))
+      {
+        this.errors.push("Email Invalid");
       }
       if (elements.subject.value == "")
       {
