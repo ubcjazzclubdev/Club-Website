@@ -12,7 +12,7 @@ export default defineComponent({
       currImg: "",
       currIdx: 0,
       currSize: 0,
-      featuredImgs: new Array<string>(),
+      featuredImgs: [] as Array<string>,
       timerId: 0,
     };
   },
@@ -85,6 +85,7 @@ export default defineComponent({
     },
 
     modalImage(event: Event): void {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const image: any = event.target;
       const id = image.getAttribute("modal-id");
       emitter.emit("modal-open", id);
