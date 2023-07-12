@@ -8,6 +8,14 @@
   padding: 10vh 0 7vh 0;
   font-family: Trocchi;
 
+  a {
+    color: inherit;
+  }
+
+  .icon {
+    font-size: 4rem;
+  }
+
   .footer-return {
     display: inline-block;
     text-transform: uppercase;
@@ -30,7 +38,7 @@
     flex-direction: column;
     justify-content: center;
 
-    padding: 5vw 25vw 5vw 25vw;
+    padding: 0vw 25vw 5vw 25vw;
 
     margin-left: auto;
     margin-right: auto;
@@ -100,6 +108,16 @@
             text-transform: none;
             text-align: left;
           }
+        }
+      }
+
+      .item.socials {
+        font-size: 4em;
+        width:100%;
+        justify-content: space-between;
+
+        a {
+          color: inherit;
         }
       }
     }

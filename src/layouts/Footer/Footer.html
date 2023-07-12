@@ -1,7 +1,7 @@
 <div id="footer-container">
   <div class="footer-return" @click="scrollToTop">back to the top</div>
   <div class="footer-content">
-    <div class="footer-row news">
+    <!-- <div class="footer-row news">
       <span class="sub-text"> subscribe to our newsletter </span>
       <form
         id="contact-form"
@@ -22,29 +22,28 @@
         id="hidden_iframe"
         style="display: none"
       ></iframe>
-    </div>
+    </div> -->
     <div class="footer-row info">
+      <div class="footer-row item socials">
+        <a href="https://www.instagram.com/ubcjazzclub/?hl=en">
+          <font-awesome-icon :icon="['fab', 'instagram']" />
+        </a>
+        <a href="https://discord.com/invite/dsznYSCyeM">
+          <font-awesome-icon :icon="['fab', 'discord']" />
+        </a>
+        <a href="https://www.facebook.com/ubcjazzclub">
+          <font-awesome-icon :icon="['fab', 'facebook']" />
+        </a>
+      </div>
       <div class="footer-row item">
-        <a href="mailto:president@ubcjazzclub.ca">
-          <img src="../../assets/images/graphics/icon_mail.png" />
+        <a href="mailto:president@ubcjazzclub.ca" class="icon">
+          <font-awesome-icon :icon="['far', 'envelope']" />
         </a>
         <p>{{ this.email }}</p>
       </div>
       <div class="footer-row item">
-        <a href="https://www.instagram.com/ubcjazzclub/?hl=en">
-          <img src="../../assets/images/graphics/icon_inst.png" />
-        </a>
-        <p>{{ this.lnk_insta }}</p>
-      </div>
-      <div class="footer-row item">
-        <a href="https://www.facebook.com/ubcjazzclub">
-          <img src="../../assets/images/graphics/icon_fb.png" />
-        </a>
-        <p>{{ this.lnk_fb }}</p>
-      </div>
-      <div class="footer-row item">
-        <a href="https://goo.gl/maps/3w3ruTpXCaUUpnzU7">
-          <img src="../../assets/images/graphics/icon_loc.png" />
+        <a href="https://goo.gl/maps/3w3ruTpXCaUUpnzU7" class="icon">
+          <font-awesome-icon :icon="['fas', 'location-dot']" />
         </a>
         <div class="wrapper-loc">
           <p>{{ this.room }}</p>
