@@ -1,4 +1,5 @@
 [build]
+command = "yarn run build"
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
 [[redirects]]
