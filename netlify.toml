@@ -1,4 +1,6 @@
 [build]
+command = "yarn run build"
+environment = { NODE_VERSION = "18.12.0" }
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
 [[redirects]]

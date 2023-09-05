@@ -16,7 +16,7 @@ export default defineComponent({
       bookingPolicy: "",
       compensation: "",
 
-      errors: new Array<string>(),
+      errors: [] as Array<string>,
       submitted: false,
     };
   },

@@ -29,9 +29,9 @@ export default defineComponent({
     return {
       modalState: false,
       // Intermediary var to prevent multiple require calls
-      allSrcs: new Array<Array<string>>(),
+      allSrcs: [] as Array<Array<string>>,
 
-      displayList: new Array<string>(),
+      displayList: [] as Array<string>,
       currElement: null,
       modId: 0,
       currImg: "",

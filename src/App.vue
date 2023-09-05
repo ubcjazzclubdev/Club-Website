@@ -1,34 +1,34 @@
 <template>
   <div id="app">
-    <Header />
-    <Title />
+    <JazzHeader />
+    <JazzTitle />
     <Background />
     <router-view></router-view>
-    <Footer />
+    <JazzFooter />
   </div>
 </template>
 
 <script lang="ts">
-import Header from "./layouts/Header/Header.vue";
-import Title from "./layouts/Title/Title.vue";
-import Footer from "./layouts/Footer/Footer.vue";
+import JazzHeader from "./layouts/Header/JazzHeader.vue";
+import JazzTitle from "./layouts/Title/JazzTitle.vue";
+import JazzFooter from "./layouts/Footer/JazzFooter.vue";
 import Background from "./layouts/Background/Background.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   components: {
-    Header,
-    Title,
-    Footer,
+    JazzHeader,
+    JazzTitle,
+    JazzFooter,
     Background,
   },
 });
 </script>
 
 <style lang="scss">
-@import "./assets/styles/variables.scss";
-@import "./assets/styles/styles.scss";
-@import "./assets/fonts/fonts.scss";
+@use "./assets/styles/variables.scss";
+@use "./assets/styles/styles.scss";
+@use "./assets/fonts/fonts.scss";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
