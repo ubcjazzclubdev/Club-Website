@@ -3,9 +3,9 @@
   top: 0;
   left: 0;
   position: relative;
-  min-height: 60%;
+  min-height: 100%;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   opacity: 0.9;
@@ -19,13 +19,14 @@
   }
 
   @media only screen and (max-device-width: 1024px) and (orientation: portrait) {
-    background-attachment: cover !important;
-    background-position: center !important;
+    background-attachment: unset !important;
+    background-position: center top !important;
+    min-height: 30%;
   }
 
   @media only screen and (max-device-width: 767px) and (orientation: landscape) {
-    background-attachment: cover !important;
-    background-position: center !important;
+    background-attachment: unset !important;
+    background-position: center top !important;
   }
 }
 
