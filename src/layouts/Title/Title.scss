@@ -1,8 +1,9 @@
 .title_text_overlay {
   z-index: 10;
   width: 100%;
-  top: 35%;
+  top: 50%;
   position: absolute;
+  transform: translateY(-50%);
   margin-left: auto;
   margin-right: auto;
 
