@@ -10,12 +10,13 @@
   font-size: 4vw;
 
   .desc {
-    margin-top: 17vw;
-    margin-bottom: 15vw;
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+    font-size: 5vw;
   }
 
   .execs_section {
-    margin-top: 2vw;
+    margin-top: 3vw;
     position: relative;
     margin-bottom: 10vw;
     width: 100%;
@@ -71,6 +72,9 @@
 
       .dylan23 {
         background-image: url(../../assets/images/exec_portraits/Dylan23.jpg);
+        background-size: 120%;
+        background-position-y: 30%;
+        background-position-x: 50%;
       }
 
 
@@ -78,6 +82,7 @@
         background-image: url(../../assets/images/exec_portraits/Steven.jpg);
         background-size: 120%;
         background-position-y: 7%;
+        background-position-x: 10%;
       }
 
       .steven22 {
@@ -88,6 +93,9 @@
 
       .steven23 {
         background-image: url(../../assets/images/exec_portraits/Steven23.jpg);
+        background-size: 130%;
+        background-position-y: 55%;
+        background-position-x: 40%;
       }
 
       .isabel22 {
@@ -98,41 +106,95 @@
 
       .isabel23 {
         background-image: url(../../assets/images/exec_portraits/Isabel23.jpg);
+        background-size: 110%;
+        background-position-y: 43%;
       }
 
       .lida22 {
         background-image: url(../../assets/images/exec_portraits/Lida.jpg);
-        background-size: 150%;
+        background-size: 90%;
         background-position-y: 25%;
       }
 
       .lida23 {
         background-image: url(../../assets/images/exec_portraits/Lida23.jpg);
+        background-size: 110%;
+        background-position-y: 25%;
+        background-position-x: 30%;
       }
 
       .ben {
         background-image: url(../../assets/images/exec_portraits/Ben.jpg);
-        background-size: 130%;
+        background-size: 135%;
         background-position-y: 40%;
       }
 
       .ben23 {
         background-image: url(../../assets/images/exec_portraits/Ben23.jpg);
+        background-size: 140%;
+        background-position-y: 30%;
+        background-position-x: 42%;
       }
 
       .ellie23 {
         background-image: url(../../assets/images/exec_portraits/Ellie23.jpg);
+        background-size: 125%;
+        background-position-y: 30%;
       }
 
       .david23 {
         background-image: url(../../assets/images/exec_portraits/David23.jpg);
+        background-size: 110%;
+        background-position-y: 25%;
       }
 
 
       .lucia23 {
         background-image: url(../../assets/images/exec_portraits/Lucia23.jpg);
+        background-size: 135%;
+        background-position-y: 17%;
       }
 
+      .nicola23 {
+        background-image: url(../../assets/images/exec_portraits/nicola23.JPG);
+        background-size: 210%;
+        background-position-y: 120%;
+      }
+
+      .alyssa23 {
+        background-image: url(../../assets/images/exec_portraits/alyssa23.JPG);
+        background-size: 160%;
+        background-position-y: 67%;
+        background-position-x: 39%;
+      }
+
+      .kai23 {
+        background-image: url(../../assets/images/exec_portraits/kai23.JPG);
+        background-size: 175%;
+        background-position-y: 61%;
+        background-position-x: 47%;
+      }
+
+      .seraphina23 {
+        background-image: url(../../assets/images/exec_portraits/seraphina23.JPG);
+        background-size: 200%;
+        background-position-y: 56%;
+        background-position-x: 42%;
+      }
+
+      .yujia23 {
+        background-image: url(../../assets/images/exec_portraits/yujia23.JPG);
+        background-size: 175%;
+        background-position-y: 62%;
+        background-position-x: 45%;
+      }
+
+      .eora23 {
+        background-image: url(../../assets/images/exec_portraits/eora23.JPG);
+        background-size: 170%;
+        background-position-y: 62%;
+        background-position-x: 61%;
+      }
 
       .exec_desc_box {
         position: relative;
@@ -172,6 +234,7 @@
             font-style: normal;
             font-weight: bold;
           }
+
           div:nth-child(2n) {
             padding-bottom: 0.3rem;
           }
@@ -179,6 +242,7 @@
 
         .exec_title {
           text-align: right;
+          font-size: 90%;
           margin-right: 2vw;
           margin-bottom: 1vw;
           position: absolute;
@@ -198,17 +262,17 @@
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .container {
     .desc {
-      margin-top: 17vw;
-      margin-bottom: 15vw;
-      font-size: 5vw;
+      margin-top: 10vw;
+      margin-bottom: 8vw;
+      font-size: 8vw;
     }
 
     .execs_section {
-      margin-top: 2vw;
+      margin-top: 4vw;
       grid-template-columns: 1fr;
 
       .exec {
-        margin: 2vw;
+        margin: 1vw;
 
         .exec_portrait {
           z-index: 5;
@@ -224,12 +288,16 @@
 
         .exec_desc_box {
           border: solid 2px var(--club-yellow);
-          height: 40vw;
+          height: 35vw;
+          width: calc(100% - 15vw);
+          position: relative;
+          right: 2vw;
 
           .exec_desc {
             position: relative;
-            left: 20vw;
-            font-size: 2.5vw;
+            left: 23vw;
+            top: 2vw;
+            font-size: 2.7vw;
             text-align: left;
             float: left;
 
@@ -244,12 +312,14 @@
 
             div:nth-child(2n) {
               text-align: left;
+              min-width: 30vw;
             }
           }
 
           .exec_title {
             margin-right: 2vw;
             margin-bottom: 1vw;
+            font-size: 110%;
           }
         }
       }

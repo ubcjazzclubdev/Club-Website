@@ -1,8 +1,9 @@
 .title_text_overlay {
   z-index: 10;
   width: 100%;
-  top: 35%;
+  top: 50%;
   position: absolute;
+  transform: translateY(-50%);
   margin-left: auto;
   margin-right: auto;
 
@@ -50,7 +51,7 @@
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .title_text_overlay {
-    top: 25%;
+    top: 15%;
 
     .title_box {
       h1 {
@@ -62,7 +63,7 @@
     }
     .title_caption {
       font-size: 5vw;
-      margin-top: -7vh;
+      margin-top: -12vh;
 
       background-size: 60%;
     }
