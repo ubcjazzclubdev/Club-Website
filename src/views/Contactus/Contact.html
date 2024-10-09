@@ -9,66 +9,27 @@
     </div>
     <div class="contact_form_container">
       <div id="contact_form_left">
-        <!--https://docs.google.com/forms/d/e/1FAIpQLScc24G44FRIWIhSidM3qM70BJbTZsJK_TOdPbdrEyyjlEJ8kw/viewform?usp=pp_url&entry.495402710=Name&entry.146365604=Email@gmail.com&entry.308083149=Subject&entry.1511380091=Message-->
-        <form
-          id="contact_form"
-          @submit.prevent="staticSubmit"
-          enctype="text/plain"
-          target="hidden_iframe"
-        >
-          <p>Name:</p>
-          <input
-            id="name"
-            name="entry.495402710"
-            type="text"
-            class="feedback-input"
-            placeholder="Your name..."
-          />
-          <p>Email:</p>
-          <input
-            id="email"
-            name="entry.146365604"
-            type="text"
-            class="feedback-input"
-            placeholder="Your email..."
-          />
-          <p>Subject:</p>
-          <input
-            id="subject"
-            name="entry.308083149"
-            type="text"
-            class="feedback-input"
-            placeholder="Subject of message..."
-          />
-          <p>Message:</p>
-          <textarea
-            id="message"
-            name="entry.1511380091"
-            class="feedback-input"
-            placeholder="Enter your message here!"
-          ></textarea>
-          <input type="submit" value="SUBMIT" />
-        </form>
-        <iframe
-          name="hidden_iframe"
-          id="hidden_iframe"
-          style="display: none"
-        ></iframe>
-        <div class="submitted status hide"></div>
+        <p>Have any questions about the club?</p>
+        <br />
+        <p>
+          Reach out to us on Facebook, Instagram, or at
+          <a href="mailto:president@ubcjazzclub.ca">president@ubcjazzclub.ca</a>!
+        </p>
+        <br />
+        <p>Link to socials below!</p>
       </div>
       <div id="contact_form_right">
         <p>Interested in booking our band?</p>
         <br />
         <p>{{ bookingDesc }}</p>
         <br />
-        <p>Booking Policies:</p>
         <p>{{ bookingPolicy }}</p>
         <p>{{ compensation }}</p>
         <br />
         <p>
-          Reach out to us on Facebook, Instagram, or at
+          Please email us at
           <a href="mailto:music@ubcjazzclub.ca">music@ubcjazzclub.ca</a> to book
-          a gig! Social links are down below.
+          a gig! 
         </p>
       </div>
     </div>

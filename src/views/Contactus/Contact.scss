@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30vw;
+  padding-top: 15vw;
   color: white;
   background-color: #333333;
 
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     width: 70%;
-    padding-bottom: 30vh;
+    padding-bottom: 15vh;
 
     #contact_title {
       display: inline-block;
@@ -65,89 +65,31 @@
       font-size: 1.5vw;
 
       #contact_form_left {
-        display: inline-block;
-        width: 50%;
-
-        p:first-child {
-          padding-top: 1vh;
-        }
+        
         p {
-          padding-top: 2vh;
-          padding-bottom: 1vh;
           font-style: italic;
           text-align: left;
-        }
+          padding-bottom: 1vh;
+          padding-right: 10%;
 
-        #contact_form {
-          padding-right: 4vw;
-          padding-left: 4vw;
-
-          .feedback-input {
-            color: white;
-            font-family: Helvetica, Arial, sans-serif;
-            font-weight: 500;
-            font-size: 18px;
-            border-radius: 10px;
-            line-height: 22px;
-            background-color: #575757;
-            transition: all 0.3s;
-            padding: 13px;
-            margin-bottom: 15px;
-            width: 100%;
-            box-sizing: border-box;
-          }
-
-          textarea {
-            height: 17vh;
-            line-height: 150%;
-            resize: none;
-            border-style: inset !important;
-            border-width: 2px !important;
-          }
-
-          ::placeholder {
-            font-style: italic;
-          }
-
-          [type="submit"] {
-            font-style: italic;
-            width: 100%;
-            background: transparent;
-            border: solid 2px var(--club-yellow);
-            border-radius: 5px;
-            cursor: pointer;
-            color: var(--club-yellow);
-            font-size: 24px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            transition: all 0.3s;
-            margin-top: -4px;
+          a {
             font-weight: 700;
+            color: white;
+
+            &:hover {
+              color: var(--club-yellow);
+            }
           }
-
-          [type="submit"]:hover {
-            background: var(--club-yellow);
-            border: solid 2px var(--club-grey);
-            color: var(--club-grey);
-          }
-        }
-
-        .submitted {
-          margin-top: 1vw;
-
-          font-family: Built-Tilting;
-          font-style: italic;
-          font-size: 3vw;
         }
       }
 
       #contact_form_right {
         display: inline-block;
-        width: 46%;
+        width: 175%;
         padding-top: 1vh;
         padding-bottom: 1vh;
         padding-left: 4%;
-        border-left: solid var(--club-yellow) 4pt;
+        border-left: solid var(--club-yellow) 3.5pt;
 
         p {
           font-style: italic;
@@ -201,47 +143,12 @@
         font-size: 4vw;
 
         #contact_form_left {
-          position: relative;
           width: 90%;
+          padding-left: 2vw;
 
-          padding-bottom: 10vw;
-          margin-bottom: 10vw;
-
-          #contact_form {
-            padding-right: 2vw;
-            padding-left: 2vw;
-
-            .feedback-input {
-              font-size: 4vw;
-            }
-
-            [type="submit"] {
-              font-size: 4vw;
-            }
-          }
-
-          .hide {
-            display: none;
-          }
-
-          .submitted {
-            margin-top: 4vw;
-            font-size: 6vw;
-          }
-
-          // Trick to get resizable bottom border
-          &:after {
-            position: absolute;
-            display: block;
-            left: 50%;
-            bottom: 0;
-            content: "";
-
-            width: 70%;
-            height: 2px;
-
-            background-color: var(--club-yellow);
-            transform: translate(-50%, 0);
+          border-left: none;
+          p {
+            text-align: center;
           }
         }
 
