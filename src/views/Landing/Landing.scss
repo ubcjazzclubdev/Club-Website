@@ -30,7 +30,7 @@
 
     #circle2 {
       // Big Background circle
-      top: -30vw;
+      top: -50vw;
       right: 40%;
       width: 150vw;
     }
@@ -44,7 +44,7 @@
 
     .intro_1 {
       position: relative;
-      margin-top: 20vw;
+      margin-top: 10vw;
 
       p {
         background-color: var(--club-dark-grey);
@@ -54,7 +54,7 @@
 
     .intro_2 {
       position: relative;
-      margin-top: 30vw;
+      margin-top: 15vw;
       text-align: left;
 
       .table {
@@ -91,7 +91,7 @@
 
     .intro_3 {
       position: relative;
-      margin-top: 30vw;
+      margin-top: 15vw;
       padding-right: 8vw;
       text-align: right;
 
@@ -117,7 +117,7 @@
     }
 
     .space {
-      padding-bottom: 30vw;
+      padding-bottom: 18vw;
     }
   }
 
@@ -125,6 +125,17 @@
   .div_home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("../../assets/images/home_events_divider.jpg");
+  }
+  .Socials_Plug {
+    position: relative;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    padding-top: 8vw;
+    padding-bottom: 2vw;
+    font-style: italic;
+    font-size: 2vw;
+    color: white;
+    transition: all 0.3s;
   }
 
   // Events Content
@@ -148,7 +159,8 @@
     }
 
     .events_display {
-      padding-top: 15vw;
+      padding-top: 6vw;
+      padding-bottom: 4vw;
       margin-left: auto;
       margin-right: auto;
       width: 80%;
