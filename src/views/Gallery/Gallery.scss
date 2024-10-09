@@ -16,7 +16,7 @@
         rgba(0, 0, 0, $brightness),
         rgba(0, 0, 0, $brightness)
       ),
-      url("../../assets/images/christmas_6.jpg");
+      url("../../assets/images/valentines.jpg");
   }
 
   .videos {
@@ -67,11 +67,11 @@
       float: right;
       display: flex;
 
-      margin-top: 5vw;
+      margin-top: 2vw;
       margin-bottom: 5vw;
       margin-right: 7vw;
 
-      width: 45%;
+      width: 40%;
       max-height: 45vw;
       min-height: 45vw;
 
@@ -180,8 +180,8 @@
   .vid_container {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15vw;
-    margin-bottom: 15vw;
+    margin-top: 8vw;
+    margin-bottom: 8vw;
     width: 80%;
 
     .video {
@@ -191,7 +191,8 @@
 
     .vid_desc {
       display: inline-block;
-      margin-top: 6vw;
+      margin-top: 2vw;
+      margin-bottom: 2vw;
 
       & > a {
         text-decoration: none;

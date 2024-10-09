@@ -10,9 +10,9 @@ export default defineComponent({
       email: "president@ubcjazzclub.ca",
       lnk_insta: "@ubcjazzclub",
       lnk_fb: "ubc jazz club",
-      room: "Room 3206D",
+      room: "Room 3301E",
       address: "AMS Student Nest 6133 University Blvd, Vancouver, BC V6T 1Z1",
-      copyright: "copyright ubcjazzclub 2023",
+      copyright: "copyright ubcjazzclub 2024",
     };
   },
 

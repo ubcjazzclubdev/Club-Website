@@ -7,7 +7,7 @@
 
   .div_about {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../../assets/images/jam_5.jpg");
+      url("../../assets/images/award.jpg");
   }
 
   .top_section {
@@ -38,7 +38,7 @@
     #circle3 {
       // Bot-right big circle
       width: 37%;
-      top: 27%;
+      top: 22%;
       right: -5%;
     }
 
@@ -52,15 +52,15 @@
     .description {
       position: relative;
       z-index: 5;
-      padding-top: 17vw;
-      padding-bottom: 20vw;
-      font-size: 1.6vw;
+      padding-top: 15vw;
+      padding-bottom: 15vw;
+      font-size: 1.9vw;
     }
 
     .description_ext {
       position: relative;
       z-index: 5;
-      font-size: 1.75vw;
+      font-size: 1.8vw;
       font-style: italic;
 
       .text_1 {
@@ -89,7 +89,7 @@
     margin-top: 2vw;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20vw;
+    margin-bottom: 12vw;
 
     // Padding
     padding-top: 5vw;
@@ -103,13 +103,22 @@
     border-width: 8pt;
     border-color: var(--club-yellow);
 
+    .review_title {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: calc(1rem + 3vw);
+      padding-top: 2vw;
+      padding-bottom: 2vw;
+    }
+
     .review {
       width: 70%;
       margin-left: auto;
       margin-right: auto;
-      font-size: calc(1rem + 2vw);
-      padding-top: 5vw;
-      padding-bottom: 5vw;
+      font-size: calc(1rem + 1.2vw);
+      padding-top: 3vw;
+      padding-bottom: 3vw;
 
       .star_rating {
         width: 30%;
@@ -142,8 +151,8 @@
   }
 
   .awards_section {
-    margin-top: 11vw;
-    margin-bottom: 30vw;
+    margin-top: 7vw;
+    margin-bottom: 10vw;
 
     .awards_row {
       display: flex;
