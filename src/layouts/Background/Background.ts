@@ -22,7 +22,7 @@ export default defineComponent({
           this.imageUrl = require("../../assets/images/page_bgs/about_back.jpg");
         }
         if (path == "/team") {
-          this.imageUrl = require("../../assets/images/page_bgs/team_back24.jpg");
+          this.imageUrl = require("../../assets/images/page_bgs/team_back25.jpg");
         }
         if (path == "/involvement") {
           this.imageUrl = require("../../assets/images/imagine_day_1.jpg");
